@@ -1,0 +1,600 @@
+.meeting1_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.meeting2_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting3_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting4_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting5_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting6_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting7_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting8_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 700ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting9_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting10_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 900ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting11_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting12_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 1100ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting13_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 1200ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting14_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 1300ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting15_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 1400ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting16_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting17_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting18_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 1700ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting19_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting20_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 1900ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting21_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting22_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 2100ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting23_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 2200ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_1_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 2300ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_2_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 2400ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_3_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 2500ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_4_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 2600ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_5_med {
+    animation-name: meeting;
+    animation-duration: 5s;
+    animation-delay: 2700ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting1_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+.meeting2_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting3_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting4_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting5_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting6_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting7_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 1200ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting8_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 1400ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting9_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting10_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting11_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 1200ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting12_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 1400ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting13_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting14_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting15_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting16_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 2200ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting17_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 2400ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting18_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 2600ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting19_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 2800ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting20_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 3000ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting21_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 3200ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting22_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 3400ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting23_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 3600ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_1_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 3700ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_2_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 3800ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_3_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 3900ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_4_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 4000ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_5_slow {
+    animation-name: meeting;
+    animation-duration: 7s;
+    animation-delay: 4100ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting1_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.meeting2_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 50ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting3_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting4_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 150ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting5_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting6_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 250ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting7_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting8_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 350ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting9_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting10_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 450ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting11_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting12_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 550ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting13_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting14_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 650ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting15_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 700ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting16_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 750ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting17_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting18_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 850ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting19_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 900ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting20_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 950ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting21_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting22_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 1050ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting23_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 1100ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_1_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 1300ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_2_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 1350ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_3_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 1400ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_4_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 1450ms;
+    animation-iteration-count: infinite;
+}
+
+.meeting_5_high {
+    animation-name: meeting;
+    animation-duration: 3s;
+    animation-delay: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes meeting {
+    0% {
+        background-color: rgb(0, 255, 0);
+    }
+    25%{
+        background-color: rgb(0,163,255);
+    }
+    50%{
+        background-color: transparent;
+    }
+    100% {
+        background-color: transparent;
+    }
+}

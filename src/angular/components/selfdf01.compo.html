@@ -1,0 +1,197 @@
+<section (click)="cleanAllRightOp()" class="blockthispage">
+    <section style="position: absolute;
+        left: 347px;
+        top: 100px;
+        width: 200px;
+        height: 130px;
+        z-index: 30;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        padding: 10px;
+        text-align: center;
+        line-height:75px;" *ngIf='loading'>更新中
+        <br>
+        <img src="image/loading_circles.gif" style="position:absolute;width: 30px;height: 30px;top:75px;left:85px;">
+    </section>
+    <div id="clickareaSelfd" [style.display]="selfdf">
+        <div style="  position: absolute;
+   z-index:12;
+   top:15px;
+   left:20px;">
+            <span id="istitle" style="color:white;
+    float:left;
+    display:block;
+    min-width:40px; height:33px;
+    text-align:center;
+    background-repeat:no-repeat;
+    background-size:93%;
+    background-position:center;
+    background-image:url('image/istitle.png');
+    font-weight:300;padding:12px;text-transform: capitalize;">{{istitle}}</span>
+            <span style="display:block;float:left;color:#C6C6C6;margin-top:8px;margin-left:2px;">按键功能自定义</span>
+
+        </div>
+
+        <img style="width:100%;height:auto;" src="./image/selfdf.png">
+        <div id="optionsbar" class={{shelf01block}}>
+            <a (click)="pageshow(1)" id="opta01" [ngStyle]="lecss01" (click)="onClick(0)">&nbsp;
+                <img id="optimg01" src="./image/btnl01.png"> 宏命令</a>
+            <a (click)="pageshow(2)" id="opta02" [ngStyle]="lecss02" (click)="onClick(1)">&nbsp;
+                <img id="optimg02" src="./image/btnl02.png"> 文本</a>
+            <a (click)="pageshow(3)" id="opta03" [ngStyle]="lecss03" (click)="onClick(2)">&nbsp;
+                <img id="optimg03" src="./image/btnl03.png"> 键盘按键</a>
+            <a (click)="pageshow(4)" id="opta04" [ngStyle]="lecss04" (click)="onClick(3)">&nbsp;
+                <img id="optimg04" src="./image/btnl04.png"> 鼠标按键</a>
+            <a (click)="pageshow(5)" id="opta05" [ngStyle]="lecss05" (click)="onClick(4)"> &nbsp;
+                <img id="optimg05" src="./image/btnl08.png"> 组合热键</a>
+            <a (click)="pageshow(6)" id="opta06" [ngStyle]="lecss06" (click)="onClick(5)">&nbsp;
+                <img id="optimg06" src="./image/btnl06.png"> 多媒体</a>
+            <a (click)="pageshow(7)" id="opta07" [ngStyle]="lecss07" (click)="onClick(6)">&nbsp;
+                <img id="optimg07" src="./image/btnl07.png"> 快捷启动</a>
+        </div>
+        <div id="contentarea">
+            <side01-app *ngIf="side01" [myKey]="theKey" (resetpage)="resetside01page()" (outputGameEvent)='getGameoptions($event)' [mutiobj]='mutiobj' (outputEvent)="CancelPage($event)"
+                (Keyhasbeenset)="keyhasBeenSet($event)" (nowloading)='loadingbegin($event)'></side01-app>
+            <side02-app *ngIf="side02" [myKey]="theKey" (outputGameEvent)='getGameoptions($event)' [mutiobj]='mutiobj' (outputEvent)="CancelPage($event)"
+                (Keyhasbeenset)="keyhasBeenSet($event)" (nowloading)='loadingbegin($event)'></side02-app>
+            <side03-app *ngIf="side03" [myKey]="theKey" (outputGameEvent)='getGameoptions($event)' [mutiobj]='mutiobj' (outputEvent)="CancelPage($event)"
+                (Keyhasbeenset)="keyhasBeenSet($event)" (nowloading)='loadingbegin($event)'></side03-app>
+            <side04-app *ngIf="side04" [myKey]="theKey" (outputGameEvent)='getGameoptions($event)' [mutiobj]='mutiobj' (outputEvent)="CancelPage($event)"
+                (Keyhasbeenset)="keyhasBeenSet($event)" (nowloading)='loadingbegin($event)'></side04-app>
+            <side05-app *ngIf="side05" [myKey]="theKey" (outputGameEvent)='getGameoptions($event)' [mutiobj]='mutiobj' (outputEvent)="CancelPage($event)"
+                (Keyhasbeenset)="keyhasBeenSet($event)" (nowloading)='loadingbegin($event)'></side05-app>
+            <side06-app *ngIf="side06" [myKey]="theKey" (outputGameEvent)='getGameoptions($event)' [mutiobj]='mutiobj' (outputEvent)="CancelPage($event)"
+                (Keyhasbeenset)="keyhasBeenSet($event)" (nowloading)='loadingbegin($event)'></side06-app>
+            <side07-app *ngIf="side07" [myKey]="theKey" (outputGameEvent)='getGameoptions($event)' [mutiobj]='mutiobj' (outputEvent)="CancelPage($event)"
+                (Keyhasbeenset)="keyhasBeenSet($event)" (nowloading)='loadingbegin($event)'></side07-app>
+        </div>
+
+        <!-- <div id="confirmarea">
+        <a id="na"    (click)="colseSelfdf()">取消</a>
+        <a id="yes"   (click)="colseSelfdf()">保存</a>
+    </div> -->
+
+    </div>
+    <!-- <button (click)="checkKeyinfile()">click</button> -->
+    <div class="kbarea">
+        <img src="./image/bk700_atbtn02.png" alt="bk700_atbtn.png" id="selfdfbtn" *ngIf="attbtn">
+        <img src="./image/bk700.png" alt="bk700" id="bk500">
+        <div *ngFor="let item of array1;let recordIndex = index" id="{{item}}_css01" (dblclick)="callSelfdf(recordIndex)" (contextmenu)="onRightClick(recordIndex)"></div>
+        <div *ngIf="empty"></div>
+        <div *ngFor="let options of array1;let recordIndex = index" id="{{options}}_2_css01" style="border:1px solid red;color:white;width:100px;height:76px;font-size:15px;z-index:10;display:none;z-index:10;background:black;opacity:1;">
+            <a (click)="callSelfdf(recordIndex)">编辑功能</a>
+            <a (click)=" resetThiskey(recordIndex)">恢复默认功能</a>
+            <a (click)="blockKey(recordIndex)">禁用功能</a>
+        </div>
+
+        <!-- <div class="effect clearEffect UtoD1 LtoR1" id="esc_css01" (dblclick)="callSelfdf(0)"></div><div *ngIf="esc_css01"><a>编辑功能</a><a>恢复默认功能</a><a>禁用功能</a></div>
+    <div class="effect clearEffect UtoD1 LtoR2" id="f1_css01" (dblclick)="callSelfdf(1)"></div>
+    <div class="effect clearEffect UtoD1 LtoR2" id="f2_css01" (dblclick)="callSelfdf(2)"></div>
+    <div class="effect clearEffect UtoD1 LtoR3" id="f3_css01" (dblclick)="callSelfdf(3)"></div>
+    <div class="effect clearEffect UtoD1 LtoR3" id="f4_css01" (dblclick)="callSelfdf(4)"></div>
+    <div class="effect clearEffect UtoD1 LtoR4" id="f5_css01" (dblclick)="callSelfdf(5)"></div>
+    <div class="effect clearEffect UtoD1 LtoR4" id="f6_css01" (dblclick)="callSelfdf(6)"></div>
+    <div class="effect clearEffect UtoD1 LtoR5" id="f7_css01" (dblclick)="callSelfdf(7)"></div>
+    <div class="effect clearEffect UtoD1 LtoR5" id="f8_css01" (dblclick)="callSelfdf(8)"></div>
+    <div class="effect clearEffect UtoD1 LtoR6" id="f9_css01" (dblclick)="callSelfdf(9)"></div>
+    <div class="effect clearEffect UtoD1 LtoR6" id="f10_css01" (dblclick)="callSelfdf(10)"></div>
+    <div class="effect clearEffect UtoD1 LtoR7" id="f11_css01" (dblclick)="callSelfdf(11)"></div>
+    <div class="effect clearEffect UtoD1 LtoR7" id="f12_css01" (dblclick)="callSelfdf(12)"></div>
+    <div class="effect clearEffect UtoD1 LtoR8" id="print_css01" (dblclick)="callSelfdf(13)"></div>
+    <div class="effect clearEffect UtoD1 LtoR8" id="scroll_css01" (dblclick)="callSelfdf(14)"></div>
+    <div class="effect clearEffect UtoD1 LtoR8" id="pause_css01" (dblclick)="callSelfdf(15)"></div>
+    <div class="effect clearEffect UtoD2 LtoR1" id="perid_css01" (dblclick)="callSelfdf(16)"></div>
+    <div class="effect clearEffect UtoD2 LtoR1" id="n1_css01" (dblclick)="callSelfdf(17)"></div>
+    <div class="effect clearEffect UtoD2 LtoR2" id="n2_css01" (dblclick)="callSelfdf(18)"></div>
+    <div class="effect clearEffect UtoD2 LtoR2" id="n3_css01" (dblclick)="callSelfdf(19)"></div>
+    <div class="effect clearEffect UtoD2 LtoR3" id="n4_css01" (dblclick)="callSelfdf(20)"></div>
+    <div class="effect clearEffect UtoD2 LtoR3" id="n5_css01" (dblclick)="callSelfdf(21)"></div>
+    <div class="effect clearEffect UtoD2 LtoR4" id="n6_css01" (dblclick)="callSelfdf(22)"></div>
+    <div class="effect clearEffect UtoD2 LtoR4" id="n7_css01" (dblclick)="callSelfdf(23)"></div>
+    <div class="effect clearEffect UtoD2 LtoR5" id="n8_css01" (dblclick)="callSelfdf(24)"></div>
+    <div class="effect clearEffect UtoD2 LtoR5" id="n9_css01" (dblclick)="callSelfdf(25)"></div>
+    <div class="effect clearEffect UtoD2 LtoR6" id="n0_css01" (dblclick)="callSelfdf(26)"></div>
+    <div class="effect clearEffect UtoD2 LtoR6" id="minus_css01" (dblclick)="callSelfdf(27)"></div>
+    <div class="effect clearEffect UtoD2 LtoR7" id="plus_css01" (dblclick)="callSelfdf(28)"></div>
+    <div class="effect clearEffect UtoD2 LtoR7" id="bsp_css01" (dblclick)="callSelfdf(29)"></div>
+    <div class="effect clearEffect UtoD2 LtoR8" id="insert_css01" (dblclick)="callSelfdf(30)"></div>
+    <div class="effect clearEffect UtoD2 LtoR8" id="home_css01" (dblclick)="callSelfdf(31)"></div>
+    <div class="effect clearEffect UtoD2 LtoR8" id="pup_css01" (dblclick)="callSelfdf(32)"></div>
+    <div class="effect clearEffect UtoD2 LtoR9" id="numlock_css01" (dblclick)="callSelfdf(33)"></div>
+    <div class="effect clearEffect UtoD2 LtoR9" id="numdrawn_css01" (dblclick)="callSelfdf(34)"></div>
+    <div class="effect clearEffect UtoD2 LtoR10" id="numtimes_css01" (dblclick)="callSelfdf(35)"></div>
+    <div class="effect clearEffect UtoD2 LtoR10" id="numminus_css01" (dblclick)="callSelfdf(36)"></div>
+    <div class="effect clearEffect UtoD3 LtoR1" id="tab_css01" (dblclick)="callSelfdf(37)"></div>
+    <div class="effect clearEffect UtoD3 LtoR1" id="q_css01" (dblclick)="callSelfdf(38)"></div>
+    <div class="effect clearEffect UtoD3 LtoR2" id="w_css01" (dblclick)="callSelfdf(39)"></div>
+    <div class="effect clearEffect UtoD3 LtoR2" id="e_css01" (dblclick)="callSelfdf(40)"></div>
+    <div class="effect clearEffect UtoD3 LtoR3" id="r_css01" (dblclick)="callSelfdf(41)"></div>
+    <div class="effect clearEffect UtoD3 LtoR3" id="t_css01" (dblclick)="callSelfdf(42)"></div>
+    <div class="effect clearEffect UtoD3 LtoR4" id="y_css01" (dblclick)="callSelfdf(43)"></div>
+    <div class="effect clearEffect UtoD3 LtoR4" id="u_css01" (dblclick)="callSelfdf(44)"></div>
+    <div class="effect clearEffect UtoD3 LtoR5" id="i_css01" (dblclick)="callSelfdf(45)"></div>
+    <div class="effect clearEffect UtoD3 LtoR5" id="o_css01" (dblclick)="callSelfdf(46)"></div>
+    <div class="effect clearEffect UtoD3 LtoR6" id="p_css01" (dblclick)="callSelfdf(47)"></div>
+    <div class="effect clearEffect UtoD3 LtoR6" id="lqu_css01" (dblclick)="callSelfdf(48)"></div>
+    <div class="effect clearEffect UtoD3 LtoR7" id="rqu_css01" (dblclick)="callSelfdf(49)"></div>
+    <div class="effect clearEffect UtoD3 LtoR8" id="delete_css01" (dblclick)="callSelfdf(50)"></div>
+    <div class="effect clearEffect UtoD3 LtoR7" id="drawn_css01" (dblclick)="callSelfdf(51)"></div>
+    <div class="effect clearEffect UtoD3 LtoR8" id="end_css01" (dblclick)="callSelfdf(52)"></div>
+    <div class="effect clearEffect UtoD3 LtoR8" id="pdown_css01" (dblclick)="callSelfdf(53)"></div>
+    <div class="effect clearEffect UtoD3 LtoR9" id="num7_css01" (dblclick)="callSelfdf(54)"></div>
+    <div class="effect clearEffect UtoD3 LtoR9" id="num8_css01" (dblclick)="callSelfdf(55)"></div>
+    <div class="effect clearEffect UtoD3 LtoR10" id="num9_css01" (dblclick)="callSelfdf(56)"></div>
+    <div class="effect clearEffect UtoD3 LtoR10" id="numplus_css01" (dblclick)="callSelfdf(57)"></div>
+    <div class="effect clearEffect UtoD4 LtoR1" id="caps_css01" (dblclick)="callSelfdf(58)"></div>
+    <div class="effect clearEffect UtoD4 LtoR1" id="a_css01" (dblclick)="callSelfdf(59)"></div>
+    <div class="effect clearEffect UtoD4 LtoR2" id="s_css01" (dblclick)="callSelfdf(60)"></div>
+    <div class="effect clearEffect UtoD4 LtoR2" id="d_css01" (dblclick)="callSelfdf(61)"></div>
+    <div class="effect clearEffect UtoD4 LtoR3" id="f_css01" (dblclick)="callSelfdf(62)"></div>
+    <div class="effect clearEffect UtoD4 LtoR3" id="g_css01" (dblclick)="callSelfdf(63)"></div>
+    <div class="effect clearEffect UtoD4 LtoR4" id="h_css01" (dblclick)="callSelfdf(64)"></div>
+    <div class="effect clearEffect UtoD4 LtoR4" id="j_css01" (dblclick)="callSelfdf(65)"></div>
+    <div class="effect clearEffect UtoD4 LtoR5" id="k_css01" (dblclick)="callSelfdf(66)"></div>
+    <div class="effect clearEffect UtoD4 LtoR5" id="l_css01" (dblclick)="callSelfdf(67)"></div>
+    <div class="effect clearEffect UtoD4 LtoR6" id="sem_css01" (dblclick)="callSelfdf(68)"></div>
+    <div class="effect clearEffect UtoD4 LtoR6" id="quo_css01" (dblclick)="callSelfdf(69)"></div>
+    <div class="effect clearEffect UtoD4 LtoR7" id="enter_css01" (dblclick)="callSelfdf(70)"></div>
+    <div class="effect clearEffect UtoD4 LtoR9" id="num4_css01" (dblclick)="callSelfdf(71)"></div>
+    <div class="effect clearEffect UtoD4 LtoR9" id="num5_css01" (dblclick)="callSelfdf(72)"></div>
+    <div class="effect clearEffect UtoD4 LtoR10" id="num6_css01" (dblclick)="callSelfdf(73)"></div>
+    <div class="effect clearEffect UtoD5 LtoR1" id="lshift_css01" (dblclick)="callSelfdf(74)"></div>
+    <div class="effect clearEffect UtoD5 LtoR1" id="z_css01" (dblclick)="callSelfdf(75)"></div>
+    <div class="effect clearEffect UtoD5 LtoR2" id="x_css01" (dblclick)="callSelfdf(76)"></div>
+    <div class="effect clearEffect UtoD5 LtoR2" id="c_css01" (dblclick)="callSelfdf(77)"></div>
+    <div class="effect clearEffect UtoD5 LtoR3" id="v_css01" (dblclick)="callSelfdf(78)"></div>
+    <div class="effect clearEffect UtoD5 LtoR3" id="b_css01" (dblclick)="callSelfdf(79)"></div>
+    <div class="effect clearEffect UtoD5 LtoR4" id="n_css01" (dblclick)="callSelfdf(80)"></div>
+    <div class="effect clearEffect UtoD5 LtoR4" id="m_css01" (dblclick)="callSelfdf(81)"></div>
+    <div class="effect clearEffect UtoD5 LtoR5" id="comma_css01" (dblclick)="callSelfdf(82)"></div>
+    <div class="effect clearEffect UtoD5 LtoR5" id="dot_css01" (dblclick)="callSelfdf(83)"></div>
+    <div class="effect clearEffect UtoD5 LtoR6" id="qmark_css01" (dblclick)="callSelfdf(84)"></div>
+    <div class="effect clearEffect UtoD5 LtoR6" id="rshift_css01" (dblclick)="callSelfdf(85)"></div>
+    <div class="effect clearEffect UtoD5 LtoR7" id="up_css01" (dblclick)="callSelfdf(86)"></div>
+    <div class="effect clearEffect UtoD5 LtoR9" id="num1_css01" (dblclick)="callSelfdf(87)"></div>
+    <div class="effect clearEffect UtoD5 LtoR9" id="num2_css01" (dblclick)="callSelfdf(88)"></div>
+    <div class="effect clearEffect UtoD5 LtoR10" id="num3_css01" (dblclick)="callSelfdf(89)"></div>
+    <div class="effect clearEffect UtoD5 LtoR10" id="numenter_css01" (dblclick)="callSelfdf(90)"></div>
+    <div class="effect clearEffect UtoD6 LtoR1" id="lctrl_css01" (dblclick)="callSelfdf(91)"></div>
+    <div class="effect clearEffect UtoD6 LtoR1" id="win_css01" (dblclick)="callSelfdf(92)"></div>
+    <div class="effect clearEffect UtoD6 LtoR2" id="lalt_css01" (dblclick)="callSelfdf(93)"></div>
+    <div class="effect clearEffect UtoD6 LtoR3" id="space_css01" (dblclick)="callSelfdf(94)"></div>
+    <div class="effect clearEffect UtoD6 LtoR5" id="ralt_css01" (dblclick)="callSelfdf(95)"></div>
+    <div class="effect clearEffect UtoD6 LtoR5" id="fn_css01" (dblclick)="callSelfdf(96)"></div>
+    <div class="effect clearEffect UtoD6 LtoR6" id="book_css01" (dblclick)="callSelfdf(97)"></div>
+    <div class="effect clearEffect UtoD6 LtoR6" id="rctrl_css01" (dblclick)="callSelfdf(98)"></div>
+    <div class="effect clearEffect UtoD6 LtoR8" id="left_css01" (dblclick)="callSelfdf(99)"></div>
+    <div class="effect clearEffect UtoD6 LtoR8" id="down_css01" (dblclick)="callSelfdf(100)"></div>
+    <div class="effect clearEffect UtoD6 LtoR8" id="right_css01" (dblclick)="callSelfdf(101)"></div>
+    <div class="effect clearEffect UtoD6 LtoR9" id="num0_css01" (dblclick)="callSelfdf(102)"></div>
+    <div class="effect clearEffect UtoD6 LtoR10" id="numdot_css01" (dblclick)="callSelfdf(103)"></div> -->
+
+        <section style="position: absolute;bottom:0px; right:30px;" id='resetbtn' (click)="resetbutton()">
+            <p style="font-size:16px;cursor:pointer;">恢复默认设置</p>
+        </section>
+
+    </div>
+</section>

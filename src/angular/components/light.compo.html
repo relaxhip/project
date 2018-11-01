@@ -1,0 +1,48 @@
+<rainbow-effect *ngIf="seerainbow"></rainbow-effect>
+<breath-effect *ngIf="seebreath"></breath-effect>
+<lighten-effect *ngIf="seelighten"></lighten-effect>
+<crash-effect *ngIf="seecrash"></crash-effect>
+<starlight-effect *ngIf="seestarlight"></starlight-effect>
+<dragon-effect *ngIf="seedragon"></dragon-effect>
+<meeting-effect *ngIf="seemeeting"></meeting-effect>
+<lightrain-effect *ngIf="seelightrain"></lightrain-effect>
+<boom-effect *ngIf="seeboom"></boom-effect>
+<cross-effect *ngIf="seecross"></cross-effect>
+<float-effect *ngIf="seefloat"></float-effect>
+<waves-effect *ngIf="seewaves"></waves-effect>
+<round-effect *ngIf="seeround"></round-effect>
+<gameEffect-effect *ngIf="seegameeffect"></gameEffect-effect>
+<pure-effect *ngIf="seepure"></pure-effect>
+<blasoul-effect *ngIf="seeblasoul"></blasoul-effect>
+<div style="position: absolute;z-index: 20; top: 212px;
+left: 110px;
+width: 280px;
+height: 210px;" (mouseenter)='cancelft()' *ngIf="cancelftng"></div>
+<section>
+    <div style="width:200px; height:35px;position: absolute;opacity: 0.7;z-index: 20;top: 228px;left: 130px;">
+        <div *ngIf="fnbtn" class="twsize" style=" background-image:url(image/fnopthv.png);float:left;width:207px;height:30px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;padding-left:10px;color:white;line-height:30px"
+            (click)="CloseFtltbox()">{{etitle}}</div>
+        <div *ngIf="!fnbtn" class="twsize" style=" background-image:url(image/fnopt.png);float:left;width:207px;height:28px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;padding-left:10px;color:white;line-height:30px"
+            (click)="openOpt()" id="ftltopt">{{etitle}}</div>
+    </div>
+    <div id="ftltbox" class="fadeIn" *ngIf="ftltbox">
+        <div>
+            <a (click)="frtpClose(0)">流光</a>
+            <a (click)="frtpClose(1)">呼吸</a>
+            <a (click)="frtpClose(2)">光谱</a>
+            <a (click)="frtpClose(3)">撞击</a>
+            <a (click)="frtpClose(4)">繁星</a>
+            <a (click)="frtpClose(5)">龙腾</a>
+            <a (click)="frtpClose(6)">邂逅</a>
+            <a (click)="frtpClose(7)">光雨</a>
+            <a (click)="frtpClose(8)">脉冲</a>
+            <a (click)="frtpClose(9)">纵横</a>
+            <a (click)="frtpClose(10)">飘痕</a>
+            <a (click)="frtpClose(11)">涟漪</a>
+            <a (click)="frtpClose(12)">绽放</a>
+            <a (click)="frtpClose(13)">游戏模式</a>
+            <a (click)="frtpClose(14)">纯色</a>
+            <a (click)="frtpClose(15)">Blasoul</a>
+        </div>
+    </div>
+</section>

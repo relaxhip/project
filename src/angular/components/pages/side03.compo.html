@@ -1,0 +1,17 @@
+<!-- <img src="./image/sidep03.png" alt="01" style="width:80%;"> -->
+<!-- <img src="./image/sidep02.png" alt="02" style="width:80%;"> -->
+<div style="margin-left:10px; margin-top:10px;">
+<!-- <h3 class="lightcolor">名称</h3>
+<br>
+<input tabindex=-1 class="ipstyle" style="width:230px; height:30px;"> -->
+<br>
+<br>
+<h3 class="lightcolor">输入文字</h3>
+<br>
+<input tabindex=-1 class="ipstyle" style="width:230px; height:30px;" id="keycode" (keydown)="keycodeGet($event)" (keyup)="keycodeGet($event)"
+    [(ngModel)]="keycodeContent">
+<div id="confirmarea">
+    <a id="na"     (click)="cancelPage()">取消</a>
+    <a id="yes"   (click)="MacrosetIn()">保存</a>
+</div>
+</div>

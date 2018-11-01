@@ -1,0 +1,24 @@
+<!-- <img src="./image/sidep04.png" alt="01" style="width:80%;"> -->
+<div style="margin-left:10px;margin-top:10px;">
+<h3 class="lightcolor">按钮功能</h3>
+<div  class="checkbox" style="margin-left:-5px;">
+        <a (click)="clickOnitem(0)">&nbsp;<img src="image/uncheck.png" *ngIf='!check01'><img src="image/check.png" *ngIf='check01'>&nbsp;单击左键</a>
+        <a (click)="clickOnitem(1)">&nbsp;<img src="image/uncheck.png" *ngIf='!check02'><img src="image/check.png" *ngIf='check02'>&nbsp;单击右键</a>
+        <a (click)="clickOnitem(2)">&nbsp;<img src="image/uncheck.png" *ngIf='!check03'><img src="image/check.png" *ngIf='check03'>&nbsp;左键双击</a>
+        <a (click)="clickOnitem(3)">&nbsp;<img src="image/uncheck.png" *ngIf='!check04'><img src="image/check.png" *ngIf='check04'>&nbsp;单击中建</a>
+        <a (click)="clickOnitem(4)">&nbsp;<img src="image/uncheck.png" *ngIf='!check05'><img src="image/check.png" *ngIf='check05'>&nbsp;前进</a>
+        <a (click)="clickOnitem(5)">&nbsp;<img src="image/uncheck.png" *ngIf='!check06'><img src="image/check.png" *ngIf='check06'>&nbsp;返回</a>
+</div>
+<br>
+<h3 class="lightcolor">滚动功能</h3>
+<div class="checkbox" style="margin-left:-5px;">
+        <a (click)="clickOnitem(6)">&nbsp;<img src="image/uncheck.png" *ngIf='!check07'><img src="image/check.png" *ngIf='check07'>&nbsp;向上滚动</a>
+        <a (click)="clickOnitem(7)">&nbsp;<img src="image/uncheck.png" *ngIf='!check08'><img src="image/check.png" *ngIf='check08'>&nbsp;向下滚动</a>
+        <a (click)="clickOnitem(8)">&nbsp;<img src="image/uncheck.png" *ngIf='!check09'><img src="image/check.png" *ngIf='check09'>&nbsp;向左滚动</a>
+        <a (click)="clickOnitem(9)">&nbsp;<img src="image/uncheck.png" *ngIf='!check10'><img src="image/check.png" *ngIf='check10'>&nbsp;向右滚动</a> 
+</div>
+<div id="confirmarea">
+        <a id="na"    (click)="cancelPage()">取消</a>
+        <a id="yes"   (click)="functionkeysetIn()">保存</a>
+</div>
+</div>

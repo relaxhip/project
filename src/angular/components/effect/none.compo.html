@@ -1,0 +1,318 @@
+<!-- <div style="position: absolute;z-index: 19;width: 100%;height: 100%;top: 0px;left: 0px;cursor: pointer;" (mouseenter)='goIn()'
+    *ngIf="letsgoIn"></div>
+<div style="position: absolute;z-index:21;width:210px;height:30px;top:230px;left:130px;cursor:pointer;" (mouseenter)='goOut()'
+    *ngIf="letsgoout"></div> -->
+<section (click)="timeBlur()">
+    <section style="position: absolute;
+		left: 347px;
+		top: 70px;
+		width: 200px;
+		height: 100px;
+		z-index: 30;
+		background: black;
+		color: white;
+		padding: 10px;
+		text-align: center;
+		line-height:75px;" *ngIf='timewarn'>请输入 1 ~ 9999 之数值
+    </section>
+    <div id="mchbar"></div>
+    <img src="./image/bk700.png" alt="bk700" id="bk700">
+    <img src="./image/bk700_atbtn.png" alt="bk700_atbtn.png" id="bk700atbtn" *ngIf="attbtn">
+    <!-- <button (click)="brightness()">click</button> -->
+    <div [style.opacity]="op">
+        <div id="esc"></div>
+        <div id="f1"></div>
+        <div id="f2"></div>
+        <div id="f3"></div>
+        <div id="f4"></div>
+        <div id="f5"></div>
+        <div id="f6"></div>
+        <div id="f7"></div>
+        <div id="f8"></div>
+        <div id="f9"></div>
+        <div id="f10"></div>
+        <div id="f11"></div>
+        <div id="f12"></div>
+        <div id="print"></div>
+        <div id="scroll"></div>
+        <div id="pause"></div>
+        <div id="perid"></div>
+        <div id="n1"></div>
+        <div id="n2"></div>
+        <div id="n3"></div>
+        <div id="n4"></div>
+        <div id="n5"></div>
+        <div id="n6"></div>
+        <div id="n7"></div>
+        <div id="n8"></div>
+        <div id="n9"></div>
+        <div id="n0"></div>
+        <div id="minus"></div>
+        <div id="plus"></div>
+        <div id="bsp"></div>
+        <div id="insert"></div>
+        <div id="home"></div>
+        <div id="pup"></div>
+        <div id="numlock"></div>
+        <div id="numdrawn"></div>
+        <div id="numtimes"></div>
+        <div id="numminus"></div>
+        <div id="tab"></div>
+        <div id="q"></div>
+        <div id="w"></div>
+        <div id="e"></div>
+        <div id="r"></div>
+        <div id="t"></div>
+        <div id="y"></div>
+        <div id="u"></div>
+        <div id="i"></div>
+        <div id="o"></div>
+        <div id="p"></div>
+        <div id="lqu"></div>
+        <div id="rqu"></div>
+        <div id="delete"></div>
+        <div id="drawn"></div>
+        <div id="end"></div>
+        <div id="pdown"></div>
+        <div id="num7"></div>
+        <div id="num8"></div>
+        <div id="num9"></div>
+        <div id="numplus"></div>
+        <div id="caps"></div>
+        <div id="a"></div>
+        <div id="s"></div>
+        <div id="d"></div>
+        <div id="f"></div>
+        <div id="g"></div>
+        <div id="h"></div>
+        <div id="j"></div>
+        <div id="k"></div>
+        <div id="l"></div>
+        <div id="sem"></div>
+        <div id="quo"></div>
+        <div id="enter"></div>
+        <div id="num4"></div>
+        <div id="num5"></div>
+        <div id="num6"></div>
+        <div id="lshift"></div>
+        <div id="z"></div>
+        <div id="x"></div>
+        <div id="c"></div>
+        <div id="v"></div>
+        <div id="b"></div>
+        <div id="n"></div>
+        <div id="m"></div>
+        <div id="comma"></div>
+        <div id="dot"></div>
+        <div id="qmark"></div>
+        <div id="rshift"></div>
+        <div id="up"></div>
+        <div id="num1"></div>
+        <div id="num2"></div>
+        <div id="num3"></div>
+        <div id="numenter"></div>
+        <div id="lctrl"></div>
+        <div id="win"></div>
+        <div id="lalt"></div>
+        <div id="space"></div>
+        <div id="ralt"></div>
+        <div id="fn"></div>
+        <div id="book"></div>
+        <div id="rctrl"></div>
+        <div id="left"></div>
+        <div id="down"></div>
+        <div id="right"></div>
+        <div id="num0"></div>
+        <div id="numdot"></div>
+    </div>
+
+    <div style="width:80%; min-height:180px;height:auto;background:#0F0F0F;margin:0 auto; padding-top:10px;padding-left:10px;padding-bottom:5px;margin-top:-30px;">
+
+        <!--小方框位置  -->
+        <div id="sbox" style="position: absolute;z-index:18;bottom:0px; right:-100px;width:500px;">
+
+            <!-- 方向 -->
+            <div id="rbway" style="width:196px; min-height:22px;height:auto;background:#0A0A0A;border:1px solid #555555">
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="effectDeside(0)">
+                    <img src="image/up.png" alt="up">
+                </a>
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="effectDeside(1)">
+                    <img src="image/bottom.png" alt="bottom">
+                </a>
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="effectDeside(2)">
+                    <img src="image/left.png" alt="left">
+                </a>
+                <a style="float:left;margin-left:2px;margin-right:2px;margin-top:2px;margin-bottom:2px;" (click)="effectDeside(3)">
+                    <img src="image/right.png" alt="right">
+                </a>
+            </div>
+
+            <div id="crashway" style="width:196px; min-height:22px;height:auto;background:#0A0A0A;border:1px solid #555555">
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="dtucrash()">
+                    <img src="image/up.png" alt="up">
+                </a>
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="utdcrash()">
+                    <img src="image/bottom.png" alt="bottom">
+                </a>
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="rtlcrash()">
+                    <img src="image/left.png" alt="left">
+                </a>
+                <a style="float:left;margin-left:2px;margin-right:2px;margin-top:2px;margin-bottom:2px;" (click)="ltrcrash()">
+                    <img src="image/right.png" alt="right">
+                </a>
+            </div>
+
+            <!-- 預設 -->
+            <div id="defaultset" style="margin-top:10px;">
+                <div style="margin-left:-5px;width:300px; height:auto;background:red;">
+                    <a style="float:left;color:#555555;" class="twsize" (click)="setDefault(1)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!default'>
+                        <img src="image/check.png" *ngIf='default'>&nbsp;预设</a>
+                    <a style="float:left;color:#555555;" class="twsize" (click)="setDefault(2)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!default02'>
+                        <img src="image/check.png" *ngIf='default02'>&nbsp;自定义</a>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <!-- 選色區獨立 -->
+        <div style="position: absolute;z-index:18;bottom:-50px; right:-100px;width:500px;display: none;">
+            <div id="colorgp" style="margin-top:10px;">
+                <div id="colorbar" style="display:block;width:260px;min-height:22px;height:auto;;clear:both;">
+                    <span style="min-height:20px;height:auto;float:left;">
+                        <!-- <a id="desideclr" [style.background]="defaultclr" [style.border]="selectborder" (click)="selectclr(1)"></a> -->
+                        <!-- <a id="desideclr02" [style.background]="defaultclr02" [style.border]="selectborder02" (click)="selectclr(2)"></a> -->
+                        <!-- <a id="desideclr02" [style.background]="defaultclr02"></a> -->
+                    </span>
+                    <div *ngIf="clropt">
+                        <a (click)="PickClr(1)" style="float:left;width:18px; height:18px; background:#E9004C;display:block;border:1px #2D2D2D solid;border-right:0px;margin-left:20px;"></a>
+                        <a (click)="PickClr(2)" style="float:left;width:18px; height:18px; background:#FF3F00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(3)" style="float:left;width:18px; height:18px; background:#FFBF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(4)" style="float:left;width:18px; height:18px; background:#7FFF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(5)" style="float:left;width:18px; height:18px; background:#00FFFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(6)" style="float:left;width:18px; height:18px; background:#007FFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(7)" style="float:left;width:18px; height:18px; background:#6400FF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(8)" style="float:left;width:18px; height:18px; background:#AF26FF;display:block;border:1px #2D2D2D solid;"></a>
+                    </div>
+
+                    <div *ngIf="!clropt">
+                        <a (click)="PickClr02(1)" style="float:left;width:18px; height:18px; background:#E9004C;display:block;border:1px #2D2D2D solid;border-right:0px;margin-left:20px;"></a>
+                        <a (click)="PickClr02(2)" style="float:left;width:18px; height:18px; background:#FF3F00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(3)" style="float:left;width:18px; height:18px; background:#FFBF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(4)" style="float:left;width:18px; height:18px; background:#7FFF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(5)" style="float:left;width:18px; height:18px; background:#00FFFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(6)" style="float:left;width:18px; height:18px; background:#007FFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(7)" style="float:left;width:18px; height:18px; background:#6400FF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(8)" style="float:left;width:18px; height:18px; background:#AF26FF;display:block;border:1px #2D2D2D solid;"></a>
+                    </div>
+                </div>
+
+                <div id="blasoul" style="width:260px; min-height:21px;height:auto;">
+
+                    <!-- 選色 -->
+                    <span style="min-height:20px;height:auto;float:left;">
+                        <a style="float:left;width:30px; height:30px; background:#E9004C;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                        <a style="float:left;width:30px; height:30px; background:#FF3F00;display:block;border:1px #2D2D2D solid;"></a>
+                    </span>
+                    <a style="float:left;width:18px; height:18px; background:#1F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#3F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#5F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#7F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#9F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#BF0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#DF0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#FF0000;display:block;border:1px #2D2D2D solid;"></a>
+
+                </div>
+
+            </div>
+
+            <br>
+        </div>
+        <div style="width:100%; height:35px;">
+            <h3 class="titleclr twsize" style="float:left;margin-right:5px;font-weight:300;line-height:25px;">效果</h3>
+            <!-- 下拉式選單 -->
+            <!-- <div *ngIf="fnbtn" class="twsize" style=" background-image:url(image/fnopthv.png);float:left;width:207px;height:30px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;padding-left:10px;color:white;line-height:30px">{{etitle}}</div>
+            <div *ngIf="!fnbtn" class="twsize" style=" background-image:url(image/fnopt.png);float:left;width:207px;height:28px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;padding-left:10px;color:white;line-height:30px"
+                (click)="openOpt()" id="ftltopt">{{etitle}}</div> -->
+            <!-- <img style="float:left;" src="image/clrpicker.png"> -->
+            <a (click)="sendApply()" id="apply">储存灯效设定</a>
+        </div>
+
+        <div style="width:100%; height:60px;margin-top:5px;">
+
+            <!--一組-->
+            <div style="display: none;">
+                <div style="float:left;">
+                    <h3 class="titleclr" style="float:left;margin-right:5px;font-weight:300;line-height:-10px;font-size:12px;">亮度</h3>
+                </div>
+
+                <div style="float:left;">
+                    <div class="slidecontainer" style="margin-top:-5px;">
+                        <input tabindex=-1 [(ngModel)]="cuteValue" (ngModelChange)="onInput($event)" type="range" min="0" max="1" step="0.01" value="0.5"
+                            style="width:265px;" class="slider" id="bright">
+
+                    </div>
+
+                    <span class="contword" style="font-size:12px;margin-right:50px;margin-top:20px;">关闭</span>
+                    <span class="contword" style="font-size:12px;margin-right:50px;margin-top:20px;">微亮</span>
+                    <span class="contword" style="font-size:12px;margin-right:50px;margin-top:20px;">一般</span>
+                    <span class="contword" style="font-size:12px;">明亮</span>
+                </div>
+            </div>
+            <!-- -->
+
+            <!--一組-->
+            <div style="display: none;">
+                <div style="float:left;margin-left:100px;">
+                    <h3 class="titleclr" style="float:left;margin-right:5px;font-weight:300;line-height:-10px;font-size:12px;">速度</h3>
+                </div>
+
+                <div style="float:left;">
+                    <div class="slidecontainer" style="margin-top:-5px;">
+                        <input tabindex=-1 [(ngModel)]="speedValue" (ngModelChange)="SpeedInput($event)" type="range" min="1" max="11" value='5'
+                            step="5" class="slider" style="width:265px;transform:rotate(180deg);">
+                    </div>
+
+                    <span class="contword" style="font-size:12px;margin-right:110px;margin-top:20px;">慢</span>
+                    <span class="contword" style="font-size:12px;margin-right:110px;margin-top:20px;">中</span>
+                    <span class="contword" style="font-size:12px;margin-right:0px;margin-top:20px;">快</span>
+                </div>
+            </div>
+        </div>
+        <!-- -->
+
+
+        <br>
+        <!-- <div style="width:100%; height:60px;margin-top:-73px;">
+            <div style="margin-top:30px;">
+                <a (click)="clickOnitem()" style="width:30px;height:18px;">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check01' style="display:inline-block;">
+                    <img src="image/check.png" *ngIf='check01'>
+                </a>
+                &nbsp;
+                <span style="color:#555555;font-size:12px;">不使用设备</span>
+                <input id="time" type="text" class="ipstyle contword" style="display:inline-block; width:50px;height:12px;">
+                <span style="color:#555555;font-size:12px;">分钟后，将设备的灯光效果切换到</span>
+            </div>
+            <a class="titleclr" style="background-image:url(image/lightopt.png);background-size:cover; background-position:center;display:block; width:185px; height:24px;font-size:12px;padding-left:20px; line-height:25px;font-size:12px;margin-top:5px;">关闭所有灯光（省电模式）
+            </a>
+        </div> -->
+    </div>
+    <section>
+        <div style="width:335px; height:35px;position: absolute;opacity: 0.7;z-index: 19;top: 305px;left: 105px;">
+            <a (click)="clickOnitem()" style="width:30px;height:18px;">&nbsp;
+                <img src="image/uncheck.png" *ngIf='!check01' style="width: 12px; display:none;">
+                <img src="image/check.png" *ngIf='check01' style="width: 12px;display:none;">
+            </a>
+            &nbsp;
+            <span style="color:#555555;font-size:12px;">不使用设备</span>
+            <div *ngIf="blockTime" style="position: absolute; top: 0; left: 85px; width:50px;height:15px; background-color:transparent;"></div>
+            <input tabindex=-1 onCONTEXTMENU="window.event.returnValue=true" id="time" type="text" value={{timeValue}} [(ngModel)]="timeValue"
+                (ngModelChange)="timeInput($event)" class="ipstyle contword" style="display:inline-block; width:50px;height:15px;"
+                minlength="1" maxlength="4">
+            <span style="color:#555555;font-size:12px; ">分钟后，将设备的灯光效果切换到</span>
+        </div>
+    </section>
+</section>

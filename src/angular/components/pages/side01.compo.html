@@ -1,0 +1,246 @@
+<!-- <img src="./image/sidep01.png" alt="01" style="width:80%;"> -->
+<!-- <button (click)="testmacrotake()">macrotake</button> -->
+<div style="position: absolute;top:0px; left:0px; width:100%; height:150%;font-style: normal;" class="{{blockcss}}" (click)="console.log('yes')">
+    <div *ngIf="recordready" style="position:absolute; top:300px; left:230px;z-index:30;background:#666666;color:white;width:150px;text-align:center;">
+        <p>请先新增专案名称</p>
+    </div>
+    <div style="position: absolute;width:100%; height:100%; z-index:30;" (click)="clearOptbox()"></div>
+    <section style="position:relative; z-index:30;">
+
+        <section style="position: absolute;left: 100px;top: 70px;width: 200px;height: 100px;z-index: 30;background: black;color: white;padding: 10px;text-align: center;line-height:75px;"
+            *ngIf='recordOff'>录制已达最大值</section>
+
+        <section style="position: absolute;left: 100px;top: 70px;width: 200px;height: 100px;z-index: 30;background: black;color: white;padding: 10px;text-align: center;line-height:75px;"
+            *ngIf='timeOff'>延遅区间为 0 - 327670 毫秒</section>
+
+            <section style="position: absolute;left: 100px;top: 70px;width: 200px;height: 100px;z-index: 30;background: black;color: white;padding: 10px;text-align: center;line-height:75px;"
+            *ngIf='alertcoming'>{{alerttext}}</section>
+        <div id="upper" style="width:100%; height:50px;margin-left:10px;margin-top:10px;">
+            <h3 class="titleclr">宏</h3>
+            <i style="list-style-type:none;float:left;width:100%;">
+                <input tabindex=-1 class="ipstyle" maxlength="10" [(ngModel)]="choosename" (ngModelChange)="proName($event)" (keyup)="macroName($event)"
+                    style="display:block;width:150px; height:25px;float:left;color:white;" *ngIf="showinput">
+                <!-- <input class="ipstyle" [(ngModel)]="editname" (keyup)="editName($event)" style="display:block;width:180px; height:25px;float:left;"
+                *ngIf="editinput"> -->
+                <section *ngIf="!showinput" style="position: relative;">
+                    <div [style.display]="showfn" *ngIf="fnbtn" style="position:absolute;top:0px;z-index:1;left:0px;background-image:url(image/fnopthv.png);background-position:top right;float:left;width:180px;height:25px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;"
+                        (click)="closeOpt()"></div>
+                    <div [style.display]="showfn" *ngIf="!fnbtn" style="position: absolute;top:0px;z-index:1;left:0px;background-image:url(image/fnopt.png);background-position:top right;float:left;width:180px;height:25px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;"
+                        (click)="seemacrolist()" id="ftltopt"> </div>
+                    <div style="position:absolute;top:7px;left:5px;z-index:2;color:white;">{{choosename}}</div>
+
+                    <!-- <div style="position:absolute;top:0px;left:250px;z-index:3;">
+                        <a class="abtn" (click)="add()">
+                            <img src="image/add.png" alt="add">
+                        </a>
+                        <a class="abtn" (click)="edit()">
+                            <img src="image/edit.png" alt="edit">
+                        </a>
+                        <a class="abtn" (click)="delete()">
+                            <img src="image/delet.png" alt="delet">
+                        </a>
+                        <a class="abtn">
+        
+                            <img src="image/more.png" alt="more" (click)="openmorebox();">
+        
+                        </a>
+                    </div> -->
+
+                </section>
+
+
+                <section style="position: relative;">
+
+                    <div style="position:absolute;top:0px;left:200px;z-index:3;">
+                        <a class="abtn" (click)="add()">
+                            <img src="image/add.png" alt="add">
+                        </a>
+                        <a class="abtn" (click)="edit()">
+                            <img src="image/edit.png" alt="edit">
+                        </a>
+                        <a class="abtn" (click)="delete()">
+                            <img src="image/delet.png" alt="delet">
+                        </a>
+                        <a class="abtn">
+
+                            <img src="image/more.png" alt="more" (click)="openmorebox();">
+
+                        </a>
+                    </div>
+
+                </section>
+
+
+
+                <!-- <div id="closeftltbox" (click)="clearOptbox()" *ngIf="ftltbox">
+
+            </div> -->
+                <div id="ftltbox" class="fadeIn" *ngIf="ftltbox" style="top: 50px;left: 10px;width: 180px;">
+                    <a *ngFor="let item of names;let i = index" (click)="callName(i)" style="text-align:center;">{{item}}</a>
+                </div>
+
+
+
+
+                <div id="showmorebox" style="position: absolute;background:black;color:white;z-index: 30;text-align:center;right:80px;top:18px;opacity:0;">
+                    <a style="width:50px;height:20px;display:block" (click)="copyMacro()">复制</a>
+                    <a style="overflow:hidden;width:50px;height:20px;display:block">导入
+                        <input id="myMacro" type="file" style="width:100px; height:50px;position: relative;z-index:15;top:-20px;opacity:0;cursor: pointer;"
+                        />
+                    </a>
+                    <a (click)="SaveFile()" style="width:50px;height:20px;display:block">导出</a>
+                </div>
+            </i>
+        </div>
+
+
+
+        <div>
+            <div style="width:60%; height:400px;float:left;margin-left:10px;">
+                <div *ngIf="macroBorder" style="width: 180px;height:272px;border: 1px solid yellow;animation:macros 2s infinite;position: absolute;top:61px"></div>
+                <div id="writeMacro" (click)="takeNow()" class="ipstyle" style="margin-top:10px; float:left;margin-bottom:10px;width:180px; height:272px;overflow-y:scroll;color:#969696;background:#0A0A0A;">
+                    <!-- <p *ngFor="let item of macrobox">{{item}}</p> -->
+                    <div id="Marcrocontent" (click)="testfun()">
+                        <a *ngFor="let item of macrobox;let i = index" (click)="callitem(i)" class="test">{{item}}</a>
+
+                        <!-- <input type="text" value="{{macrobox[arrindex]}}"> -->
+                        <a id="showeditItem" style="opacity:0;">
+                            <!-- <input tabindex=-1 type="text" maxlength="8" *ngIf="editKeyBoolean" [(ngModel)]="macrobox[arrindex]" (ngModelChange)="editItem($event)"
+                            (keydown)="editItemKeyUp($event)" style="width:100%;height:30px;"> -->
+                            <input id="Pinput" [(ngModel)]="keycodeContent" tabindex=-1 type="text" maxlength="8" *ngIf="pressIf" style="position: relative; z-index:20;width:100%;height:30px;text-align:center"
+                                (keyup)="editTimeremain($event)" (click)="confirmInput()">
+                            <input id="Rinput" [(ngModel)]="keycodeContent" tabindex=-1 type="text" maxlength="8" *ngIf="releaseIf" style="position: relative; z-index:20;width:100%;height:30px;text-align:center"
+                                (keyup)="editTimeremain($event)" (click)="confirmInput()">
+
+
+                            <input id="Tinput" type="text" [(ngModel)]="EnterText" (keyup)="EnterTextInput($event)" onkeydown="javascript: return event.keyCode == 69 ? false : true" style="position: relative; z-index:20;width:100%;height:30px;text-align:center">
+                            <input class="disabled" [(ngModel)]="Timevalue" tabindex=-1 type="number" maxlength="6" *ngIf="timeIf" style="position: relative; z-index:20;width:100%;height:30px;text-align:center;opacity:0;"
+                                (keyup)="editTimeremain($event)" onkeydown="javascript: return event.keyCode == 69 ? false : true">
+
+                            <input tabindex=-1 type="text" maxlength="6" *ngIf="!editKeyBoolean" [(ngModel)]="keycodeContent" style="width:100%;height:30px;"
+                                (keydown)="confirm($event)">
+                        </a>
+                    </div>
+                </div>
+                <input tabindex=-1 type="text" (keydown)="keydownValue($event)" (keyup)="keyupValue($event)" style="position:absolute; top:0px; left:0px;opacity:0;"
+                    id="myAnchor" (blur)="whenAnchorBlur()">
+                <!-- <button (click)="MacrosetIn()">test macro</button> -->
+                <div style="float:left;margin-top:10px">
+                    <div id="btnarea">
+                        <a class="standbtn" (mouseenter)="selectDisplay(0)" (mouseleave)="selectNone()">
+                            <img src="image/uo.png" alt="up" (click)="moveUp()">
+                        </a>
+                        <a class="standbtn" (mouseenter)="selectDisplay(1)" (mouseleave)="selectNone()">
+                            <img src="image/down.png" alt="down" (click)="moveDown()">
+                        </a>
+                        <a class="standbtn" (mouseenter)="selectDisplay(2)" (mouseleave)="selectNone()">
+                            <img src="image/add.png" alt="add" (click)="additem()">
+                        </a>
+                        <a class="standbtn" (mouseenter)="selectDisplay(3)" (mouseleave)="selectNone()">
+                            <img src="image/peb.png" alt="peb" (click)="editItemContent()">
+                        </a>
+                        <a class="standbtn" (mouseenter)="selectDisplay(4)" (mouseleave)="selectNone()">
+                            <img src="image/stop.png" alt="stop" (click)="deletAll()">
+                        </a>
+                        <a class="standbtn" (mouseenter)="selectDisplay(5)" (mouseleave)="selectNone()">
+                            <img src="image/delet.png" alt="delet" (click)="deletItem()">
+                        </a>
+                        <a class="standbtn" (mouseenter)="selectDisplay(6)" (mouseleave)="selectNone()">
+                            <img src="image/copy.png" alt="copy" (click)=" CopyItem()">
+                        </a>
+                        <a class="standbtn" (mouseenter)="selectDisplay(7)" (mouseleave)="selectNone()">
+                            <img src="image/paste.png" alt="paste" (click)="PasteItem()">
+                        </a>
+                        <a class="standbtn" (mouseenter)="selectDisplay(8)" (mouseleave)="selectNone()">
+                            <img src="image/clock.png" alt="clock" (click)="timetoZero()">
+                        </a>
+                    </div>
+                    <a style="display:block;margin:0px;padding:0px;border:0px;width:25px; height:48px;background:#E9004C;border:1px solid #555555;color:#555555;padding:2px;"
+                        (mouseenter)="selectDisplay(9)" (mouseleave)="selectNone()">
+                        <img class="recordbtn" src="image/record.png" style="max-width:100%;height:auto;text-align: center;" alt="record" *ngIf="record"
+                            (click)="getfocus()">
+                        <img src="image/closerecord.png" style="max-width:100%;height:auto;text-align: center;" alt="closerecord" *ngIf="!record"
+                            (click)="blurfocus()">
+                    </a>
+                </div>
+            </div>
+            <div id="selectName">
+                <div id="selectUp">
+                    <span style="color: white;position: absolute;left: 14px;top: 4px;font-size: 11px;word-spacing: 1px;">上移</span>
+                    <img src="image/select.png" style="width: 50px; height: 20px;">
+                </div>
+                <div id="selectDown">
+                    <span style="color: white;position: absolute;left: 14px;top: 4px;font-size: 11px;word-spacing: 1px;">下移</span>
+                    <img src="image/select.png" style="width: 50px; height: 20px;">
+                </div>
+                <div id="selectAdd">
+                    <span style="color: white;position: absolute;left: 14px;top: 4px;font-size: 11px;word-spacing: 1px;">插入</span>
+                    <img src="image/select.png" style="width: 50px; height: 20px;">
+                </div>
+                <div id="selectEdit">
+                    <span style="color: white;position: absolute;left: 14px;top: 4px;font-size: 11px;word-spacing: 1px;">编辑</span>
+                    <img src="image/select.png" style="width: 50px; height: 20px;">
+                </div>
+                <div id="selectDeleteAll">
+                    <span style="color: white;position: absolute;left: 14px;top: 4px;font-size: 11px;word-spacing: 1px;">刪除所有事件</span>
+                    <img src="image/select.png" style="width: 100px; height: 20px;">
+                </div>
+                <div id="selectDeleteItem">
+                    <span style="color: white;position: absolute;left: 14px;top: 4px;font-size: 11px;word-spacing: 1px;">刪除已选事件</span>
+                    <img src="image/select.png" style="width: 100px; height: 20px;">
+                </div>
+                <div id="selectCopy">
+                    <span style="color: white;position: absolute;left: 14px;top: 4px;font-size: 11px;word-spacing: 1px;">复制已选</span>
+                    <img src="image/select.png" style="width: 75px; height: 20px;">
+                </div>
+                <div id="selectPaste">
+                    <span style="color: white;position: absolute;left: 14px;top: 4px;font-size: 11px;word-spacing: 1px;">粘贴已选</span>
+                    <img src="image/select.png" style="width: 75px; height: 20px;">
+                </div>
+                <div id="selectDeleteAllDelay">
+                    <span style="color: white;position: absolute;left: 14px;top: 4px;font-size: 11px;word-spacing: 1px;">删除所有延迟</span>
+                    <img src="image/select.png" style="width: 100px; height: 20px;">
+                </div>
+                <div id="selectMacro">
+                    <span style="color: white;position: absolute;left: 14px;top: 4px;font-size: 11px;word-spacing: 1px;">录制</span>
+                    <img src="image/select.png" style="width: 50px; height: 20px;">
+                </div>
+            </div>
+
+
+            <div>
+                <!--右側-->
+                <div style="display:block; float:right;margin-top:45px;margin-right:0px;">
+                    <!-- <input tabindex=-1 type="text" [(ngModel)]="setdistantTime" (ngModelChange)="distantT($event)" class="abtn" style="width:60px; height:25px"> -->
+
+                    <!-- <div *ngIf="contBorder" style="width: 60px;height: 25px;position: absolute;border: 1px solid yellow;animation:macros 2s infinite;top: 95px; left: 361px;text-align: center;"></div> -->
+                    <input id="contInput" tabindex=-1 type="text" min="0" max="327670" minlength="1" maxlength="6" [(ngModel)]="setdistantTime"
+                        (ngModelChange)="distantT($event)" value="{{setTempdT}}" style="width:60px; height:25px;" class="contabtn"
+                        (click)="contOn()">
+                    <span class="contword">毫秒</span>
+                </div>
+
+                <div style="float:left;width:100px; height:auto;margin-left:-30px;margin-top:10px;">
+                    <h3 class="titleclr">&nbsp;延迟</h3>
+                    <a class="contword" style="display:block; width:100px;height:auto;margin-top:5px;cursor:pointer;" (click)="clickOnitem(0)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check01'>
+                        <img src="image/check.png" *ngIf='check01'>&nbsp;记录延迟</a>
+                    <a class="contword" style="display:block; width:100px;height:auto;margin-top:5px;cursor:pointer;" (click)="clickOnitem(1)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check02'>
+                        <img src="image/check.png" *ngIf='check02'>&nbsp;默认延迟</a>
+
+                    <a class="contword" style="display:block; width:100px;height:auto;margin-top:5px;cursor:pointer;" (click)="clickOnitem(2)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check03'>
+                        <img src="image/check.png" *ngIf='check03'>&nbsp;无延迟</a>
+                </div>
+            </div>
+        </div>
+        <input tabindex=-1 type="text" id="keycode" (keydown)="keycodeGet($event)" style="opacity:0;">
+        <!-- <button (click)="checkBerforeSend()">test send</button> -->
+    </section>
+    <div id="confirmarea">
+        <a id="na" (click)="cancelPage()">取消</a>
+        <!-- 由下往上傳值false -->
+        <a id="yes" (click)="DecidetoSave()">保存</a>
+    </div>
+</div>

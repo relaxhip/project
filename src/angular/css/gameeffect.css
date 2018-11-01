@@ -1,0 +1,23 @@
+.gameYellow {
+    background-color: rgb(255, 255, 0);
+}
+
+.gameRed {
+    background-color: rgb(255, 0, 0);
+}
+
+.gameBlue {
+    background-color: rgb(0, 200, 255);
+}
+
+.gameGreen {
+    background-color: rgb(0, 255, 0);
+}
+
+.gameWhite {
+    background-color: rgb(255, 255, 255);
+}
+
+.gameOrange {
+    background-color: rgb(255, 126, 0);
+}

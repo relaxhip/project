@@ -1,0 +1,1627 @@
+.att1 {
+    animation-name: rainbow1;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.att2 {
+    animation-name: rainbow2;
+    animation-duration: 1950ms;
+    animation-delay: 50ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.att3 {
+    animation-name: rainbow3;
+    animation-duration: 1900ms;
+    animation-delay: 100ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.att4 {
+    animation-name: rainbow4;
+    animation-duration: 1850ms;
+    animation-delay: 150ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.att5 {
+    animation-name: rainbow5;
+    animation-duration: 1800ms;
+    animation-delay: 200ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.att6 {
+    animation-name: rainbow6;
+    animation-duration: 1750ms;
+    animation-delay: 250ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.att7 {
+    animation-name: rainbow7;
+    animation-duration: 1700ms;
+    animation-delay: 300ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.att8 {
+    animation-name: rainbow8;
+    animation-duration: 1650ms;
+    animation-delay: 350ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.att9 {
+    animation-name: rainbow9;
+    animation-duration: 1600ms;
+    animation-delay: 400ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.att10 {
+    animation-name: rainbow10;
+    animation-duration: 1550ms;
+    animation-delay: 450ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.att11 {
+    animation-name: rainbow11;
+    animation-duration: 1500ms;
+    animation-delay: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+}
+
+.bar1 {
+    background-color: #ff0000;
+}
+
+.bar2 {
+    background-color: #ff7d00;
+}
+
+.bar3 {
+    background-color: #ffff00;
+}
+
+.bar4 {
+    background-color: #7dff00;
+}
+
+.bar5 {
+    background-color: #00ff00;
+}
+
+.bar6 {
+    background-color: #00ff7f;
+}
+
+.bar7 {
+    background-color: #00b9ff;
+}
+
+.bar8 {
+    background-color: #0064ff;
+}
+
+.bar9 {
+    background-color: #0000ff;
+}
+
+.bar10 {
+    background-color: #a200ff;
+}
+
+.red {
+    background-color: red;
+}
+
+@keyframes rainbow1 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #ff0000;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rainbow2 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #ff7d00;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rainbow3 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #ffff00;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rainbow4 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #7dff00;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rainbow5 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #00ff00;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rainbow6 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #00ff7f;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rainbow7 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #00b9ff;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rainbow8 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #0064ff;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rainbow9 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #0000ff;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rainbow10 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #8000ff;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes rainbow11 {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #a200ff;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+
+#esc_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 191px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f1_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 237px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f2_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 261px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f3_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 284px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f4_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 307px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f5_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 341px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f6_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 365px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f7_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 388px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f8_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 411px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f9_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 445px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f10_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 468px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f11_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 491px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f12_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 514px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#print_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 545px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#scroll_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 568px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#pause_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 17px;
+    left: 591px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#perid_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 192px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n1_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 216px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n2_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 239px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n3_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 261px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n4_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 284px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n5_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 307px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n6_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 329px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n7_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 353px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n8_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 376px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n9_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 400px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n0_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 423px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#minus_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 446px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#plus_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 468px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#bsp_attlight {
+    width: 40px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 492px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#insert_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 547px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#home_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 570px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#pup_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 593px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#numlock_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 623px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#numdrawn_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 646px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#numtimes_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 669px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#numminus_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 53px;
+    left: 692px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#tab_attlight {
+    width: 30px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 192px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#q_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 228px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#w_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 250px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#e_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 273px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#r_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 296px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#t_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 319px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#y_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 341px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#u_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 365px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#i_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 388px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#o_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 411px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#p_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 435px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#lqu_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 458px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#rqu_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 481px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#drawn_attlight {
+    width: 28px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 504px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#delete_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 547px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#end_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 570px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#pdown_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 593px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#num7_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 624px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#num8_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 646px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#num9_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 77px;
+    left: 669px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#numplus_attlight {
+    width: 16px;
+    height: 40px;
+    position: absolute;
+    top: 77px;
+    left: 692px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#caps_attlight {
+    width: 35px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 192px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#a_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 232px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#s_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 256px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#d_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 279px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#f_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 301px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#g_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 325px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#h_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 348px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#j_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 371px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#k_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 394px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#l_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 417px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#sem_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 441px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#quo_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 464px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#enter_attlight {
+    width: 43px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 488px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#num4_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 624px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#num5_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 646px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#num6_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 100px;
+    left: 669px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#lshift_attlight {
+    width: 45px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 192px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#z_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 246px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#x_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 268px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#c_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 291px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#v_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 314px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#b_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 338px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#n_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 361px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#m_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 384px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#comma_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 407px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#dot_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 430px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#qmark_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 451px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#rshift_attlight {
+    width: 55px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 476px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#up_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 570px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#num1_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 624px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#num2_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 646px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#num3_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 123px;
+    left: 669px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#lctrl_attlight {
+    width: 30px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 192px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#win_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 228px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#lalt_attlight {
+    width: 26px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 251px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#space_attlight {
+    width: 130px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 285px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#ralt_attlight {
+    width: 28px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 423px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#fn_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 457px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#book_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 481px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#rctrl_attlight {
+    width: 25px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 505px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#left_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 547px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#down_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 570px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#right_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 593px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#num0_attlight {
+    width: 38px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 624px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#numdot_attlight {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 146px;
+    left: 669px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#numenter_attlight {
+    width: 16px;
+    height: 40px;
+    position: absolute;
+    top: 123px;
+    left: 692px;
+    opacity: 0.5;
+    z-index: 9;
+    border-radius: 1px;
+}
+
+#Upside1_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0px;
+    left: 210px;
+}
+
+#Upside2_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 232.5px;
+}
+
+#Upside3_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 255.2px;
+}
+
+#Upside4_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 277.9px;
+}
+
+#Upside5_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 300.5px;
+}
+
+#Upside6_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 323.2px;
+}
+
+#Upside7_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 345.9px;
+}
+
+#Upside8_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 368.5px;
+}
+
+#Upside9_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 391.3px;
+}
+
+#Upside10_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 413px;
+}
+
+#Upside11_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 465.2px;
+}
+
+#Upside12_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 488px;
+}
+
+#Upside13_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 510px;
+}
+
+#Upside14_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 532.9px;
+}
+
+#Upside15_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 555.6px;
+}
+
+#Upside16_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 578.3px;
+}
+
+#Upside17_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 600.9px;
+}
+
+#Upside18_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 623.6px;
+}
+
+#Upside19_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 646.3px;
+}
+
+#Upside20_attlight {
+    width: 22.5px;
+    height: 10px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: 0;
+    left: 668.9px;
+}
+
+#logo1_attlight {
+    width: 10px;
+    height: 26px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: -20px;
+    left: 440.5px;
+}
+
+#logo2_attlight {
+    width: 10px;
+    height: 26px;
+    position: absolute;
+    opacity: 0.5;
+    z-index: -1;
+    top: -20px;
+    left: 450.5px;
+}

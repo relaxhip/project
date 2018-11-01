@@ -1,0 +1,48 @@
+.pure_red {
+    animation-name: pure;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.pure_orange {
+    background-color: #FF3F00;
+}
+
+.pure_yellow {
+    background-color: #FFBF00;
+
+}
+
+.pure_green {
+    background-color: #7FFF00;
+
+}
+
+.pure_lightblue {
+    background-color: #00FFFF;
+
+}
+
+.pure_blue {
+    background-color: #007FFF;
+
+}
+
+.pure_darkblue {
+    background-color: #6400FF;
+
+}
+
+.pure_purple {
+    background-color: #AF26FF;
+
+}
+
+@keyframes pure{
+    0%{
+        background-color: #E9004C
+    }
+    100%{
+        background-color: #E9004C
+    }
+}

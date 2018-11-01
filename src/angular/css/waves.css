@@ -1,0 +1,1760 @@
+#esc_waves,
+#esc_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 191px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f1_waves,
+#f1_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 237px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f2_waves,
+#f2_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 261px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f3_waves,
+#f3_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 284px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f4_waves,
+#f4_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 307px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f5_waves,
+#f5_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 341px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f6_waves,
+#f6_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 365px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f7_waves,
+#f7_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 388px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f8_waves,
+#f8_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 411px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f9_waves,
+#f9_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 445px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f10_waves,
+#f10_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 468px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f11_waves,
+#f11_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 491px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f12_waves,
+#f12_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 514px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#print_waves,
+#print_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 545px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#scroll_waves,
+#scroll_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 568px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pause_waves,
+#pause_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 591px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#perid_waves,
+#perid_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n1_waves,
+#n1_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 216px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n2_waves,
+#n2_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 239px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n3_waves,
+#n3_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 261px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n4_waves,
+#n4_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 284px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n5_waves,
+#n5_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 307px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n6_waves,
+#n6_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 329px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n7_waves,
+#n7_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 353px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n8_waves,
+#n8_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 376px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n9_waves,
+#n9_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 400px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n0_waves,
+#n0_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 423px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#minus_waves,
+#minus_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 446px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#plus_waves,
+#plus_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 468px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#bsp_waves,
+#bsp_waves2
+	{
+	width: 40px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 492px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#insert_waves,
+#insert_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#home_waves,
+#home_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pup_waves,
+#pup_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numlock_waves,
+#numlock_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 623px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numdrawn_waves,
+#numdrawn_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numtimes_waves,
+#numtimes_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numminus_waves,
+#numminus_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#tab_waves,
+#tab_waves2
+	{
+	width: 30px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#q_waves,
+#q_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 228px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#w_waves,
+#w_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 250px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#e_waves,
+#e_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 273px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#r_waves,
+#r_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 296px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#t_waves,
+#t_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 319px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#y_waves,
+#y_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 341px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#u_waves,
+#u_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 365px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#i_waves,
+#i_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 388px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#o_waves,
+#o_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 411px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#p_waves,
+#p_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 435px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lqu_waves,
+#lqu_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 458px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rqu_waves,
+#rqu_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 481px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#drawn_waves,
+#drawn_waves2
+	{
+	width: 28px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 504px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#delete_waves,
+#delete_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#end_waves,
+#end_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pdown,
+#pdown_waves,
+#pdown_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num7,
+#num7_waves,
+#num7_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num8,
+#num8_waves,
+#num8_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num9,
+#num9_waves,
+#num9_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numplus_waves,
+#numplus_waves2
+	{
+	width: 16px;
+	height: 40px;
+	position: absolute;
+	top: 77px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#caps_waves,
+#caps_waves2
+	{
+	width: 35px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#a_waves,
+#a_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 232px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#s_waves,
+#s_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 256px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#d_waves,
+#d_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 279px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f_waves,
+#f_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 301px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#g_waves,
+#g_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 325px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#h_waves,
+#h_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 348px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#j_waves,
+#j_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 371px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#k_waves,
+#k_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 394px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#l_waves,
+#l_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 417px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#sem_waves,
+#sem_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 441px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#quo_waves,
+#quo_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 464px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#enter_waves,
+#enter_waves2
+	{
+	width: 43px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 488px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num4_waves,
+#num4_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num5_waves,
+#num5_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num6_waves,
+#num6_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lshift_waves,
+#lshift_waves2
+	{
+	width: 45px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#z_waves,
+#z_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 246px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#x_waves,
+#x_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 268px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#c_waves,
+#c_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 291px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#v_waves,
+#v_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 314px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#b_waves,
+#b_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 338px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n_waves,
+#n_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 361px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#m_waves,
+#m_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 384px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#comma_waves,
+#comma_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 407px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#dot_waves,
+#dot_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 430px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#qmark_waves,
+#qmark_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 451px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rshift_waves,
+#rshift_waves2
+	{
+	width: 55px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 476px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#up_waves,
+#up_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num1_waves,
+#num1_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num2_waves,
+#num2_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num3_waves,
+#num3_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lctrl_waves,
+#lctrl_waves2 {
+	width: 30px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#win_waves,
+#win_waves2 {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 228px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lalt_waves,
+#lalt_waves2 {
+	width: 26px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 251px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#space_waves,
+#space_waves2
+	{
+	width: 130px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 285px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#ralt_waves,
+#ralt_waves2
+	{
+	width: 28px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 423px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#fn_waves,
+#fn_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 457px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#book_waves,
+#book_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 481px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rctrl_waves,
+#rctrl_waves2
+	{
+	width: 25px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 505px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#left_waves,
+#left_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#down_waves,
+#down_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#right_waves,
+#right_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num0_waves,
+#num0_waves2
+	{
+	width: 38px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numdot_waves,
+#numdot_waves2
+	{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numenter_waves,
+#numenter_waves2
+	{
+	width: 16px;
+	height: 40px;
+	position: absolute;
+	top: 123px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+/*特效區*/
+
+.waves1_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+}
+
+.waves2_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+	animation-delay: 70ms;
+}
+
+.waves3_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+	animation-delay: 140ms;
+}
+
+.waves4_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+	animation-delay: 210ms;
+}
+
+.waves5_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+	animation-delay: 280ms;
+}
+
+.waves6_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+	animation-delay: 350ms;
+}
+
+.waves7_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+	animation-delay: 420ms;
+}
+
+.waves8_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+	animation-delay: 490ms;
+}
+
+.waves9_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+	animation-delay: 560ms;
+}
+
+.waves10_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+	animation-delay: 630ms;
+}
+
+.waves11_1_med {
+	animation-name: waves1;
+	animation-duration: 3s;
+	animation-delay: 700ms;
+}
+
+.waves1_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+}
+
+.waves2_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+	animation-delay: 70ms;
+}
+
+.waves3_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+	animation-delay: 140ms;
+}
+
+.waves4_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+	animation-delay: 210ms;
+}
+
+.waves5_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+	animation-delay: 280ms;
+}
+
+.waves6_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+	animation-delay: 350ms;
+}
+
+.waves7_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+	animation-delay: 420ms;
+}
+
+.waves8_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+	animation-delay: 490ms;
+}
+
+.waves9_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+	animation-delay: 560ms;
+}
+
+.waves10_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+	animation-delay: 630ms;
+}
+
+.waves11_2_med {
+	animation-name: waves2;
+	animation-duration: 3s;
+	animation-delay: 700ms;
+}
+.waves1_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+}
+
+.waves2_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+	animation-delay: 50ms;
+}
+
+.waves3_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+	animation-delay: 100ms;
+}
+
+.waves4_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+	animation-delay: 150ms;
+}
+
+.waves5_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+	animation-delay: 200ms;
+}
+
+.waves6_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+	animation-delay: 250ms;
+}
+
+.waves7_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+	animation-delay: 300ms;
+}
+
+.waves8_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+	animation-delay: 350ms;
+}
+
+.waves9_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+	animation-delay: 400ms;
+}
+
+.waves10_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+	animation-delay: 450ms;
+}
+
+.waves11_1_high {
+	animation-name: waves1;
+	animation-duration: 1s;
+	animation-delay: 500ms;
+}
+
+.waves1_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+}
+
+.waves2_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+	animation-delay: 50ms;
+}
+
+.waves3_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+	animation-delay: 100ms;
+}
+
+.waves4_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+	animation-delay: 150ms;
+}
+
+.waves5_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+	animation-delay: 200ms;
+}
+
+.waves6_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+	animation-delay: 250ms;
+}
+
+.waves7_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+	animation-delay: 300ms;
+}
+
+.waves8_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+	animation-delay: 350ms;
+}
+
+.waves9_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+	animation-delay: 400ms;
+}
+
+.waves10_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+	animation-delay: 450ms;
+}
+
+.waves11_2_high {
+	animation-name: waves2;
+	animation-duration: 1s;
+	animation-delay: 500ms;
+}
+.waves1_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+}
+
+.waves2_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+	animation-delay: 100ms;
+}
+
+.waves3_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+	animation-delay: 200ms;
+}
+
+.waves4_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+	animation-delay: 300ms;
+}
+
+.waves5_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+	animation-delay: 400ms;
+}
+
+.waves6_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+	animation-delay: 500ms;
+}
+
+.waves7_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+	animation-delay: 600ms;
+}
+
+.waves8_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+	animation-delay: 700ms;
+}
+
+.waves9_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+	animation-delay: 800ms;
+}
+
+.waves10_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+	animation-delay: 900ms;
+}
+
+.waves11_1_slow {
+	animation-name: waves1;
+	animation-duration: 5s;
+	animation-delay: 1000ms;
+}
+
+.waves1_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+}
+
+.waves2_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+	animation-delay: 100ms;
+}
+
+.waves3_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+	animation-delay: 200ms;
+}
+
+.waves4_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+	animation-delay: 300ms;
+}
+
+.waves5_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+	animation-delay: 400ms;
+}
+
+.waves6_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+	animation-delay: 500ms;
+}
+
+.waves7_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+	animation-delay: 600ms;
+}
+
+.waves8_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+	animation-delay: 700ms;
+}
+
+.waves9_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+	animation-delay: 800ms;
+}
+
+.waves10_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+	animation-delay: 900ms;
+}
+
+.waves11_2_slow {
+	animation-name: waves2;
+	animation-duration: 5s;
+	animation-delay: 1000ms;
+}
+
+@keyframes waves1 {
+	0% {
+		background-color: rgb(255, 0, 0);
+	}
+	100% {
+		background-color: transparent;
+	}
+}
+
+@keyframes waves2 {
+	0% {
+		background-color: rgb(0, 0, 255);
+	}
+	100% {
+		background-color: transparent;
+	}
+}

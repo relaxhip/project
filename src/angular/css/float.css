@@ -1,0 +1,1187 @@
+#esc_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 191px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+#f1_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 237px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f2_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 261px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f3_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 284px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f4_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 307px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f5_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 341px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f6_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 365px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f7_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 388px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f8_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 411px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f9_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 445px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f10_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 468px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f11_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 491px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f12_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 514px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+#print_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 545px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#scroll_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 568px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+#pause_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 591px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#perid_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n1_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 216px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n2_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 239px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n3_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 261px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n4_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 284px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n5_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 307px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n6_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 329px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n7_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 353px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n8_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 376px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n9_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 400px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n0_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 423px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#minus_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 446px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#plus_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 468px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#bsp_float {
+	width: 40px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 492px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#insert_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#home_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pup_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numlock_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 623px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numdrawn_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numtimes_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numminus_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#tab_float {
+	width: 30px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+#q_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 228px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#w_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 250px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#e_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 273px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#r_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 296px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#t_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 319px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#y_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 341px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#u_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 365px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#i_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 388px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#o_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 411px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#p_float{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 435px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lqu_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 458px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rqu_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 481px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#drawn_float {
+	width: 28px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 504px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#delete_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#end_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pdown_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num7_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num8_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num9_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+#numplus_float {
+	width: 16px;
+	height: 40px;
+	position: absolute;
+	top: 77px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#caps_float {
+	width: 35px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#a_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 232px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#s_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 256px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#d_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 279px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 301px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+#g_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 325px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#h_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 348px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#j_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 371px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#k_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 394px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#l_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 417px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#sem_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 441px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#quo_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 464px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#enter_float {
+	width: 43px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 488px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num4_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+#num5_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num6_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lshift_float {
+	width: 45px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#z_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 246px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#x_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 268px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#c_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 291px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#v_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 314px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#b_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 338px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 361px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#m_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 384px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#comma_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 407px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#dot_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 430px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#qmark_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 451px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rshift_float {
+	width: 55px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 476px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#up_float  {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num1_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num2_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+#num3_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lctrl_float {
+	width: 30px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#win_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 228px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lalt_float {
+	width: 26px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 251px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#space_float {
+	width: 130px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 285px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#ralt_float {
+	width: 28px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 423px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#fn_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 457px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#book_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 481px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rctrl_float {
+	width: 25px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 505px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#left_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#down_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#right_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num0_float {
+	width: 38px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numdot_float {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numenter_float {
+	width: 16px;
+	height: 40px;
+	position: absolute;
+	top: 123px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+
+
+
+
+
+
+
+
+/*特效區*/
+
+.float1_med {
+    animation-name: float1;
+	animation-duration: 1.5s;
+}
+.float2_med {
+    animation-name: float2;
+	animation-duration: 1.5s;
+}
+.float1_high {
+    animation-name: float1;
+	animation-duration: 0.5s;
+}
+.float2_high {
+    animation-name: float2;
+	animation-duration: 0.5s;
+}
+.float1_slow {
+    animation-name: float1;
+	animation-duration: 3s;
+}
+.float2_slow {
+    animation-name: float2;
+	animation-duration: 3s;
+}
+
+@keyframes float1 {
+    0% {
+        background-color: rgb(255, 0, 0);
+    }
+    100% {
+        background-color: rgb(255, 255, 0);
+    }
+}
+@keyframes float2 {
+    0% {
+        background-color: rgb(0, 0, 255);
+    }
+    100% {
+        background-color: rgb(255, 255, 0);
+    }
+}

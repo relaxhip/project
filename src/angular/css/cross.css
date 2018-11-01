@@ -1,0 +1,1195 @@
+#esc_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 191px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f1_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 237px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f2_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 261px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f3_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 284px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f4_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 307px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f5_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 341px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f6_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 365px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f7_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 388px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f8_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 411px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f9_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 445px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f10_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 468px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f11_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 491px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f12_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 514px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#print_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 545px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#scroll_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 568px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pause_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 591px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#perid_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n1_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 216px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n2_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 239px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n3_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 261px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n4_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 284px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n5_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 307px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n6_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 329px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n7_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 353px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n8_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 376px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n9_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 400px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n0_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 423px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#minus_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 446px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#plus_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 468px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#bsp_cross {
+	width: 40px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 492px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#insert_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#home_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pup_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numlock_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 623px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numdrawn_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numtimes_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numminus_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#tab_cross {
+	width: 30px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#q_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 228px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#w_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 250px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#e_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 273px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#r_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 296px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#t_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 319px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#y_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 341px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#u_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 365px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#i_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 388px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#o_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 411px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#p_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 435px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lqu_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 458px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rqu_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 481px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#drawn_cross {
+	width: 28px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 504px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#delete_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#end_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pdown_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num7_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num8_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num9_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numplus_cross {
+	width: 16px;
+	height: 40px;
+	position: absolute;
+	top: 77px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#caps_cross {
+	width: 35px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#a_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 232px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#s_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 256px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#d_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 279px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 301px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#g_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 325px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#h_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 348px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#j_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 371px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#k_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 394px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#l_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 417px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#sem_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 441px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#quo_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 464px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#enter_cross {
+	width: 43px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 488px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num4_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num5_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num6_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lshift_cross {
+	width: 45px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#z_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 246px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#x_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 268px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#c_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 291px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#v_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 314px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#b_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 338px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 361px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#m_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 384px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#comma_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 407px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#dot_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 430px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#qmark_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 451px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rshift_cross {
+	width: 55px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 476px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#up_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num1_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num2_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num3_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lctrl_cross {
+	width: 30px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#win_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 228px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lalt_cross {
+	width: 26px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 251px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#space_cross {
+	width: 130px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 285px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#ralt_cross {
+	width: 28px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 423px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#fn_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 457px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#book_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 481px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rctrl_cross {
+	width: 25px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 505px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#left_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#down_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#right_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num0_cross {
+	width: 38px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numdot_cross {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numenter_cross {
+	width: 16px;
+	height: 40px;
+	position: absolute;
+	top: 123px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+/*特效區*/
+
+.cross1_med {
+	animation-name: cross1;
+	animation-duration: 2s;
+}
+
+.cross2_med {
+	animation-name: cross2;
+	animation-duration: 2s;
+}
+
+.cross1_high {
+	animation-name: cross1;
+	animation-duration: 0.5s;
+}
+
+.cross2_high {
+	animation-name: cross2;
+	animation-duration: 0.5s;
+}
+
+.cross1_slow {
+	animation-name: cross1;
+	animation-duration: 5s;
+}
+
+.cross2_slow {
+	animation-name: cross2;
+	animation-duration: 5s;
+}
+
+
+
+@keyframes cross1 {
+	0% {
+		background-color: rgb(255, 0, 0);
+	}
+	100% {
+		background-color: rgb(255, 0, 0);
+	}
+}
+
+@keyframes cross2 {
+	0% {
+		background-color: rgb(0, 0, 255);
+	}
+	100% {
+		background-color: rgb(255, 0, 0);
+	}
+}

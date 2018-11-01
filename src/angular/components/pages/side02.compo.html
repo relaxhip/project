@@ -1,0 +1,33 @@
+<!-- <img src="./image/sidep02.png" alt="02" style="width:80%;"> -->
+<div style="margin-left:10px; margin-top:10px;padding:5px;">
+
+      <!-- <h3 class="lightcolor">名称</h3>
+      <br>
+      <input tabindex=-1 class="ipstyle" style="width:180px; height:30px;"> -->
+      <br>
+      <br>
+      <div>
+            <div style="float:left">
+                  <h3 class="lightcolor">输入文字</h3>
+                  <br>
+                  <textarea id="textarea" cols="40" rows="10" id="clip" class="ipstyle" [(ngModel)]="textcontent" style="width:180px;height:150px;">
+                        请在此输入文字
+                  </textarea>
+                  <br>
+                  <a style=" width:50%;height:30px;background:#555555;float: right;color: white;text-align: center;line-height: 27px;" (click)="cleartextbox()">清除</a>
+            </div>
+
+            <!-- <div style="float:left; margin-left:5px;">
+                  <h3 class="lightcolor">字符之间延迟</h3>
+                  <br>
+
+                  <input tabindex=-1 type="text" style="width:40px; height:20px;background:#0F0F0F;border:1px solid #555555;color:#555555;padding:2px;">
+                  <p style="color:white;display:block; float:right;">毫秒</p>
+            </div> -->
+      </div>
+      <div id="confirmarea" style="bottom:-100px;">
+            <a id="na" (click)="cancelPage()">取消</a>
+            <a id="yes" (click)="keywasSet()">保存</a>
+            <!-- <button (click)="testpaste()">test</button> -->
+      </div>
+</div>

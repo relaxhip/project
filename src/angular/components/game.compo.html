@@ -1,0 +1,44 @@
+<div id="gamebox">
+    <p style="color:#969696">游戏模式</p>
+    <div id="gamecontent">
+        <div style="position: absolute;top: 55px;left: 30px;">
+            <div>
+                <a (click)="select1()">
+                    <img src="image/uncheck.png" *ngIf='!check01' style="width: 12px; display:inline-block;">
+                    <img src="image/check.png" *ngIf='check01' style="width: 12px;">
+                </a> &nbsp;
+                <span style="color: gray;font-size: 11px;text-align: center;">禁用 Alt + Tab</span>
+
+            </div>
+            <br>
+            <div>
+                <a (click)="select2()">
+                    <img src="image/uncheck.png" *ngIf='!check02' style="width: 12px; display:inline-block;">
+                    <img src="image/check.png" *ngIf='check02' style="width: 12px;">
+                </a>&nbsp;
+                <span style="color: gray;font-size: 11px;text-align: center;">禁用 Alt + F4</span>
+            </div>
+            <br>
+            <div>
+                <a (click)="select3()">
+                    <img src="image/uncheck.png" *ngIf='!check03' style="width: 12px; display:inline-block;">
+                    <img src="image/check.png" *ngIf='check03' style="width: 12px;">
+                </a> &nbsp;
+                <span style="color: gray;font-size: 11px;text-align: center;">禁用 Shift + Tab</span>
+            </div>
+            <br>
+            <div>
+                <!-- <a (click)="select4()">
+                    <img src="image/uncheck.png" *ngIf='!check04' style="width: 12px; display:inline-block;">
+                    <img src="image/check.png" *ngIf='check04' style="width: 12px;">
+                </a> &nbsp; -->
+                <!-- <span style="color: gray;font-size: 11px;text-align: center;">自定义禁用&nbsp;
+                    <input type="text" style="width: 200px;height: 15px" placeholder="输入按鍵 (可能包括Shift、Ctrl、Alt)">&nbsp;&nbsp;
+                    <img src="image/write.png">&nbsp;&nbsp;
+                    <img src="image/save.png">&nbsp;&nbsp;
+                    <img src="image/delete.png">
+                </span> -->
+            </div>
+        </div>
+    </div>
+</div>

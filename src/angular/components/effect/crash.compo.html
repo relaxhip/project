@@ -1,0 +1,891 @@
+<!-- <div style="position: absolute;z-index: 19;width: 100%;height: 200%;top: 0px;left: 0px;cursor: pointer;" (mouseenter)='goIn()'
+    *ngIf="letsgoIn">
+</div>
+<div style="position: absolute;z-index:21;width:210px;height:30px;top:230px;left:130px;cursor:pointer;" (mouseenter)='goOut()'
+    *ngIf="letsgoout">
+</div> -->
+<section class={{blockcss}} (click)="timeBlur()">
+    <!-- <section style="position: absolute;
+		left: 347px;
+		top: 70px;
+		width: 200px;
+		height: 130px;
+		z-index: 30;
+		background: rgba(0,0,0,0.6);
+		color: white;
+		padding: 10px;
+		text-align: center;
+        line-height:75px;"
+        *ngIf='loading'>写入中
+        <br>
+        <img src="image/loading_circles.gif" style="position:absolute;width: 30px;height: 30px;top:75px;left:85px;">
+    </section> -->
+    <section style="position: absolute;
+		left: 347px;
+		top: 70px;
+		width: 200px;
+		height: 100px;
+		z-index: 30;
+		background: black;
+		color: white;
+		padding: 10px;
+		text-align: center;
+		line-height:75px;"
+        *ngIf='timewarn'>请输入 1 ~ 9999 之数值
+    </section>
+    <div id="mchbar"></div>
+    <img src="./image/bk700_atbtn.png" alt="bk700_atbtn.png" id="bk700atbtn" *ngIf="attbtn">
+    <img src="./image/bk700_ att.png" alt="bk700" id="bk700">
+    <div [style.opacity]="op">
+        
+        <div [class]="UtoD2" id="esc"></div>
+		<div [class]="UtoD2" id="f1"></div>
+		<div [class]="UtoD2" id="f2"></div>
+		<div [class]="UtoD2" id="f3"></div>
+		<div [class]="UtoD2" id="f4"></div>
+		<div [class]="UtoD2" id="f5"></div>
+		<div [class]="UtoD2" id="f6"></div>
+		<div [class]="UtoD2" id="f7"></div>
+		<div [class]="UtoD2" id="f8"></div>
+		<div [class]="UtoD2" id="f9"></div>
+		<div [class]="UtoD2" id="f10"></div>
+		<div [class]="UtoD2" id="f11"></div>
+		<div [class]="UtoD2" id="f12"></div>
+		<div [class]="UtoD2" id="print"></div>
+		<div [class]="UtoD2" id="scroll"></div>
+		<div [class]="UtoD2" id="pause"></div>
+		<div [class]="UtoD3" id="perid"></div>
+		<div [class]="UtoD3" id="n1"></div>
+		<div [class]="UtoD3" id="n2"></div>
+		<div [class]="UtoD3" id="n3"></div>
+		<div [class]="UtoD3" id="n4"></div>
+		<div [class]="UtoD3" id="n5"></div>
+		<div [class]="UtoD3" id="n6"></div>
+		<div [class]="UtoD3" id="n7"></div>
+		<div [class]="UtoD3" id="n8"></div>
+		<div [class]="UtoD3" id="n0"></div>
+		<div [class]="UtoD3" id="n9"></div>
+		<div [class]="UtoD3" id="minus"></div>
+		<div [class]="UtoD3" id="plus"></div>
+		<div [class]="UtoD3" id="bsp"></div>
+		<div [class]="UtoD3" id="insert"></div>
+		<div [class]="UtoD3" id="home"></div>
+		<div [class]="UtoD3" id="pup"></div>
+		<div [class]="UtoD3" id="numlock"></div>
+		<div [class]="UtoD3" id="numdrawn"></div>
+		<div [class]="UtoD3" id="numtimes"></div>
+		<div [class]="UtoD3" id="numminus"></div>
+		<div [class]="UtoD4" id="tab"></div>
+		<div [class]="UtoD4" id="q"></div>
+		<div [class]="UtoD4" id="w"></div>
+		<div [class]="UtoD4" id="e"></div>
+		<div [class]="UtoD4" id="r"></div>
+		<div [class]="UtoD4" id="t"></div>
+		<div [class]="UtoD4" id="y"></div>
+		<div [class]="UtoD4" id="u"></div>
+		<div [class]="UtoD4" id="i"></div>
+		<div [class]="UtoD4" id="o"></div>
+		<div [class]="UtoD4" id="p"></div>
+		<div [class]="UtoD4" id="lqu"></div>
+		<div [class]="UtoD4" id="rqu"></div>
+		<div [class]="UtoD4" id="delete"></div>
+		<div [class]="UtoD4" id="drawn"></div>
+		<div [class]="UtoD4" id="end"></div>
+		<div [class]="UtoD4" id="pdown"></div>
+		<div [class]="UtoD4" id="num7"></div>
+		<div [class]="UtoD4" id="num8"></div>
+		<div [class]="UtoD4" id="num9"></div>
+		<div [class]="UtoD4" id="numplus"></div>
+		<div [class]="UtoD5" id="caps"></div>
+		<div [class]="UtoD5" id="a"></div>
+		<div [class]="UtoD5" id="s"></div>
+		<div [class]="UtoD5" id="d"></div>
+		<div [class]="UtoD5" id="f"></div>
+		<div [class]="UtoD5" id="g"></div>
+		<div [class]="UtoD5" id="h"></div>
+		<div [class]="UtoD5" id="j"></div>
+		<div [class]="UtoD5" id="k"></div>
+		<div [class]="UtoD5" id="l"></div>
+		<div [class]="UtoD5" id="sem"></div>
+		<div [class]="UtoD5" id="quo"></div>
+		<div [class]="UtoD5" id="enter"></div>
+		<div [class]="UtoD5" id="num4"></div>
+		<div [class]="UtoD5" id="num5"></div>
+		<div [class]="UtoD5" id="num6"></div>
+		<div [class]="UtoD6" id="lshift"></div>
+		<div [class]="UtoD6" id="z"></div>
+		<div [class]="UtoD6" id="x"></div>
+		<div [class]="UtoD6" id="c"></div>
+		<div [class]="UtoD6" id="v"></div>
+		<div [class]="UtoD6" id="b"></div>
+		<div [class]="UtoD6" id="n"></div>
+		<div [class]="UtoD6" id="m"></div>
+		<div [class]="UtoD6" id="comma"></div>
+		<div [class]="UtoD6" id="dot"></div>
+		<div [class]="UtoD6" id="qmark"></div>
+		<div [class]="UtoD6" id="rshift"></div>
+		<div [class]="UtoD6" id="up"></div>
+		<div [class]="UtoD6" id="num1"></div>
+		<div [class]="UtoD6" id="num2"></div>
+		<div [class]="UtoD6" id="num3"></div>
+		<div [class]="UtoD6" id="numenter"></div>
+		<div [class]="UtoD7" id="lctrl"></div>
+		<div [class]="UtoD7" id="win"></div>
+		<div [class]="UtoD7" id="lalt"></div>
+		<div [class]="UtoD7" id="space"></div>
+		<div [class]="UtoD7" id="ralt"></div>
+		<div [class]="UtoD7" id="fn"></div>
+		<div [class]="UtoD7" id="book"></div>
+		<div [class]="UtoD7" id="rctrl"></div>
+		<div [class]="UtoD7" id="left"></div>
+		<div [class]="UtoD7" id="down"></div>
+		<div [class]="UtoD7" id="right"></div>
+		<div [class]="UtoD7" id="num0"></div>
+		<div [class]="UtoD7" id="numdot"></div>
+
+
+        <!-- 第二層 下到上 -->
+
+        <div [class]="DtoU6" id="esc_2"></div>
+        <div [class]="DtoU6" id="f1_2"></div>
+        <div [class]="DtoU6" id="f2_2"></div>
+        <div [class]="DtoU6" id="f3_2"></div>
+        <div [class]="DtoU6" id="f4_2"></div>
+        <div [class]="DtoU6" id="f5_2"></div>
+        <div [class]="DtoU6" id="f6_2"></div>
+        <div [class]="DtoU6" id="f7_2"></div>
+        <div [class]="DtoU6" id="f8_2"></div>
+        <div [class]="DtoU6" id="f9_2"></div>
+        <div [class]="DtoU6" id="f10_2"></div>
+        <div [class]="DtoU6" id="f11_2"></div>
+        <div [class]="DtoU6" id="f12_2"></div>
+        <div [class]="DtoU6" id="print_2"></div>
+        <div [class]="DtoU6" id="scroll_2"></div>
+        <div [class]="DtoU6" id="pause_2"></div>
+        <div [class]="DtoU5" id="perid_2"></div>
+        <div [class]="DtoU5" id="n1_2"></div>
+        <div [class]="DtoU5" id="n2_2"></div>
+        <div [class]="DtoU5" id="n3_2"></div>
+        <div [class]="DtoU5" id="n4_2"></div>
+        <div [class]="DtoU5" id="n5_2"></div>
+        <div [class]="DtoU5" id="n6_2"></div>
+        <div [class]="DtoU5" id="n7_2"></div>
+        <div [class]="DtoU5" id="n8_2"></div>
+        <div [class]="DtoU5" id="n9_2"></div>
+        <div [class]="DtoU5" id="n0_2"></div>
+        <div [class]="DtoU5" id="minus_2"></div>
+        <div [class]="DtoU5" id="plus_2"></div>
+        <div [class]="DtoU5" id="bsp_2"></div>
+        <div [class]="DtoU5" id="insert_2"></div>
+        <div [class]="DtoU5" id="home_2"></div>
+        <div [class]="DtoU5" id="pup_2"></div>
+        <div [class]="DtoU5" id="numlock_2"></div>
+        <div [class]="DtoU5" id="numtimes_2"></div>
+        <div [class]="DtoU5" id="numminus_2"></div>
+        <div [class]="DtoU5" id="numdrawn_2"></div>
+        <div [class]="DtoU4" id="tab_2"></div>
+        <div [class]="DtoU4" id="q_2"></div>
+        <div [class]="DtoU4" id="w_2"></div>
+        <div [class]="DtoU4" id="e_2"></div>
+        <div [class]="DtoU4" id="r_2"></div>
+        <div [class]="DtoU4" id="t_2"></div>
+        <div [class]="DtoU4" id="y_2"></div>
+        <div [class]="DtoU4" id="u_2"></div>
+        <div [class]="DtoU4" id="i_2"></div>
+        <div [class]="DtoU4" id="o_2"></div>
+        <div [class]="DtoU4" id="p_2"></div>
+        <div [class]="DtoU4" id="lqu_2"></div>
+        <div [class]="DtoU4" id="rqu_2"></div>
+        <div [class]="DtoU4" id="drawn_2"></div>
+        <div [class]="DtoU4" id="delete_2"></div>
+        <div [class]="DtoU4" id="end_2"></div>
+        <div [class]="DtoU4" id="pdown_2"></div>
+        <div [class]="DtoU4" id="num7_2"></div>
+        <div [class]="DtoU4" id="num8_2"></div>
+        <div [class]="DtoU4" id="num9_2"></div>
+        <div [class]="DtoU4" id="numplus_2"></div>
+        <div [class]="DtoU3" id="caps_2"></div>
+        <div [class]="DtoU3" id="a_2"></div>
+        <div [class]="DtoU3" id="s_2"></div>
+        <div [class]="DtoU3" id="d_2"></div>
+        <div [class]="DtoU3" id="f_2"></div>
+        <div [class]="DtoU3" id="g_2"></div>
+        <div [class]="DtoU3" id="h_2"></div>
+        <div [class]="DtoU3" id="j_2"></div>
+        <div [class]="DtoU3" id="k_2"></div>
+        <div [class]="DtoU3" id="l_2"></div>
+        <div [class]="DtoU3" id="sem_2"></div>
+        <div [class]="DtoU3" id="quo_2"></div>
+        <div [class]="DtoU3" id="enter_2"></div>
+        <div [class]="DtoU3" id="num4_2"></div>
+        <div [class]="DtoU3" id="num5_2"></div>
+        <div [class]="DtoU3" id="num6_2"></div>
+        <div [class]="DtoU2" id="lshift_2"></div>
+        <div [class]="DtoU2" id="z_2"></div>
+        <div [class]="DtoU2" id="x_2"></div>
+        <div [class]="DtoU2" id="c_2"></div>
+        <div [class]="DtoU2" id="v_2"></div>
+        <div [class]="DtoU2" id="b_2"></div>
+        <div [class]="DtoU2" id="n_2"></div>
+        <div [class]="DtoU2" id="m_2"></div>
+        <div [class]="DtoU2" id="comma_2"></div>
+        <div [class]="DtoU2" id="dot_2"></div>
+        <div [class]="DtoU2" id="qmark_2"></div>
+        <div [class]="DtoU2" id="rshift_2"></div>
+        <div [class]="DtoU2" id="up_2"></div>
+        <div [class]="DtoU2" id="num1_2"></div>
+        <div [class]="DtoU2" id="num2_2"></div>
+        <div [class]="DtoU2" id="num3_2"></div>
+        <div [class]="DtoU2" id="numenter_2"></div>
+        <div [class]="DtoU1" id="lctrl_2"></div>
+        <div [class]="DtoU1" id="win_2"></div>
+        <div [class]="DtoU1" id="lalt_2"></div>
+        <div [class]="DtoU1" id="space_2"></div>
+        <div [class]="DtoU1" id="ralt_2"></div>
+        <div [class]="DtoU1" id="fn_2"></div>
+        <div [class]="DtoU1" id="book_2"></div>
+        <div [class]="DtoU1" id="rctrl_2"></div>
+        <div [class]="DtoU1" id="left_2"></div>
+        <div [class]="DtoU1" id="down_2"></div>
+        <div [class]="DtoU1" id="right_2"></div>
+        <div [class]="DtoU1" id="num0_2"></div>
+        <div [class]="DtoU1" id="numdot_2"></div>
+
+        <!-- 第三層左到右 -->
+
+        <div [class]="LtoR1" id="esc_3"></div>
+        <div [class]="LtoR3" id="f1_3"></div>
+        <div [class]="LtoR4" id="f2_3"></div>
+        <div [class]="LtoR5" id="f3_3"></div>
+        <div [class]="LtoR6" id="f4_3"></div>
+        <div [class]="LtoR7" id="f5_3"></div>
+        <div [class]="LtoR8" id="f6_3"></div>
+        <div [class]="LtoR9" id="f7_3"></div>
+        <div [class]="LtoR10" id="f8_3"></div>
+        <div [class]="LtoR11" id="f9_3"></div>
+        <div [class]="LtoR12" id="f10_3"></div>
+        <div [class]="LtoR13" id="f11_3"></div>
+        <div [class]="LtoR14" id="f12_3"></div>
+        <div [class]="LtoR15" id="print_3"></div>
+        <div [class]="LtoR16" id="scroll_3"></div>
+        <div [class]="LtoR17" id="pause_3"></div>
+        <div [class]="LtoR1" id="perid_3"></div>
+        <div [class]="LtoR2" id="n1_3"></div>
+        <div [class]="LtoR3" id="n2_3"></div>
+        <div [class]="LtoR4" id="n3_3"></div>
+        <div [class]="LtoR5" id="n4_3"></div>
+        <div [class]="LtoR6" id="n5_3"></div>
+        <div [class]="LtoR7" id="n6_3"></div>
+        <div [class]="LtoR8" id="n7_3"></div>
+        <div [class]="LtoR9" id="n8_3"></div>
+        <div [class]="LtoR10" id="n9_3"></div>
+        <div [class]="LtoR11" id="n0_3"></div>
+        <div [class]="LtoR12" id="minus_3"></div>
+        <div [class]="LtoR13" id="plus_3"></div>
+        <div [class]="LtoR14" id="bsp_3"></div>
+        <div [class]="LtoR15" id="insert_3"></div>
+        <div [class]="LtoR16" id="home_3"></div>
+        <div [class]="LtoR17" id="pup_3"></div>
+        <div [class]="LtoR18" id="numlock_3"></div>
+        <div [class]="LtoR19" id="numdrawn_3"></div>
+        <div [class]="LtoR20" id="numtimes_3"></div>
+        <div [class]="LtoR21" id="numminus_3"></div>
+        <div [class]="LtoR1" id="tab_3"></div>
+        <div [class]="LtoR2" id="q_3"></div>
+        <div [class]="LtoR3" id="w_3"></div>
+        <div [class]="LtoR4" id="e_3"></div>
+        <div [class]="LtoR5" id="r_3"></div>
+        <div [class]="LtoR6" id="t_3"></div>
+        <div [class]="LtoR7" id="y_3"></div>
+        <div [class]="LtoR8" id="u_3"></div>
+        <div [class]="LtoR9" id="i_3"></div>
+        <div [class]="LtoR10" id="o_3"></div>
+        <div [class]="LtoR11" id="p_3"></div>
+        <div [class]="LtoR12" id="lqu_3"></div>
+        <div [class]="LtoR13" id="rqu_3"></div>
+        <div [class]="LtoR14" id="drawn_3"></div>
+        <div [class]="LtoR15" id="delete_3"></div>
+        <div [class]="LtoR16" id="end_3"></div>
+        <div [class]="LtoR17" id="pdown_3"></div>
+        <div [class]="LtoR18" id="num7_3"></div>
+        <div [class]="LtoR19" id="num8_3"></div>
+        <div [class]="LtoR20" id="num9_3"></div>
+        <div [class]="LtoR21" id="numplus_3"></div>
+        <div [class]="LtoR1" id="caps_3"></div>
+        <div [class]="LtoR2" id="a_3"></div>
+        <div [class]="LtoR3" id="s_3"></div>
+        <div [class]="LtoR4" id="d_3"></div>
+        <div [class]="LtoR5" id="f_3"></div>
+        <div [class]="LtoR6" id="g_3"></div>
+        <div [class]="LtoR7" id="h_3"></div>
+        <div [class]="LtoR8" id="j_3"></div>
+        <div [class]="LtoR9" id="k_3"></div>
+        <div [class]="LtoR10" id="l_3"></div>
+        <div [class]="LtoR11" id="sem_3"></div>
+        <div [class]="LtoR12" id="quo_3"></div>
+        <div [class]="LtoR13" id="enter_3"></div>
+        <div [class]="LtoR18" id="num4_3"></div>
+        <div [class]="LtoR19" id="num5_3"></div>
+        <div [class]="LtoR20" id="num6_3"></div>
+        <div [class]="LtoR1" id="lshift_3"></div>
+        <div [class]="LtoR2" id="z_3"></div>
+        <div [class]="LtoR3" id="x_3"></div>
+        <div [class]="LtoR4" id="c_3"></div>
+        <div [class]="LtoR5" id="v_3"></div>
+        <div [class]="LtoR6" id="b_3"></div>
+        <div [class]="LtoR7" id="n_3"></div>
+        <div [class]="LtoR8" id="m_3"></div>
+        <div [class]="LtoR9" id="comma_3"></div>
+        <div [class]="LtoR10" id="dot_3"></div>
+        <div [class]="LtoR11" id="qmark_3"></div>
+        <div [class]="LtoR14" id="rshift_3"></div>
+        <div [class]="LtoR16" id="up_3"></div>
+        <div [class]="LtoR18" id="num1_3"></div>
+        <div [class]="LtoR19" id="num2_3"></div>
+        <div [class]="LtoR20" id="num3_3"></div>
+        <div [class]="LtoR21" id="numenter_3"></div>
+        <div [class]="LtoR1" id="lctrl_3"></div>
+        <div [class]="LtoR1" id="win_3"></div>
+        <div [class]="LtoR2" id="lalt_3"></div>
+        <div [class]="LtoR6" id="space_3"></div>
+        <div [class]="LtoR11" id="ralt_3"></div>
+        <div [class]="LtoR12" id="fn_3"></div>
+        <div [class]="LtoR13" id="book_3"></div>
+        <div [class]="LtoR14" id="rctrl_3"></div>
+        <div [class]="LtoR15" id="left_3"></div>
+        <div [class]="LtoR16" id="down_3"></div>
+        <div [class]="LtoR17" id="right_3"></div>
+        <div [class]="LtoR18" id="num0_3"></div>
+        <div [class]="LtoR20" id="numdot_3"></div>
+
+        <!-- 第四層 右到左-->
+
+        <div [class]="RtoL1" id="esc_4"></div>
+        <div [class]="RtoL3" id="f1_4"></div>
+        <div [class]="RtoL4" id="f2_4"></div>
+        <div [class]="RtoL5" id="f3_4"></div>
+        <div [class]="RtoL6" id="f4_4"></div>
+        <div [class]="RtoL7" id="f5_4"></div>
+        <div [class]="RtoL8" id="f6_4"></div>
+        <div [class]="RtoL9" id="f7_4"></div>
+        <div [class]="RtoL10" id="f8_4"></div>
+        <div [class]="RtoL11" id="f9_4"></div>
+        <div [class]="RtoL12" id="f10_4"></div>
+        <div [class]="RtoL13" id="f11_4"></div>
+        <div [class]="RtoL14" id="f12_4"></div>
+        <div [class]="RtoL15" id="print_4"></div>
+        <div [class]="RtoL16" id="scroll_4"></div>
+        <div [class]="RtoL17" id="pause_4"></div>
+        <div [class]="RtoL1" id="perid_4"></div>
+        <div [class]="RtoL2" id="n1_4"></div>
+        <div [class]="RtoL3" id="n2_4"></div>
+        <div [class]="RtoL4" id="n3_4"></div>
+        <div [class]="RtoL5" id="n4_4"></div>
+        <div [class]="RtoL6" id="n5_4"></div>
+        <div [class]="RtoL7" id="n6_4"></div>
+        <div [class]="RtoL8" id="n7_4"></div>
+        <div [class]="RtoL9" id="n8_4"></div>
+        <div [class]="RtoL10" id="n9_4"></div>
+        <div [class]="RtoL11" id="n0_4"></div>
+        <div [class]="RtoL12" id="minus_4"></div>
+        <div [class]="RtoL13" id="plus_4"></div>
+        <div [class]="RtoL14" id="bsp_4"></div>
+        <div [class]="RtoL15" id="insert_4"></div>
+        <div [class]="RtoL16" id="home_4"></div>
+        <div [class]="RtoL17" id="pup_4"></div>
+        <div [class]="RtoL18" id="numlock_4"></div>
+        <div [class]="RtoL19" id="numdrawn_4"></div>
+        <div [class]="RtoL20" id="numtimes_4"></div>
+        <div [class]="RtoL21" id="numminus_4"></div>
+        <div [class]="RtoL1" id="tab_4"></div>
+        <div [class]="RtoL2" id="q_4"></div>
+        <div [class]="RtoL3" id="w_4"></div>
+        <div [class]="RtoL4" id="e_4"></div>
+        <div [class]="RtoL5" id="r_4"></div>
+        <div [class]="RtoL6" id="t_4"></div>
+        <div [class]="RtoL7" id="y_4"></div>
+        <div [class]="RtoL8" id="u_4"></div>
+        <div [class]="RtoL9" id="i_4"></div>
+        <div [class]="RtoL10" id="o_4"></div>
+        <div [class]="RtoL11" id="p_4"></div>
+        <div [class]="RtoL12" id="lqu_4"></div>
+        <div [class]="RtoL13" id="rqu_4"></div>
+        <div [class]="RtoL14" id="delete_4"></div>
+        <div [class]="RtoL15" id="drawn_4"></div>
+        <div [class]="RtoL16" id="end_4"></div>
+        <div [class]="RtoL17" id="pdown_4"></div>
+        <div [class]="RtoL18" id="num7_4"></div>
+        <div [class]="RtoL19" id="num8_4"></div>
+        <div [class]="RtoL20" id="num9_4"></div>
+        <div [class]="RtoL21" id="numplus_4"></div>
+        <div [class]="RtoL1" id="caps_4"></div>
+        <div [class]="RtoL2" id="a_4"></div>
+        <div [class]="RtoL3" id="s_4"></div>
+        <div [class]="RtoL4" id="d_4"></div>
+        <div [class]="RtoL5" id="f_4"></div>
+        <div [class]="RtoL6" id="g_4"></div>
+        <div [class]="RtoL7" id="h_4"></div>
+        <div [class]="RtoL8" id="j_4"></div>
+        <div [class]="RtoL9" id="k_4"></div>
+        <div [class]="RtoL10" id="l_4"></div>
+        <div [class]="RtoL11" id="sem_4"></div>
+        <div [class]="RtoL12" id="quo_4"></div>
+        <div [class]="RtoL13" id="enter_4"></div>
+        <div [class]="RtoL18" id="num4_4"></div>
+        <div [class]="RtoL19" id="num5_4"></div>
+        <div [class]="RtoL20" id="num6_4"></div>
+        <div [class]="RtoL1" id="lshift_4"></div>
+        <div [class]="RtoL2" id="z_4"></div>
+        <div [class]="RtoL3" id="x_4"></div>
+        <div [class]="RtoL4" id="c_4"></div>
+        <div [class]="RtoL5" id="v_4"></div>
+        <div [class]="RtoL6" id="b_4"></div>
+        <div [class]="RtoL7" id="n_4"></div>
+        <div [class]="RtoL8" id="m_4"></div>
+        <div [class]="RtoL9" id="comma_4"></div>
+        <div [class]="RtoL10" id="dot_4"></div>
+        <div [class]="RtoL11" id="qmark_4"></div>
+        <div [class]="RtoL14" id="rshift_4"></div>
+        <div [class]="RtoL16" id="up_4"></div>
+        <div [class]="RtoL18" id="num1_4"></div>
+        <div [class]="RtoL19" id="num2_4"></div>
+        <div [class]="RtoL20" id="num3_4"></div>
+        <div [class]="RtoL21" id="numenter_4"></div>
+        <div [class]="RtoL1" id="lctrl_4"></div>
+        <div [class]="RtoL1" id="win_4"></div>
+        <div [class]="RtoL2" id="lalt_4"></div>
+        <div [class]="RtoL6" id="space_4"></div>
+        <div [class]="RtoL11" id="ralt_4"></div>
+        <div [class]="RtoL12" id="fn_4"></div>
+        <div [class]="RtoL13" id="book_4"></div>
+        <div [class]="RtoL14" id="rctrl_4"></div>
+        <div [class]="RtoL15" id="left_4"></div>
+        <div [class]="RtoL16" id="down_4"></div>
+        <div [class]="RtoL17" id="right_4"></div>
+        <div [class]="RtoL18" id="num0_4"></div>
+        <div [class]="RtoL20" id="numdot_4"></div>
+
+
+        <div [class]="LtoR1_att" id="esc_att"></div>
+        <div [class]="LtoR3_att" id="f1_att"></div>
+        <div [class]="LtoR4_att" id="f2_att"></div>
+        <div [class]="LtoR5_att" id="f3_att"></div>
+        <div [class]="LtoR6_att" id="f4_att"></div>
+        <div [class]="LtoR7_att" id="f5_att"></div>
+        <div [class]="LtoR8_att" id="f6_att"></div>
+        <div [class]="LtoR9_att" id="f7_att"></div>
+        <div [class]="LtoR10_att" id="f8_att"></div>
+        <div [class]="LtoR11_att" id="f9_att"></div>
+        <div [class]="LtoR12_att" id="f10_att"></div>
+        <div [class]="LtoR13_att" id="f11_att"></div>
+        <div [class]="LtoR14_att" id="f12_att"></div>
+        <div [class]="LtoR15_att" id="print_att"></div>
+        <div [class]="LtoR16_att" id="scroll_att"></div>
+        <div [class]="LtoR17_att" id="pause_att"></div>
+        <div [class]="LtoR1_att" id="perid_att"></div>
+        <div [class]="LtoR2_att" id="n1_att"></div>
+        <div [class]="LtoR3_att" id="n2_att"></div>
+        <div [class]="LtoR4_att" id="n3_att"></div>
+        <div [class]="LtoR5_att" id="n4_att"></div>
+        <div [class]="LtoR6_att" id="n5_att"></div>
+        <div [class]="LtoR7_att" id="n6_att"></div>
+        <div [class]="LtoR8_att" id="n7_att"></div>
+        <div [class]="LtoR9_att" id="n8_att"></div>
+        <div [class]="LtoR10_att" id="n9_att"></div>
+        <div [class]="LtoR11_att" id="n0_att"></div>
+        <div [class]="LtoR12_att" id="minus_att"></div>
+        <div [class]="LtoR13_att" id="plus_att"></div>
+        <div [class]="LtoR14_att" id="bsp_att"></div>
+        <div [class]="LtoR15_att" id="insert_att"></div>
+        <div [class]="LtoR16_att" id="home_att"></div>
+        <div [class]="LtoR17_att" id="pup_att"></div>
+        <div [class]="LtoR18_att" id="numlock_att"></div>
+        <div [class]="LtoR19_att" id="numdrawn_att"></div>
+        <div [class]="LtoR20_att" id="numtimes_att"></div>
+        <div [class]="LtoR21_att" id="numminus_att"></div>
+        <div [class]="LtoR1_att" id="tab_att"></div>
+        <div [class]="LtoR2_att" id="q_att"></div>
+        <div [class]="LtoR3_att" id="w_att"></div>
+        <div [class]="LtoR4_att" id="e_att"></div>
+        <div [class]="LtoR5_att" id="r_att"></div>
+        <div [class]="LtoR6_att" id="t_att"></div>
+        <div [class]="LtoR7_att" id="y_att"></div>
+        <div [class]="LtoR8_att" id="u_att"></div>
+        <div [class]="LtoR9_att" id="i_att"></div>
+        <div [class]="LtoR10_att" id="o_att"></div>
+        <div [class]="LtoR11_att" id="p_att"></div>
+        <div [class]="LtoR12_att" id="lqu_att"></div>
+        <div [class]="LtoR13_att" id="rqu_att"></div>
+        <div [class]="LtoR14_att" id="drawn_att"></div>
+        <div [class]="LtoR15_att" id="delete_att"></div>
+        <div [class]="LtoR16_att" id="end_att"></div>
+        <div [class]="LtoR17_att" id="pdown_att"></div>
+        <div [class]="LtoR18_att" id="num7_att"></div>
+        <div [class]="LtoR19_att" id="num8_att"></div>
+        <div [class]="LtoR20_att" id="num9_att"></div>
+        <div [class]="LtoR21_att" id="numplus_att"></div>
+        <div [class]="LtoR1_att" id="caps_att"></div>
+        <div [class]="LtoR2_att" id="a_att"></div>
+        <div [class]="LtoR3_att" id="s_att"></div>
+        <div [class]="LtoR4_att" id="d_att"></div>
+        <div [class]="LtoR5_att" id="f_att"></div>
+        <div [class]="LtoR6_att" id="g_att"></div>
+        <div [class]="LtoR7_att" id="h_att"></div>
+        <div [class]="LtoR8_att" id="j_att"></div>
+        <div [class]="LtoR9_att" id="k_att"></div>
+        <div [class]="LtoR10_att" id="l_att"></div>
+        <div [class]="LtoR11_att" id="sem_att"></div>
+        <div [class]="LtoR12_att" id="quo_att"></div>
+        <div [class]="LtoR13_att" id="enter_att"></div>
+        <div [class]="LtoR18_att" id="num4_att"></div>
+        <div [class]="LtoR19_att" id="num5_att"></div>
+        <div [class]="LtoR20_att" id="num6_att"></div>
+        <div [class]="LtoR1_att" id="lshift_att"></div>
+        <div [class]="LtoR2_att" id="z_att"></div>
+        <div [class]="LtoR3_att" id="x_att"></div>
+        <div [class]="LtoR4_att" id="c_att"></div>
+        <div [class]="LtoR5_att" id="v_att"></div>
+        <div [class]="LtoR6_att" id="b_att"></div>
+        <div [class]="LtoR7_att" id="n_att"></div>
+        <div [class]="LtoR8_att" id="m_att"></div>
+        <div [class]="LtoR9_att" id="comma_att"></div>
+        <div [class]="LtoR10_att" id="dot_att"></div>
+        <div [class]="LtoR11_att" id="qmark_att"></div>
+        <div [class]="LtoR14_att" id="rshift_att"></div>
+        <div [class]="LtoR16_att" id="up_att"></div>
+        <div [class]="LtoR18_att" id="num1_att"></div>
+        <div [class]="LtoR19_att" id="num2_att"></div>
+        <div [class]="LtoR20_att" id="num3_att"></div>
+        <div [class]="LtoR21_att" id="numenter_att"></div>
+        <div [class]="LtoR1_att" id="lctrl_att"></div>
+        <div [class]="LtoR1_att" id="win_att"></div>
+        <div [class]="LtoR2_att" id="lalt_att"></div>
+        <div [class]="LtoR6_att" id="space_att"></div>
+        <div [class]="LtoR11_att" id="ralt_att"></div>
+        <div [class]="LtoR12_att" id="fn_att"></div>
+        <div [class]="LtoR13_att" id="book_att"></div>
+        <div [class]="LtoR14_att" id="rctrl_att"></div>
+        <div [class]="LtoR15_att" id="left_att"></div>
+        <div [class]="LtoR16_att" id="down_att"></div>
+        <div [class]="LtoR17_att" id="right_att"></div>
+        <div [class]="LtoR18_att" id="num0_att"></div>
+        <div [class]="LtoR20_att" id="numdot_att"></div>
+    </div>
+    <!-- 魂力燈帶DIV 第一層 -->
+    <div [class]="UtoD1" id="Upside1" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside2" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside3" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside4" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside5" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside6" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside7" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside8" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside9" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside10" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="logo1" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="logo2" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside11" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside12" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside13" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside14" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside15" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside16" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside17" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside18" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside19" [style.opacity]="attOp"></div>
+    <div [class]="UtoD1" id="Upside20" [style.opacity]="attOp"></div>
+
+    <!-- 魂力燈帶 DIV第二層 -->
+    <div [class]="DtoU7" id="Upside1_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside2_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside3_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside4_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside5_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside6_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside7_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside8_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside9_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside10_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="logo1_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="logo2_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside11_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside12_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside13_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside14_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside15_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside16_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside17_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside18_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside19_2" [style.opacity]="attOp"></div>
+    <div [class]="DtoU7" id="Upside20_2" [style.opacity]="attOp"></div>
+    <!-- 魂力燈帶DIV 第三層 -->
+    <div [class]="LtoR2" id="Upside1_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR3" id="Upside2_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR4" id="Upside3_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR5" id="Upside4_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR6" id="Upside5_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR7" id="Upside6_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR8" id="Upside7_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR9" id="Upside8_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR10" id="Upside9_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR11" id="Upside10_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR11" id="logo1_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR11" id="logo2_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR11" id="Upside11_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR12" id="Upside12_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR13" id="Upside13_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR14" id="Upside14_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR15" id="Upside15_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR16" id="Upside16_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR17" id="Upside17_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR18" id="Upside18_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR19" id="Upside19_3" [style.opacity]="attOp"></div>
+    <div [class]="LtoR20" id="Upside20_3" [style.opacity]="attOp"></div>
+
+
+    <!-- 魂力燈帶DIV 第四層 -->
+    <div [class]="RtoL2" id="Upside1_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL3" id="Upside2_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL4" id="Upside3_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL5" id="Upside4_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL6" id="Upside5_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL7" id="Upside6_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL8" id="Upside7_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL9" id="Upside8_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL10" id="Upside9_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL11" id="Upside10_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL11" id="logo1_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL11" id="logo2_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL11" id="Upside11_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL12" id="Upside12_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL13" id="Upside13_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL14" id="Upside14_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL15" id="Upside15_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL16" id="Upside16_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL17" id="Upside17_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL18" id="Upside18_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL19" id="Upside19_4" [style.opacity]="attOp"></div>
+    <div [class]="RtoL20" id="Upside20_4" [style.opacity]="attOp"></div>
+
+    <div [class]="Upside1_att" id="Upside1_att" [style.opacity]="op"></div>
+    <div [class]="Upside2_att" id="Upside2_att" [style.opacity]="op"></div>
+    <div [class]="Upside3_att" id="Upside3_att" [style.opacity]="op"></div>
+    <div [class]="Upside4_att" id="Upside4_att" [style.opacity]="op"></div>
+    <div [class]="Upside5_att" id="Upside5_att" [style.opacity]="op"></div>
+    <div [class]="Upside6_att" id="Upside6_att" [style.opacity]="op"></div>
+    <div [class]="Upside7_att" id="Upside7_att" [style.opacity]="op"></div>
+    <div [class]="Upside8_att" id="Upside8_att" [style.opacity]="op"></div>
+    <div [class]="Upside9_att" id="Upside9_att" [style.opacity]="op"></div>
+    <div [class]="Upside10_att" id="Upside10_att" [style.opacity]="op"></div>
+    <div [class]="logo1_att" id="logo1_att" [style.opacity]="op"></div>
+    <div [class]="logo2_att" id="logo2_att" [style.opacity]="op"></div>
+    <div [class]="Upside11_att" id="Upside11_att" [style.opacity]="op"></div>
+    <div [class]="Upside12_att" id="Upside12_att" [style.opacity]="op"></div>
+    <div [class]="Upside13_att" id="Upside13_att" [style.opacity]="op"></div>
+    <div [class]="Upside14_att" id="Upside14_att" [style.opacity]="op"></div>
+    <div [class]="Upside15_att" id="Upside15_att" [style.opacity]="op"></div>
+    <div [class]="Upside16_att" id="Upside16_att" [style.opacity]="op"></div>
+    <div [class]="Upside17_att" id="Upside17_att" [style.opacity]="op"></div>
+    <div [class]="Upside18_att" id="Upside18_att" [style.opacity]="op"></div>
+    <div [class]="Upside19_att" id="Upside19_att" [style.opacity]="op"></div>
+    <div [class]="Upside20_att" id="Upside20_att" [style.opacity]="op"></div>
+
+
+    <div style="width:80%; min-height:180px;height:auto;background:#0F0F0F;margin:0 auto; padding-top:10px;padding-left:10px;padding-bottom:5px;margin-top:-30px;">
+
+        <!--小方框位置  -->
+        <div id="sbox" style="position: absolute;z-index:18;bottom:0px; right:-100px;width:500px;">
+
+            <!-- 方向 -->
+            <div id="rbway" style="display:block;width:196px; min-height:22px;height:auto;background:#0A0A0A;border:1px solid #555555">
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="effectDeside(0)">
+                    <img src="image/up.png" alt="up">
+                </a>
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="effectDeside(1)">
+                    <img src="image/bottom.png" alt="bottom">
+                </a>
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="effectDeside(2)">
+                    <img src="image/left.png" alt="left">
+                </a>
+                <a style="float:left;margin-left:2px;margin-right:2px;margin-top:2px;margin-bottom:2px;" (click)="effectDeside(3)">
+                    <img src="image/right.png" alt="right">
+                </a>
+
+            </div>
+
+            <div id="crashway" style="width:196px; min-height:22px;height:auto;background:#0A0A0A;border:1px solid #555555">
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="dtucrash()">
+                    <img src="image/up.png" alt="up">
+                </a>
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="utdcrash()">
+                    <img src="image/bottom.png" alt="bottom">
+                </a>
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="rtlcrash()">
+                    <img src="image/left.png" alt="left">
+                </a>
+                <a style="float:left;margin-left:2px;margin-right:2px;margin-top:2px;margin-bottom:2px;" (click)="ltrcrash()">
+                    <img src="image/right.png" alt="right">
+                </a>
+
+            </div>
+
+            <!-- 預設 -->
+            <div id="defaultset" style="display:block;margin-top:10px;">
+                <div style="margin-left:-5px;width:300px; height:auto;background:red;">
+                    <a style="float:left;color:#555555;" class="twsize" (click)="setDefault(1)">&nbsp;
+                        <img class="colorcheck" src="image/uncheck.png" *ngIf='!default'>
+                        <img class="colorcheck" src="image/check.png" *ngIf='default'>&nbsp;预设</a>
+                    <a style="float:left;color:#555555;" class="twsize" (click)="setDefault(2)">&nbsp;
+                        <img class="colorcheck" src="image/uncheck.png" *ngIf='!default02'>
+                        <img class="colorcheck" src="image/check.png" *ngIf='default02'>&nbsp;自定义</a>
+                </div>
+            </div>
+            <br>
+
+
+
+
+        </div>
+
+
+        <!-- 選色區獨立 -->
+        <div style="position: absolute;z-index:18;bottom:-50px; right:-100px;width:500px;">
+            <div id="colorgp" style="margin-top:10px;">
+                <div id="colorbar" style="display:block;width:260px;min-height:22px;height:auto;;clear:both;">
+
+                    <!-- 選色 -->
+                    <span style="min-height:20px;height:auto;float:left;">
+                        <a id="desideclr" [style.background]="defaultclr" [style.border]="selectborder" (click)="selectclr(1)"></a>
+                        <a id="desideclr02" [style.background]="defaultclr02" [style.border]="selectborder02" (click)="selectclr(2)"></a>
+                        <!-- <a id="desideclr02" [style.background]="defaultclr02"></a> -->
+
+                    </span>
+                    <div *ngIf="clropt">
+                        <a (click)="PickClr(1)" style="float:left;width:18px; height:18px; background:#E9004C;display:block;border:1px #2D2D2D solid;border-right:0px;margin-left:20px;"></a>
+                        <a (click)="PickClr(2)" style="float:left;width:18px; height:18px; background:#FF3F00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(3)" style="float:left;width:18px; height:18px; background:#FFBF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(4)" style="float:left;width:18px; height:18px; background:#7FFF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(5)" style="float:left;width:18px; height:18px; background:#00FFFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(6)" style="float:left;width:18px; height:18px; background:#007FFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(7)" style="float:left;width:18px; height:18px; background:#6400FF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(8)" style="float:left;width:18px; height:18px; background:#AF26FF;display:block;border:1px #2D2D2D solid;"></a>
+                    </div>
+
+                    <div *ngIf="!clropt">
+                        <a (click)="PickClr02(1)" style="float:left;width:18px; height:18px; background:#E9004C;display:block;border:1px #2D2D2D solid;border-right:0px;margin-left:20px;"></a>
+                        <a (click)="PickClr02(2)" style="float:left;width:18px; height:18px; background:#FF3F00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(3)" style="float:left;width:18px; height:18px; background:#FFBF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(4)" style="float:left;width:18px; height:18px; background:#7FFF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(5)" style="float:left;width:18px; height:18px; background:#00FFFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(6)" style="float:left;width:18px; height:18px; background:#007FFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(7)" style="float:left;width:18px; height:18px; background:#6400FF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(8)" style="float:left;width:18px; height:18px; background:#AF26FF;display:block;border:1px #2D2D2D solid;"></a>
+                    </div>
+
+                </div>
+
+                <div id="blasoul" style="width:260px; min-height:21px;height:auto;">
+
+                    <!-- 選色 -->
+                    <span style="min-height:20px;height:auto;float:left;">
+                        <a style="float:left;width:30px; height:30px; background:#E9004C;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                        <a style="float:left;width:30px; height:30px; background:#FF3F00;display:block;border:1px #2D2D2D solid;"></a>
+                    </span>
+                    <a style="float:left;width:18px; height:18px; background:#1F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#3F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#5F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#7F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#9F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#BF0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#DF0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#FF0000;display:block;border:1px #2D2D2D solid;"></a>
+
+                </div>
+
+            </div>
+
+            <br>
+        </div>
+        <div style="width:100%; height:35px;">
+            <h3 class="titleclr twsize" style="float:left;margin-right:5px;font-weight:300;line-height:25px;">效果</h3>
+            <!-- 下拉式選單 -->
+            <div *ngIf="fnbtn" class="twsize" style=" background-image:url(image/fnopthv.png);float:left;width:207px;height:30px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;padding-left:10px;color:white;line-height:30px">{{etitle}}</div>
+            <div *ngIf="!fnbtn" class="twsize" style=" background-image:url(image/fnopt.png);float:left;width:207px;height:28px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;padding-left:10px;color:white;line-height:30px"
+                (click)="openOpt()" id="ftltopt">{{etitle}}</div>
+
+
+            <img style="float:left;" src="image/clrpicker.png">
+            <a (click)="sendApply()" id="apply">储存灯效设定</a>
+        </div>
+
+        <div style="width:100%; height:60px;margin-top:5px;">
+
+            <!--一組-->
+            <div style="float:left;">
+                <h3 class="titleclr" style="float:left;margin-right:5px;font-weight:300;line-height:-10px;font-size:12px;">亮度</h3>
+            </div>
+
+            <div style="float:left;">
+                <div class="slidecontainer" style="margin-top:-5px;">
+                    <input tabindex=-1 [(ngModel)]="cuteValue" (ngModelChange)="onInput($event)" type="range" min="0"
+                        max="1" step="0.01" value={{cuteValue}} style="width:265px;" class="slider" id="bright"
+                        onkeydown="if(event.keyCode > 0){return false}">
+
+                </div>
+
+                <span class="contword" style="font-size:12px;margin-right:50px;margin-top:20px;">关闭</span>
+                <span class="contword" style="font-size:12px;margin-right:50px;margin-top:20px;">微亮</span>
+                <span class="contword" style="font-size:12px;margin-right:50px;margin-top:20px;">一般</span>
+                <span class="contword" style="font-size:12px;">明亮</span>
+            </div>
+            <!-- -->
+
+            <!--一組-->
+            <div style="float:left;margin-left:100px;">
+                <h3 class="titleclr" style="float:left;margin-right:5px;font-weight:300;line-height:-10px;font-size:12px;">速度</h3>
+            </div>
+
+            <div style="float:left;">
+                <div class="slidecontainer" style="margin-top:-5px;">
+                    <input tabindex=-1 [(ngModel)]="speedValue" (ngModelChange)="SpeedInput($event)" type="range" min="20"
+                        max="100" value={{speedhere}} step="40" class="slider" style="width:265px;transform:rotate(180deg);"
+                        onkeydown="if(event.keyCode > 0){return false}">
+                </div>
+
+                <span class="contword" style="font-size:12px;margin-right:110px;margin-top:20px;">慢</span>
+                <span class="contword" style="font-size:12px;margin-right:110px;margin-top:20px;">中</span>
+                <span class="contword" style="font-size:12px;margin-right:0px;margin-top:20px;">快</span>
+            </div>
+            <!-- -->
+
+        </div>
+        <br>
+        <!-- <div style="width:100%; height:60px;margin-top:-73px;">
+            <div style="margin-top:30px;">
+                <a (click)="clickOnitem(0)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check01' style="display:inline-block;">
+                    <img src="image/check.png" *ngIf='check01'>&nbsp;
+                    <span style="color:#555555;font-size:12px;">不使用设备</span>
+                </a>
+                <input type="text" class="ipstyle contword" style="display:inline-block; width:50px;height:12px;">
+                <span style="color:#555555;font-size:12px;">分钟后，将设备的灯光效果切换到</span>
+            </div>
+            <a class="titleclr" style="background-image:url(image/lightopt.png);background-size:cover; background-position:center;display:block; width:185px; height:24px;font-size:12px;padding-left:20px; line-height:25px;font-size:12px;margin-top:5px;">关闭所有灯光（省电模式）</a>
+        </div> -->
+    </div>
+    <section>
+        <div style="width:335px; height:35px;position: absolute;opacity: 0.7;z-index: 19;top: 305px;left: 105px;">
+            <a (click)="clickOnitem()" style="width:30px;height:18px;">&nbsp;
+                <img src="image/uncheck.png" *ngIf='!check01' style="width: 12px; display:none;">
+                <img src="image/check.png" *ngIf='check01' style="width: 12px;display:none;">
+            </a>
+            &nbsp;
+            <span style="color:#555555;font-size:12px;">不使用设备</span>
+            <div *ngIf="blockTime" style="position: absolute; top: 0; left: 85px; width:50px;height:15px; background-color:transparent;"></div>
+            <input tabindex=-1 onCONTEXTMENU="window.event.returnValue=true" id="time" type="text" value={{timeValue}}
+                [(ngModel)]="timeValue" (ngModelChange)="timeInput($event)" class="ipstyle contword" style="display:inline-block; width:50px;height:15px;"
+                minlength="1" maxlength="4">
+            <span style="color:#555555;font-size:12px; ">分钟后，将设备的灯光效果切换到</span>
+        </div>
+    </section>
+</section>

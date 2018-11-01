@@ -1,0 +1,840 @@
+
+.rainbow1_ud_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow2_ud_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow3_ud_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow4_ud_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow5_ud_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow6_ud_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.rainbow7_ud_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow1_ud_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow2_ud_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 50ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow3_ud_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow4_ud_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 150ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow5_ud_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow6_ud_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 250ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.rainbow7_ud_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow1_ud_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+}
+
+.rainbow2_ud_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow3_ud_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow4_ud_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 900ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow5_ud_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 1200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow6_ud_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.rainbow7_ud_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow1_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow2_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 150ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow3_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow4_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 450ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow5_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow6_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 750ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow7_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 900ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow8_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 1050ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow9_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 1200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow10_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 1350ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow11_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow12_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 1650ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow13_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow14_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 1950ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow15_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 2100ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow16_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 2250ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow17_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 2400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow18_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 2550ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow19_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 2700ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow20_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 2850ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow21_lr_med {
+    animation-name: rainbow;
+    animation-duration: 3s;
+    animation-delay: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow1_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite
+}
+
+.rainbow2_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow3_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow4_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow5_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow6_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow7_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow8_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 700ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow9_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow10_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 900ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow11_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 1000ms;
+    animation-iteration-count: infinite
+}
+
+.rainbow12_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 1100ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow13_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 1200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow14_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 1300ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow15_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 1400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow16_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow17_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow18_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 1700ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow19_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow20_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 1900ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow21_lr_high {
+    animation-name: rainbow;
+    animation-duration: 2s;
+    animation-delay: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow1_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite
+}
+
+.rainbow2_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow3_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow4_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow5_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow6_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 1000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow7_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 1200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow8_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 1400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow9_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow10_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow11_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow12_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 2200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow13_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 2400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow14_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 2600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow15_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 2800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow16_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow17_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 3200ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow18_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 3400ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow19_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 3600ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow20_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 3800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rainbow21_lr_slow {
+    animation-name: rainbow;
+    animation-duration: 4s;
+    animation-delay: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes rainbow {
+    0% {
+        background-color: rgb(255, 0, 0);
+    }
+    2.174% {
+        background-color: rgb(255, 32, 0);
+    }
+    4.348% {
+        background-color: rgb(255, 63, 0);
+    }
+    6.522% {
+        background-color: rgb(255, 94, 0)
+    }
+    8.696% {
+        background-color: rgb(255, 126, 0);
+    }
+    10.87% {
+        background-color: rgb(255, 158, 0)
+    }
+    13.044% {
+        background-color: rgb(255, 189, 0);
+    }
+    15.218% {
+        background-color: rgb(255, 222, 0)
+    }
+    17.392% {
+        background-color: rgb(255, 255, 0);
+    }
+    19.566% {
+        background-color: rgb(222, 255, 0)
+    }
+    224% {
+        background-color: rgb(189, 255, 0);
+    }
+    23.914% {
+        background-color: rgb(158, 255, 0);
+    }
+    26.088% {
+        background-color: rgb(126, 255, 0);
+    }
+    28.262% {
+        background-color: rgb(95, 255, 0)
+    }
+    30.436% {
+        background-color: rgb(63, 255, 0);
+    }
+    32.61% {
+        background-color: rgb(34, 255, 0);
+    }
+    34.784% {
+        background-color: rgb(0, 255, 0);
+    }
+    36.958% {
+        background-color: rgb(0, 255, 34);
+    }
+    39.132% {
+        background-color: rgb(0, 255, 63);
+    }
+    41.306% {
+        background-color: rgb(0, 255, 95);
+    }
+    43.48% {
+        background-color: rgb(0, 255, 126);
+    }
+    45.654% {
+        background-color: rgb(0, 255, 158);
+    }
+    47.828% {
+        background-color: rgb(0, 255, 189);
+    }
+    50.002% {
+        background-color: rgb(0, 255, 222);
+    }
+    52.176% {
+        background-color: rgb(0, 255, 255);
+    }
+    54.35% {
+        background-color: rgb(0, 222, 255)
+    }
+    56.524% {
+        background-color: rgb(0, 189, 255);
+    }
+    58.698% {
+        background-color: rgb(0, 158, 255);
+    }
+    60.872% {
+        background-color: rgb(0, 126, 255);
+    }
+    63.046% {
+        background-color: rgb(0, 95, 255);
+    }
+    65.22% {
+        background-color: rgb(0, 63, 255);
+    }
+    67.394% {
+        background-color: rgb(0, 32, 255);
+    }
+    69.568% {
+        background-color: rgb(0, 0, 255);
+    }
+    7242% {
+        background-color: rgb(32, 0, 255)
+    }
+    73.916% {
+        background-color: rgb(63, 0, 255);
+    }
+    76.09% {
+        background-color: rgb(95, 0, 255)
+    }
+    78.264% {
+        background-color: rgb(126, 0, 255);
+    }
+    80.438% {
+        background-color: rgb(158, 0, 255)
+    }
+    82.612% {
+        background-color: rgb(189, 0, 255);
+    }
+    84.786% {
+        background-color: rgb(222, 0, 255);
+    }
+    86.96% {
+        background-color: rgb(255, 0, 255);
+    }
+    89.134% {
+        background-color: rgb(255, 0, 222)
+    }
+    91.308% {
+        background-color: rgb(255, 0, 189);
+    }
+    93.482% {
+        background-color: rgb(255, 0, 158)
+    }
+    95.656% {
+        background-color: rgb(255, 0, 126);
+    }
+    97.828% {
+        background-color: rgb(255, 0, 95)
+    }
+    100% {
+        background-color: rgb(255, 0, 63);
+    }
+} 
+
+/* @keyframes rainbow {
+    0% {
+        background-color: rgb(255, 0, 0);
+    }
+    10% {
+        background-color: rgb(255, 126, 0);
+    }
+    20% {
+        background-color: rgb(255, 255, 0);
+    }
+    30% {
+        background-color: rgb(0, 255, 0);
+    }
+    40% {
+        background-color: rgb(0, 189, 255);
+    }
+    50% {
+        background-color: rgb(0, 0, 255);
+    }
+    60% {
+        background-color: rgb(126, 0, 255);
+    }
+    70% {
+        background-color: rgb(222, 0, 255);
+    }
+    80%{
+        background-color: rgb(255, 0, 255);
+    }
+    90% {
+        background-color: rgb(255, 0, 158);
+    }
+    100% {
+        background-color: rgb(255, 0, 0)
+    }
+} */

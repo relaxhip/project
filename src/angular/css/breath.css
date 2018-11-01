@@ -1,0 +1,36 @@
+
+.breath_med {
+    animation-name: breath;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.breath_slow {
+    animation-name: breath;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.breath_high {
+    animation-name: breath;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes breath {
+    0% {
+        background-color: transparent;
+    }
+    25% {
+        background-color: rgb(255, 0, 0);
+    }
+    50% {
+        background-color: transparent;
+    }
+    75% {
+        background-color: rgb(0, 0, 255);
+    }
+    100% {
+        background-color: transparent;
+    }
+}

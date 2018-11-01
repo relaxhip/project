@@ -1,0 +1,24 @@
+<div>
+    <div class = "nav-panel">
+        <div class="nav-panel-devices-item" *ngFor="let device of DeviceObj2;let i = index;">
+            <!-- <div class="card-icon">
+                <i class="fg fg-fw font42" [ngClass]="{'icon-mouse': (device.status !=0)}"></i>
+            </div> -->
+            <div class="card-text">
+                <i style="color:#55f" [ngClass]="{'icon-mouse': (device.status !=0)}"> {{device.DeviceName}}</i>
+            </div>
+            <!-- <div class="card-icon">
+                <i class="fg fg-fw font42" [ngClass]="{'icon-mouse': (this.DeviceStatus !=0)}"></i>
+            </div>
+            <div class="card-text">
+                <span [style.visibility]="(this.DeviceStatus != 0)?'visible':'hidden' "><label style="color:#55f">{{this.DeviceName}}</label></span>
+            </div> -->
+        </div>
+    </div>
+    <!-- <div class ="nav-panel-footer">
+        <ul>
+            <li>footer 3</li>
+            <li>footer 4</li>
+        </ul> 
+    </div> -->
+</div>

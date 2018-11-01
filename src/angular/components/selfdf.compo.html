@@ -1,0 +1,7 @@
+
+<div id="mchbar">
+        <a style="line-height:-16px;"  id="mchbtn01" [ngStyle]="givclr01" (click)="clickOn01()">单个按键</a>
+        <a style="line-height:-16px;"  id="mchbtn02" [ngStyle]="givclr02" (click)="clickOn02()">FN組合鍵</a>
+    </div>
+<self01-app *ngIf="selfshow"></self01-app>
+<self02-app *ngIf="!selfshow"></self02-app>

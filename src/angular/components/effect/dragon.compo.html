@@ -1,0 +1,480 @@
+<!-- <div style="position: absolute;z-index: 19;width: 100%;height: 800%;top: -500px;left: 0px;cursor: pointer;" (mouseenter)='goIn()'
+    *ngIf="letsgoIn"></div>
+<div style="position: absolute;z-index:21;width:210px;height:30px;top:230px;left:130px;cursor:pointer;" (mouseenter)='goOut()'
+    *ngIf="letsgoout"></div> -->
+<section class={{blockcss}} (click)="timeBlur()">
+    <!-- <section style="position: absolute;
+		left: 347px;
+		top: 70px;
+		width: 200px;
+		height: 130px;
+		z-index: 30;
+		background: rgba(0,0,0,0.6);
+		color: white;
+		padding: 10px;
+		text-align: center;
+        line-height:75px;" *ngIf='loading'>写入中
+        <br>
+        <img src="image/loading_circles.gif" style="position:absolute;width: 30px;height: 30px;top:75px;left:85px;">
+    </section> -->
+    <section style="position: absolute;
+		left: 347px;
+		top: 70px;
+		width: 200px;
+		height: 100px;
+		z-index: 30;
+		background: black;
+		color: white;
+		padding: 10px;
+		text-align: center;
+		line-height:75px;" *ngIf='timewarn'>请输入 1 ~ 9999 之数值
+	</section>
+    <div id="mchbar"></div>
+    <img src="./image/bk700_atbtn.png" alt="bk700_atbtn.png" id="bk700atbtn" *ngIf="attbtn">
+    <img src="./image/bk700_ att.png" alt="bk700" id="bk700">
+    <div [style.opacity]="op">
+        <div [class]="esc" id="esc"></div>
+        <div [class]="f1" id="f1"></div>
+        <div [class]="f2" id="f2"></div>
+        <div [class]="f3" id="f3"></div>
+        <div [class]="f4" id="f4"></div>
+        <div [class]="f5" id="f5"></div>
+        <div [class]="f6" id="f6"></div>
+        <div [class]="f7" id="f7"></div>
+        <div [class]="f8" id="f8"></div>
+        <div [class]="f9" id="f9"></div>
+        <div [class]="f10" id="f10"></div>
+        <div [class]="f11" id="f11"></div>
+        <div [class]="f12" id="f12"></div>
+        <div [class]="print" id="print"></div>
+        <div [class]="scroll" id="scroll"></div>
+        <div [class]="pause" id="pause"></div>
+        <div [class]="perid" id="perid"></div>
+        <div [class]="n1" id="n1"></div>
+        <div [class]="n2" id="n2"></div>
+        <div [class]="n3" id="n3"></div>
+        <div [class]="n4" id="n4"></div>
+        <div [class]="n5" id="n5"></div>
+        <div [class]="n6" id="n6"></div>
+        <div [class]="n7" id="n7"></div>
+        <div [class]="n8" id="n8"></div>
+        <div [class]="n0" id="n0"></div>
+        <div [class]="minus" id="minus"></div>
+        <div [class]="n9" id="n9"></div>
+        <div [class]="plus" id="plus"></div>
+        <div [class]="bsp" id="bsp"></div>
+        <div [class]="insert" id="insert"></div>
+        <div [class]="home" id="home"></div>
+        <div [class]="pup" id="pup"></div>
+        <div [class]="numlock" id="numlock"></div>
+        <div [class]="numdrawn" id="numdrawn"></div>
+        <div [class]="numtimes" id="numtimes"></div>
+        <div [class]="numminus" id="numminus"></div>
+        <div [class]="tab" id="tab"></div>
+        <div [class]="q" id="q"></div>
+        <div [class]="w" id="w"></div>
+        <div [class]="e" id="e"></div>
+        <div [class]="r" id="r"></div>
+        <div [class]="t" id="t"></div>
+        <div [class]="y" id="y"></div>
+        <div [class]="u" id="u"></div>
+        <div [class]="i" id="i"></div>
+        <div [class]="o" id="o"></div>
+        <div [class]="p" id="p"></div>
+        <div [class]="lqu" id="lqu"></div>
+        <div [class]="rqu" id="rqu"></div>
+        <div [class]="delete" id="delete"></div>
+        <div [class]="drawn" id="drawn"></div>
+        <div [class]="end" id="end"></div>
+        <div [class]="pdown" id="pdown"></div>
+        <div [class]="num7" id="num7"></div>
+        <div [class]="num8" id="num8"></div>
+        <div [class]="num9" id="num9"></div>
+        <div [class]="numplus" id="numplus"></div>
+        <div [class]="caps" id="caps"></div>
+        <div [class]="a" id="a"></div>
+        <div [class]="s" id="s"></div>
+        <div [class]="d" id="d"></div>
+        <div [class]="f" id="f"></div>
+        <div [class]="g" id="g"></div>
+        <div [class]="h" id="h"></div>
+        <div [class]="j" id="j"></div>
+        <div [class]="k" id="k"></div>
+        <div [class]="l" id="l"></div>
+        <div [class]="sem" id="sem"></div>
+        <div [class]="quo" id="quo"></div>
+        <div [class]="enter" id="enter"></div>
+        <div [class]="num4" id="num4"></div>
+        <div [class]="num5" id="num5"></div>
+        <div [class]="num6" id="num6"></div>
+        <div [class]="lshift" id="lshift"></div>
+        <div [class]="z" id="z"></div>
+        <div [class]="x" id="x"></div>
+        <div [class]="c" id="c"></div>
+        <div [class]="v" id="v"></div>
+        <div [class]="b" id="b"></div>
+        <div [class]="n" id="n"></div>
+        <div [class]="m" id="m"></div>
+        <div [class]="comma" id="comma"></div>
+        <div [class]="dot" id="dot"></div>
+        <div [class]="qmark" id="qmark"></div>
+        <div [class]="rshift" id="rshift"></div>
+        <div [class]="up" id="up"></div>
+        <div [class]="num1" id="num1"></div>
+        <div [class]="num2" id="num2"></div>
+        <div [class]="num3" id="num3"></div>
+        <div [class]="lctrl" id="lctrl"></div>
+        <div [class]="win" id="win"></div>
+        <div [class]="lalt" id="lalt"></div>
+        <div [class]="space" id="space"></div>
+        <div [class]="ralt" id="ralt"></div>
+        <div [class]="fn" id="fn"></div>
+        <div [class]="book" id="book"></div>
+        <div [class]="rctrl" id="rctrl"></div>
+        <div [class]="left" id="left"></div>
+        <div [class]="down" id="down"></div>
+        <div [class]="right" id="right"></div>
+        <div [class]="num0" id="num0"></div>
+        <div [class]="numdot" id="numdot"></div>
+        <div [class]="numenter" id="numenter"></div>
+
+        <div [class]="LtoR1_att" id="esc_att"></div>
+        <div [class]="LtoR3_att" id="f1_att"></div>
+        <div [class]="LtoR4_att" id="f2_att"></div>
+        <div [class]="LtoR5_att" id="f3_att"></div>
+        <div [class]="LtoR6_att" id="f4_att"></div>
+        <div [class]="LtoR7_att" id="f5_att"></div>
+        <div [class]="LtoR8_att" id="f6_att"></div>
+        <div [class]="LtoR9_att" id="f7_att"></div>
+        <div [class]="LtoR10_att" id="f8_att"></div>
+        <div [class]="LtoR11_att" id="f9_att"></div>
+        <div [class]="LtoR12_att" id="f10_att"></div>
+        <div [class]="LtoR13_att" id="f11_att"></div>
+        <div [class]="LtoR14_att" id="f12_att"></div>
+        <div [class]="LtoR15_att" id="print_att"></div>
+        <div [class]="LtoR16_att" id="scroll_att"></div>
+        <div [class]="LtoR17_att" id="pause_att"></div>
+        <div [class]="LtoR1_att" id="perid_att"></div>
+        <div [class]="LtoR2_att" id="n1_att"></div>
+        <div [class]="LtoR3_att" id="n2_att"></div>
+        <div [class]="LtoR4_att" id="n3_att"></div>
+        <div [class]="LtoR5_att" id="n4_att"></div>
+        <div [class]="LtoR6_att" id="n5_att"></div>
+        <div [class]="LtoR7_att" id="n6_att"></div>
+        <div [class]="LtoR8_att" id="n7_att"></div>
+        <div [class]="LtoR9_att" id="n8_att"></div>
+        <div [class]="LtoR10_att" id="n9_att"></div>
+        <div [class]="LtoR11_att" id="n0_att"></div>
+        <div [class]="LtoR12_att" id="minus_att"></div>
+        <div [class]="LtoR13_att" id="plus_att"></div>
+        <div [class]="LtoR14_att" id="bsp_att"></div>
+        <div [class]="LtoR15_att" id="insert_att"></div>
+        <div [class]="LtoR16_att" id="home_att"></div>
+        <div [class]="LtoR17_att" id="pup_att"></div>
+        <div [class]="LtoR18_att" id="numlock_att"></div>
+        <div [class]="LtoR19_att" id="numdrawn_att"></div>
+        <div [class]="LtoR20_att" id="numtimes_att"></div>
+        <div [class]="LtoR21_att" id="numminus_att"></div>
+        <div [class]="LtoR1_att" id="tab_att"></div>
+        <div [class]="LtoR2_att" id="q_att"></div>
+        <div [class]="LtoR3_att" id="w_att"></div>
+        <div [class]="LtoR4_att" id="e_att"></div>
+        <div [class]="LtoR5_att" id="r_att"></div>
+        <div [class]="LtoR6_att" id="t_att"></div>
+        <div [class]="LtoR7_att" id="y_att"></div>
+        <div [class]="LtoR8_att" id="u_att"></div>
+        <div [class]="LtoR9_att" id="i_att"></div>
+        <div [class]="LtoR10_att" id="o_att"></div>
+        <div [class]="LtoR11_att" id="p_att"></div>
+        <div [class]="LtoR12_att" id="lqu_att"></div>
+        <div [class]="LtoR13_att" id="rqu_att"></div>
+        <div [class]="LtoR14_att" id="drawn_att"></div>
+        <div [class]="LtoR15_att" id="delete_att"></div>
+        <div [class]="LtoR16_att" id="end_att"></div>
+        <div [class]="LtoR17_att" id="pdown_att"></div>
+        <div [class]="LtoR18_att" id="num7_att"></div>
+        <div [class]="LtoR19_att" id="num8_att"></div>
+        <div [class]="LtoR20_att" id="num9_att"></div>
+        <div [class]="LtoR21_att" id="numplus_att"></div>
+        <div [class]="LtoR1_att" id="caps_att"></div>
+        <div [class]="LtoR2_att" id="a_att"></div>
+        <div [class]="LtoR3_att" id="s_att"></div>
+        <div [class]="LtoR4_att" id="d_att"></div>
+        <div [class]="LtoR5_att" id="f_att"></div>
+        <div [class]="LtoR6_att" id="g_att"></div>
+        <div [class]="LtoR7_att" id="h_att"></div>
+        <div [class]="LtoR8_att" id="j_att"></div>
+        <div [class]="LtoR9_att" id="k_att"></div>
+        <div [class]="LtoR10_att" id="l_att"></div>
+        <div [class]="LtoR11_att" id="sem_att"></div>
+        <div [class]="LtoR12_att" id="quo_att"></div>
+        <div [class]="LtoR13_att" id="enter_att"></div>
+        <div [class]="LtoR18_att" id="num4_att"></div>
+        <div [class]="LtoR19_att" id="num5_att"></div>
+        <div [class]="LtoR20_att" id="num6_att"></div>
+        <div [class]="LtoR1_att" id="lshift_att"></div>
+        <div [class]="LtoR2_att" id="z_att"></div>
+        <div [class]="LtoR3_att" id="x_att"></div>
+        <div [class]="LtoR4_att" id="c_att"></div>
+        <div [class]="LtoR5_att" id="v_att"></div>
+        <div [class]="LtoR6_att" id="b_att"></div>
+        <div [class]="LtoR7_att" id="n_att"></div>
+        <div [class]="LtoR8_att" id="m_att"></div>
+        <div [class]="LtoR9_att" id="comma_att"></div>
+        <div [class]="LtoR10_att" id="dot_att"></div>
+        <div [class]="LtoR11_att" id="qmark_att"></div>
+        <div [class]="LtoR14_att" id="rshift_att"></div>
+        <div [class]="LtoR16_att" id="up_att"></div>
+        <div [class]="LtoR18_att" id="num1_att"></div>
+        <div [class]="LtoR19_att" id="num2_att"></div>
+        <div [class]="LtoR20_att" id="num3_att"></div>
+        <div [class]="LtoR21_att" id="numenter_att"></div>
+        <div [class]="LtoR1_att" id="lctrl_att"></div>
+        <div [class]="LtoR1_att" id="win_att"></div>
+        <div [class]="LtoR2_att" id="lalt_att"></div>
+        <div [class]="LtoR6_att" id="space_att"></div>
+        <div [class]="LtoR11_att" id="ralt_att"></div>
+        <div [class]="LtoR12_att" id="fn_att"></div>
+        <div [class]="LtoR13_att" id="book_att"></div>
+        <div [class]="LtoR14_att" id="rctrl_att"></div>
+        <div [class]="LtoR15_att" id="left_att"></div>
+        <div [class]="LtoR16_att" id="down_att"></div>
+        <div [class]="LtoR17_att" id="right_att"></div>
+        <div [class]="LtoR18_att" id="num0_att"></div>
+        <div [class]="LtoR20_att" id="numdot_att"></div>
+    </div>
+    <div [class]="Upside1_att" id="Upside1_att" [style.opacity]="op"></div>
+    <div [class]="Upside2_att" id="Upside2_att" [style.opacity]="op"></div>
+    <div [class]="Upside3_att" id="Upside3_att" [style.opacity]="op"></div>
+    <div [class]="Upside4_att" id="Upside4_att" [style.opacity]="op"></div>
+    <div [class]="Upside5_att" id="Upside5_att" [style.opacity]="op"></div>
+    <div [class]="Upside6_att" id="Upside6_att" [style.opacity]="op"></div>
+    <div [class]="Upside7_att" id="Upside7_att" [style.opacity]="op"></div>
+    <div [class]="Upside8_att" id="Upside8_att" [style.opacity]="op"></div>
+    <div [class]="Upside9_att" id="Upside9_att" [style.opacity]="op"></div>
+    <div [class]="Upside10_att" id="Upside10_att" [style.opacity]="op"></div>
+    <div [class]="logo1_att" id="logo1_att" [style.opacity]="op"></div>
+    <div [class]="logo2_att" id="logo2_att" [style.opacity]="op"></div>
+    <div [class]="Upside11_att" id="Upside11_att" [style.opacity]="op"></div>
+    <div [class]="Upside12_att" id="Upside12_att" [style.opacity]="op"></div>
+    <div [class]="Upside13_att" id="Upside13_att" [style.opacity]="op"></div>
+    <div [class]="Upside14_att" id="Upside14_att" [style.opacity]="op"></div>
+    <div [class]="Upside15_att" id="Upside15_att" [style.opacity]="op"></div>
+    <div [class]="Upside16_att" id="Upside16_att" [style.opacity]="op"></div>
+    <div [class]="Upside17_att" id="Upside17_att" [style.opacity]="op"></div>
+    <div [class]="Upside18_att" id="Upside18_att" [style.opacity]="op"></div>
+    <div [class]="Upside19_att" id="Upside19_att" [style.opacity]="op"></div>
+    <div [class]="Upside20_att" id="Upside20_att" [style.opacity]="op"></div>
+
+
+    <div *ngIf=defaultLb [class]="Upside1" id="Upside1" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside2" id="Upside2" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside3" id="Upside3" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside4" id="Upside4" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside5" id="Upside5" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside6" id="Upside6" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside7" id="Upside7" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside8" id="Upside8" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside9" id="Upside9" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside10" id="Upside10" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="logo1" id="logo1" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="logo2" id="logo2" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside11" id="Upside11" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside12" id="Upside12" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside13" id="Upside13" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside14" id="Upside14" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside15" id="Upside15" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside16" id="Upside16" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside17" id="Upside17" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside18" id="Upside18" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside19" id="Upside19" [style.opacity]="op"></div>
+    <div *ngIf=defaultLb [class]="Upside20" id="Upside20" [style.opacity]="op"></div>
+
+    <div style="width:80%; min-height:180px;height:auto;background:#0F0F0F;margin:0 auto; padding-top:10px;padding-left:10px;padding-bottom:5px;margin-top:-30px;">
+
+        <!--小方框位置  -->
+        <div id="sbox" style="position: absolute;z-index:18;bottom:0px; right:-100px;width:500px;">
+
+            <!-- 方向 -->
+            <div id="rbway" style="width:101px; min-height:22px;height:auto;background:#0A0A0A;border:1px solid #555555;display: block;">
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="effectDeside(0)">
+                    <img src="image/left.png" alt="left">
+                </a>
+                <a style="float:left;margin-left:2px;margin-right:2px;margin-top:2px;margin-bottom:2px;" (click)="effectDeside(1)">
+                    <img src="image/right.png" alt="right">
+                </a>
+
+            </div>
+
+            <div id="crashway" style="width:196px; min-height:22px;height:auto;background:#0A0A0A;border:1px solid #555555">
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="dtucrash()">
+                    <img src="image/up.png" alt="up">
+                </a>
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="utdcrash()">
+                    <img src="image/bottom.png" alt="bottom">
+                </a>
+                <a style="float:left;margin-left:2px;margin-top:2px;margin-bottom:2px;" (click)="rtlcrash()">
+                    <img src="image/left.png" alt="left">
+                </a>
+                <a style="float:left;margin-left:2px;margin-right:2px;margin-top:2px;margin-bottom:2px;" (click)="ltrcrash()">
+                    <img src="image/right.png" alt="right">
+                </a>
+
+            </div>
+
+            <!-- 預設 -->
+            <div id="defaultset" style="display:block;margin-top:10px;">
+                <div style="margin-left:-5px;width:300px; height:auto;background:red;">
+                    <a style="float:left;color:#555555;" class="twsize" (click)="setDefault(1)">&nbsp;
+                        <img class="colorcheck" src="image/uncheck.png" *ngIf='!default'>
+                        <img class="colorcheck" src="image/check.png" *ngIf='default'>&nbsp;预设</a>
+                    <a style="float:left;color:#555555;" class="twsize" (click)="setDefault(2)">&nbsp;
+                        <img class="colorcheck" src="image/uncheck.png" *ngIf='!default02'>
+                        <img class="colorcheck" src="image/check.png" *ngIf='default02'>&nbsp;自定义</a>
+                </div>
+            </div>
+            <br>
+
+
+
+
+        </div>
+
+
+        <!-- 選色區獨立 -->
+        <div style="position: absolute;z-index:18;bottom:-50px; right:-100px;width:500px;">
+            <div id="colorgp" style="margin-top:10px;">
+                <div id="colorbar" style="display:block;width:260px;min-height:22px;height:auto;;clear:both;">
+
+                    <span style="min-height:20px;height:auto;float:left;">
+                        <a id="desideclr" [style.background]="defaultclr" [style.border]="selectborder" (click)="selectclr(1)"></a>
+                        <a id="desideclr02" [style.background]="defaultclr02" [style.border]="selectborder02" (click)="selectclr(2)"></a>
+                        <!-- <a id="desideclr02" [style.background]="defaultclr02"></a> -->
+
+                    </span>
+                    <div *ngIf="clropt">
+                        <a (click)="PickClr(1)" style="float:left;width:18px; height:18px; background:#E9004C;display:block;border:1px #2D2D2D solid;border-right:0px;margin-left:20px;"></a>
+                        <a (click)="PickClr(2)" style="float:left;width:18px; height:18px; background:#FF3F00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(3)" style="float:left;width:18px; height:18px; background:#FFBF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(4)" style="float:left;width:18px; height:18px; background:#7FFF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(5)" style="float:left;width:18px; height:18px; background:#00FFFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(6)" style="float:left;width:18px; height:18px; background:#007FFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(7)" style="float:left;width:18px; height:18px; background:#6400FF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr(8)" style="float:left;width:18px; height:18px; background:#AF26FF;display:block;border:1px #2D2D2D solid;"></a>
+                    </div>
+
+                    <div *ngIf="!clropt">
+                        <a (click)="PickClr02(1)" style="float:left;width:18px; height:18px; background:#E9004C;display:block;border:1px #2D2D2D solid;border-right:0px;margin-left:20px;"></a>
+                        <a (click)="PickClr02(2)" style="float:left;width:18px; height:18px; background:#FF3F00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(3)" style="float:left;width:18px; height:18px; background:#FFBF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(4)" style="float:left;width:18px; height:18px; background:#7FFF00;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(5)" style="float:left;width:18px; height:18px; background:#00FFFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(6)" style="float:left;width:18px; height:18px; background:#007FFF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(7)" style="float:left;width:18px; height:18px; background:#6400FF;display:block;border:1px #2D2D2D solid;border-right:0px"></a>
+                        <a (click)="PickClr02(8)" style="float:left;width:18px; height:18px; background:#AF26FF;display:block;border:1px #2D2D2D solid;"></a>
+                    </div>
+                </div>
+
+                <div id="blasoul" style="width:260px; min-height:21px;height:auto;">
+
+                    <!-- 選色 -->
+                    <span style="min-height:20px;height:auto;float:left;">
+                        <a style="float:left;width:30px; height:30px; background:#E9004C;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                        <a style="float:left;width:30px; height:30px; background:#FF3F00;display:block;border:1px #2D2D2D solid;"></a>
+                    </span>
+                    <a style="float:left;width:18px; height:18px; background:#1F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#3F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#5F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#7F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#9F0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#BF0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#DF0000;display:block;border:1px #2D2D2D solid;border-right:0px;"></a>
+                    <a style="float:left;width:18px; height:18px; background:#FF0000;display:block;border:1px #2D2D2D solid;"></a>
+
+                </div>
+
+            </div>
+
+            <br>
+        </div>
+        <div style="width:100%; height:35px;">
+            <h3 class="titleclr twsize" style="float:left;margin-right:5px;font-weight:300;line-height:25px;">效果</h3>
+            <!-- 下拉式選單 -->
+            <div *ngIf="fnbtn" class="twsize" style=" background-image:url(image/fnopthv.png);float:left;width:207px;height:30px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;padding-left:10px;color:white;line-height:30px">{{etitle}}</div>
+            <div *ngIf="!fnbtn" class="twsize" style=" background-image:url(image/fnopt.png);float:left;width:207px;height:28px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;padding-left:10px;color:white;line-height:30px"
+                (click)="openOpt()" id="ftltopt">{{etitle}}</div>
+
+
+            <img style="float:left;" src="image/clrpicker.png">
+            <a (click)="sendApply()" id="apply">储存灯效设定</a>
+        </div>
+
+        <div style="width:100%; height:60px;margin-top:5px;">
+
+            <!--一組-->
+            <div style="float:left;">
+                <h3 class="titleclr" style="float:left;margin-right:5px;font-weight:300;line-height:-10px;font-size:12px;">亮度</h3>
+            </div>
+
+            <div style="float:left;">
+                <div class="slidecontainer" style="margin-top:-5px;">
+                    <input tabindex=-1 [(ngModel)]="cuteValue" (ngModelChange)="onInput($event)" type="range" min="0" max="1" step="0.01" value={{cuteValue}}
+                        style="width:265px;" class="slider" id="bright" onkeydown="if(event.keyCode > 0){return false}">
+
+                </div>
+
+                <span class="contword" style="font-size:12px;margin-right:50px;margin-top:20px;">关闭</span>
+                <span class="contword" style="font-size:12px;margin-right:50px;margin-top:20px;">微亮</span>
+                <span class="contword" style="font-size:12px;margin-right:50px;margin-top:20px;">一般</span>
+                <span class="contword" style="font-size:12px;">明亮</span>
+            </div>
+            <!-- -->
+
+            <!--一組-->
+            <div style="float:left;margin-left:100px;">
+                <h3 class="titleclr" style="float:left;margin-right:5px;font-weight:300;line-height:-10px;font-size:12px;">速度</h3>
+            </div>
+
+            <div style="float:left;">
+                <div class="slidecontainer" style="margin-top:-5px;">
+                    <input tabindex=-1 [(ngModel)]="speedValue" (ngModelChange)="SpeedInput($event)" type="range" min="50" max="150" value={{speedhere}}
+                        step="50" class="slider" style="width:265px;transform:rotate(180deg);" onkeydown="if(event.keyCode > 0){return false}">
+                </div>
+
+                <span class="contword" style="font-size:12px;margin-right:110px;margin-top:20px;">慢</span>
+                <span class="contword" style="font-size:12px;margin-right:110px;margin-top:20px;">中</span>
+                <span class="contword" style="font-size:12px;margin-right:0px;margin-top:20px;">快</span>
+            </div>
+            <!-- -->
+
+        </div>
+        <br>
+        <!-- <div style="width:100%; height:60px;margin-top:-73px;">
+            <div style="margin-top:30px;">
+                <a (click)="clickOnitem(0)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check01' style="display:inline-block;">
+                    <img src="image/check.png" *ngIf='check01'>&nbsp;
+                    <span style="color:#555555;font-size:12px;">不使用设备</span>
+                </a>
+                <input type="text" class="ipstyle contword" style="display:inline-block; width:50px;height:12px;">
+                <span style="color:#555555;font-size:12px;">分钟后，将设备的灯光效果切换到</span>
+            </div>
+            <a class="titleclr" style="background-image:url(image/lightopt.png);background-size:cover; background-position:center;display:block; width:185px; height:24px;font-size:12px;padding-left:20px; line-height:25px;font-size:12px;margin-top:5px;">关闭所有灯光（省电模式）</a>
+        </div> -->
+    </div>
+    <section>
+        <div style="width:335px; height:35px;position: absolute;opacity: 0.7;z-index: 19;top: 305px;left: 105px;">
+            <a (click)="clickOnitem()" style="width:30px;height:18px;">&nbsp;
+                <img src="image/uncheck.png" *ngIf='!check01' style="width: 12px; display:none;">
+                <img src="image/check.png" *ngIf='check01' style="width: 12px;display:none;">
+            </a>
+            &nbsp;
+            <span style="color:#555555;font-size:12px;">不使用设备</span>
+            <div *ngIf="blockTime" style="position: absolute; top: 0; left: 85px; width:50px;height:15px; background-color:transparent;"></div>
+            <input tabindex=-1 onCONTEXTMENU="window.event.returnValue=true" id="time" type="text" value={{timeValue}} [(ngModel)]="timeValue"
+                (ngModelChange)="timeInput($event)" class="ipstyle contword" style="display:inline-block; width:50px;height:15px;"
+                minlength="1" maxlength="4">
+            <span style="color:#555555;font-size:12px; ">分钟后，将设备的灯光效果切换到</span>
+        </div>
+    </section>
+</section>

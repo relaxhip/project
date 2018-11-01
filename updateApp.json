@@ -1,0 +1,12 @@
+{
+    "Version":"1.0.0.0",
+    "AppName":{
+        "Mac":"SmartGenius_Mac.zip",
+        "Win":"SmartGenius_Win.zip"
+    },
+    "FWVersion":"1001",
+    "FWName":{
+        "Win":"UpdateFw_Win.zip",
+        "Mac":"UpdateFw_Mac.zip"
+    }
+}

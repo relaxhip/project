@@ -1,0 +1,182 @@
+<section (click)="cleanAllRightOp()" class="blockthispage">
+    <section style="position: absolute;
+        left: 347px;
+        top: 100px;
+        width: 200px;
+        height: 130px;
+        z-index: 30;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        padding: 10px;
+        text-align: center;
+        line-height:75px;" *ngIf='loading'>更新中
+        <br>
+        <img src="image/loading_circles.gif" style="position:absolute;width: 30px;height: 30px;top:75px;left:85px;">
+    </section>
+    <div id="clickarea02" [style.display]="selfdf">
+        <div id="fnwindow">
+            <div id="fntitle">
+                <p>{{pickFnKey}}FN功能自定义</p>
+                <p>{{pickFnKey}}</p>
+            </div>
+            <div id="fnopt">
+                <div id="fnopts">
+                </div>
+            </div>
+            <div id="fnbtn02" *ngIf="fnbtn">{{etitle}}</div>
+            <div id="fnbtn" (click)="openOpt()" *ngIf="!fnbtn">{{etitle}}</div>
+            <div id="fnbox" class="fadeIn">
+                <a (click)="clickOnpage(0)">多媒体</a>
+                <a (click)="clickOnpage(1)">灯效控制</a>
+                <a (click)="clickOnpage(2)">快速启动</a>
+                <!-- <a (click)="clickOnpage(3)">切换配置文件</a> -->
+                <a (click)="clickOnpage(4)">特色功能</a>
+
+
+            </div>
+
+            <div class="fncontent" *ngIf="fncontent01">
+                <!--多媒體-->
+                <a (click)="clickOnMedia(0)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check01'>
+                    <img src="image/check.png" *ngIf='check01'>&nbsp;播放/暂停</a>
+                <a (click)="clickOnMedia(1)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check02'>
+                    <img src="image/check.png" *ngIf='check02'>&nbsp;停止</a>
+                <a (click)="clickOnMedia(2)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check03'>
+                    <img src="image/check.png" *ngIf='check03'>&nbsp;上一曲</a>
+                <a (click)="clickOnMedia(3)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check04'>
+                    <img src="image/check.png" *ngIf='check04'>&nbsp;下一曲</a>
+                <a (click)="clickOnMedia(4)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check05'>
+                    <img src="image/check.png" *ngIf='check05'>&nbsp;静音</a>
+
+            </div>
+
+            <div class="fncontent" *ngIf="fncontent02">
+                <!--灯效控制-->
+                <a (click)="clickOnLight(0)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check01'>
+                    <img src="image/check.png" *ngIf='check01'>&nbsp;上一个灯效</a>
+                <a (click)="clickOnLight(1)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check02'>
+                    <img src="image/check.png" *ngIf='check02'>&nbsp;下一个灯效</a>
+                <a (click)="clickOnLight(2)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check03'>
+                    <img src="image/check.png" *ngIf='check03'>&nbsp;灯效方向向上/左/外</a>
+                <a (click)="clickOnLight(3)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check04'>
+                    <img src="image/check.png" *ngIf='check04'>&nbsp;灯效方向向下/右/内</a>
+                <a (click)="clickOnLight(4)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check05'>
+                    <img src="image/check.png" *ngIf='check05'>&nbsp;灯效变化速率加快</a>
+                <a (click)="clickOnLight(5)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check06'>
+                    <img src="image/check.png" *ngIf='check06'>&nbsp;灯效变化速率减慢</a>
+                <!-- <a (click)="clickOnLight(6)">&nbsp;<img src="image/uncheck.png" *ngIf='!check07'><img src="image/check.png" *ngIf='check07'>&nbsp;进入灯效编程模式</a> -->
+                <a (click)="clickOnLight(7)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check08'>
+                    <img src="image/check.png" *ngIf='check08'>&nbsp;打开/关闭背光</a>
+                <a (click)="clickOnLight(8)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check09'>
+                    <img src="image/check.png" *ngIf='check09'>&nbsp;暂停灯效</a>
+            </div>
+
+            <div class="fncontent" *ngIf="fncontent03">
+                <!--快速启动-->
+                <!-- <a (click)="clickOnOpen(0)">&nbsp;<img src="image/uncheck.png" *ngIf='!check01'><img src="image/check.png" *ngIf='check01'>&nbsp;炽魂云驱动</a> -->
+                <a (click)="clickOnOpen(0)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check02'>
+                    <img src="image/check.png" *ngIf='check02'>&nbsp;我的电脑</a>
+                <a (click)="clickOnOpen(1)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check03'>
+                    <img src="image/check.png" *ngIf='check03'>&nbsp;搜索</a>
+                <a (click)="clickOnOpen(2)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check04'>
+                    <img src="image/check.png" *ngIf='check04'>&nbsp;计算器</a>
+                <a (click)="clickOnOpen(3)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check05'>
+                    <img src="image/check.png" *ngIf='check05'>&nbsp;播放器</a>
+                <a (click)="clickOnOpen(4)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check06'>
+                    <img src="image/check.png" *ngIf='check06'>&nbsp;浏览器</a>
+
+            </div>
+
+            <!-- <div class="fncontent" *ngIf="fncontent04">切换配置文件
+        <a (click)="clickOnDoc(0)">&nbsp;<img src="image/uncheck.png" *ngIf='!check01'><img src="image/check.png" *ngIf='check01'>&nbsp;配置文件1</a>
+        <a (click)="clickOnDoc(1)">&nbsp;<img src="image/uncheck.png" *ngIf='!check02'><img src="image/check.png" *ngIf='check02'>&nbsp;配置文件2</a>
+        <a (click)="clickOnDoc(2)">&nbsp;<img src="image/uncheck.png" *ngIf='!check03'><img src="image/check.png" *ngIf='check03'>&nbsp;配置文件3</a>
+        <a (click)="clickOnDoc(3)">&nbsp;<img src="image/uncheck.png" *ngIf='!check04'><img src="image/check.png" *ngIf='check04'>&nbsp;配置文件4</a>
+        <a (click)="clickOnDoc(4)">&nbsp;<img src="image/uncheck.png" *ngIf='!check05'><img src="image/check.png" *ngIf='check05'>&nbsp;配置文件5</a>
+
+    </div> -->
+
+            <div class="fncontent" *ngIf="fncontent05">
+                <!--特色功能-->
+                <!-- <a (click)="clickOnFeature(0)">&nbsp;<img src="image/uncheck.png" *ngIf='!check01'><img src="image/check.png" *ngIf='check01'>&nbsp;标准/游戏模式切换</a> -->
+                <a (click)="clickOnFeature(1)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check02'>
+                    <img src="image/check.png" *ngIf='check02'>&nbsp;禁用 Windows 键</a>
+                <a (click)="clickOnFeature(2)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check03'>
+                    <img src="image/check.png" *ngIf='check03'>&nbsp;恢复出厂设置</a>
+                <!-- <a (click)="clickOnFeature(3)">&nbsp;<img src="image/uncheck.png" *ngIf='!check04'><img src="image/check.png" *ngIf='check04'>&nbsp;老板键</a> -->
+                <a (click)="clickOnFeature(4)">&nbsp;
+                    <img src="image/uncheck.png" *ngIf='!check05'>
+                    <img src="image/check.png" *ngIf='check05'>&nbsp;Ctrl 与 Caps 键对调</a>
+                <!-- <a (click)="clickOnFeature(5)">&nbsp;<img src="image/uncheck.png" *ngIf='!check06'><img src="image/check.png" *ngIf='check06'>&nbsp;高级截屏</a> -->
+            </div>
+
+
+
+            <div class="fnconfirm" *ngIf="fncontent01">
+                <a id="fna01" (click)="colseSelfdf()">取消</a>
+                <a id="fna02" (click)="MediaControl()">保存</a>
+            </div>
+            <div class="fnconfirm" *ngIf="fncontent02">
+                <a id="fna01" (click)="colseSelfdf()">取消</a>
+                <a id="fna02" (click)="lightControl()">保存</a>
+            </div>
+            <div class="fnconfirm" *ngIf="fncontent03">
+                <a id="fna01" (click)="colseSelfdf()">取消</a>
+                <a id="fna02" (click)="launchTest()">保存</a>
+            </div>
+            <div class="fnconfirm" *ngIf="fncontent04">
+                <a id="fna01" (click)="colseSelfdf()">取消</a>
+                <a id="fna02" (click)="functionkeysetIn()">保存</a>
+            </div>
+            <div class="fnconfirm" *ngIf="fncontent05">
+                <a id="fna01" (click)="colseSelfdf()">取消</a>
+                <a id="fna02" (click)="specialfunc()">保存</a>
+            </div>
+
+            <div class="fnconfirm" *ngIf="fncontent06">
+                <a id="fna01" (click)="colseSelfdf()">取消</a>
+                <a id="fna02" (click)="functionkeysetIn()">保存</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="kbarea">
+        <img src="./image/bk700.png" alt="bk700" id="bk500">
+        <img src="./image/bk700_atbtn02.png" alt="bk700_atbtn.png" id="selfdfbtn" *ngIf="attbtn">
+        <div *ngFor="let item of array1;let recordIndex = index" id="{{item}}_css01" (dblclick)="callSelfdf(recordIndex)" (contextmenu)="onRightClick(recordIndex)"></div>
+
+        <div *ngFor="let options of array1;let recordIndex = index" id="{{options}}_2_css01" style="border:1px solid red;color:white;width:100px;height:76px;font-size:15px;z-index:10;display:none;z-index:10;background:black;opacity:1;">
+            <a (click)="callSelfdf(recordIndex)">编辑功能</a>
+            <a (click)=" resetThiskey(recordIndex)">恢复默认功能</a>
+            <a (click)="blockKey(recordIndex)">禁用功能</a>
+        </div>
+        <section style="position: absolute;bottom:0px; right:30px;" id='resetbtn'>
+            <p style="font-size:16px;cursor:pointer;" (click)="resetbutton()">恢复默认设置</p>
+        </section>
+    </div>
+    <!-- <section style="color:white;">{{ProfileDetail.ProfileName}}</section> -->
+</section>

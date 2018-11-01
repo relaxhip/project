@@ -1,0 +1,63 @@
+<!-- <img src="./image/sidep05.png" alt="01" style="width:80%;"> -->
+<!-- <img src="./image/sidep04.png" alt="01" style="width:80%;"> -->
+<div style="margin-left:10px; margin-top:2px;font-size:11px;">
+        <br>
+        <h3 class="lightcolor">窗口命令</h3>
+        <div class="checkbox" style="margin-left:-5px;">
+                <a style="width:150px;" (click)="clickOnitem(0)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check01'>
+                        <img src="image/check.png" *ngIf='check01'>&nbsp;关闭窗口（Alt+F4）</a>
+                <a style="width:250px;" (click)="clickOnitem(1)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check02'>
+                        <img src="image/check.png" *ngIf='check02'>&nbsp;窗口最大化（按住Alt+Space，然后再按X）</a>
+                <a style="width:250px;" (click)="clickOnitem(2)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check03'>
+                        <img src="image/check.png" *ngIf='check03'>&nbsp;窗口最小化（按住Alt+Space，然后再按N）</a>
+                <a style="width:170px;" (click)="clickOnitem(3)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check04'>
+                        <img src="image/check.png" *ngIf='check04'>&nbsp;显示桌面（Windows键+D）</a>
+                <a style="width:200px;" (click)="clickOnitem(4)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check05'>
+                        <img src="image/check.png" *ngIf='check05'>&nbsp;浏览器中的下一个标签（Ctrl+Tab）</a>
+                <a style="width:250px;" (click)="clickOnitem(5)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check06'>
+                        <img src="image/check.png" *ngIf='check06'>&nbsp;浏览器中的上一个标签（Ctrl+Shift+Tab）</a>
+        </div>
+        <br>
+        <h3 class="lightcolor">缩放命令</h3>
+        <div class="checkbox" style="height:60px;margin-left:-5px;">
+                <a style="width:150px;" (click)="clickOnitem(6)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check07'>
+                        <img src="image/check.png" *ngIf='check07'>&nbsp;放大（Ctrl+鼠标滚动）</a>
+                <a style="width:150px;" (click)="clickOnitem(7)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check08'>
+                        <img src="image/check.png" *ngIf='check08'>&nbsp;缩小（Ctrl+鼠标滚动）</a>
+                <a style="width:200px;" (click)="clickOnitem(8)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check09'>
+                        <img src="image/check.png" *ngIf='check09'>&nbsp;恢复默认缩放比例（Ctrl+0）</a>
+
+        </div>
+        <br>
+        <h3 class="lightcolor">编辑命令</h3>
+        <div class="checkbox" style="margin-left:-5px;">
+                <a style="width:100px;" (click)="clickOnitem(9)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check10'>
+                        <img src="image/check.png" *ngIf='check10'>&nbsp;复制（Ctrl+C）</a>
+                <a style="width:100px;" (click)="clickOnitem(10)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check11'>
+                        <img src="image/check.png" *ngIf='check11'>&nbsp;剪切（Ctrl+X）</a>
+                <a style="width:100px;" (click)="clickOnitem(11)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check12'>
+                        <img src="image/check.png" *ngIf='check12'>&nbsp;粘贴（Ctrl+V）</a>
+                <a style="width:100px;" (click)="clickOnitem(12)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check13'>
+                        <img src="image/check.png" *ngIf='check13'>&nbsp;撤销（Ctrl+Z）</a>
+                <a style="width:100px;" (click)="clickOnitem(13)">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check14'>
+                        <img src="image/check.png" *ngIf='check14'>&nbsp;重做（Ctrl+Y）</a>
+        </div>
+        <div id="confirmarea">
+                <a id="na" (click)="cancelPage()">取消</a>
+                <a id="yes" (click)="MacrosetIn()">保存</a>
+        </div>
+</div>

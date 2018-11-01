@@ -1,0 +1,1257 @@
+.upback1_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.upback2_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 50ms;
+    animation-iteration-count: infinite;
+}
+
+.upback3_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+}
+
+.upback4_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 150ms;
+    animation-iteration-count: infinite;
+}
+
+.upback5_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+
+.upback6_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 250ms;
+    animation-iteration-count: infinite;
+}
+
+.upback7_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+}
+
+.upback8_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+.upback9_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 1550ms;
+    animation-iteration-count: infinite;
+}
+
+.upback10_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+}
+
+.upback11_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 1650ms;
+    animation-iteration-count: infinite;
+}
+
+.upback12_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 1700ms;
+    animation-iteration-count: infinite;
+}
+.upback13_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 1750ms;
+    animation-iteration-count: infinite;
+}
+.upback14_med {
+    animation-name: crashudMed;
+    animation-duration: 3s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+}
+
+.upback1_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.upback2_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+}
+
+.upback3_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+
+.upback4_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+}
+
+.upback5_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+}
+
+.upback6_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+}
+
+.upback7_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+}
+
+.upback8_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+.upback9_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 2100ms;
+    animation-iteration-count: infinite;
+}
+
+.upback10_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 2200ms;
+    animation-iteration-count: infinite;
+}
+
+.upback11_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 2300ms;
+    animation-iteration-count: infinite;
+}
+
+.upback12_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 2400ms;
+    animation-iteration-count: infinite;
+}
+.upback13_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 2500ms;
+    animation-iteration-count: infinite;
+}
+.upback14_slow {
+    animation-name: crashudSlow;
+    animation-duration: 4s;
+    animation-delay: 2600ms;
+    animation-iteration-count: infinite;
+}
+
+.upback1_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.upback2_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 30ms;
+    animation-iteration-count: infinite;
+}
+
+.upback3_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 60ms;
+    animation-iteration-count: infinite;
+}
+
+.upback4_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 90ms;
+    animation-iteration-count: infinite;
+}
+
+.upback5_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 120ms;
+    animation-iteration-count: infinite;
+}
+
+.upback6_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 150ms;
+    animation-iteration-count: infinite;
+}
+
+.upback7_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 180ms;
+    animation-iteration-count: infinite;
+}
+
+.upback8_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+.upback9_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 1030ms;
+    animation-iteration-count: infinite;
+}
+
+.upback10_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 1060ms;
+    animation-iteration-count: infinite;
+}
+
+.upback11_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 1090ms;
+    animation-iteration-count: infinite;
+}
+
+.upback12_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 1120ms;
+    animation-iteration-count: infinite;
+}
+.upback13_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 1150ms;
+    animation-iteration-count: infinite;
+}
+.upback14_high {
+    animation-name: crashudHigh;
+    animation-duration: 2s;
+    animation-delay: 1280ms;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+.rtlcrash1_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash2_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 70ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash3_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 140ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash4_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 210ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash5_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 280ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash6_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 350ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash7_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 420ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash8_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 490ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash9_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 560ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash10_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 630ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash11_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 700ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash12_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 770ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash13_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 840ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash14_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 910ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash15_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 980ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash16_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 1050ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash17_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 1120ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash18_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 1190ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash19_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 1260ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash20_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 1330ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash21_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 1400ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash22_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash23_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2070ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash24_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2140ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash25_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2210ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash26_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2280ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash27_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2350ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash28_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2420ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash29_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2490ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash30_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2560ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash31_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2630ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash32_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2700ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash33_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2770ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash34_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2840ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash35_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2910ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash36_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 2980ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash37_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 3050ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash38_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 3120ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash39_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 3190ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash40_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 3260ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash41_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 3330ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash42_med {
+    animation-name: crashlrMed;
+    animation-duration: 4s;
+    animation-delay: 3400ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash1_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash2_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 50ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash3_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash4_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 150ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash5_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash6_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 250ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash7_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash8_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 350ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash9_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash10_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 450ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash11_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash12_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 550ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash13_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash14_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 650ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash15_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 700ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash16_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 750ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash17_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash18_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 850ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash19_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 900ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash20_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 950ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash21_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay:  1000ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash22_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash23_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 1550ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash24_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash25_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 1650ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash26_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 1700ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash27_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 1750ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash28_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash29_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 1850ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash30_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 1900ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash31_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 1950ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash32_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash33_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2050ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash34_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2100ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash35_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2150ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash36_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2200ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash37_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2250ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash38_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2300ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash39_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2350ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash40_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2400ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash41_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2450ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash42_high {
+    animation-name: crashlrHigh;
+    animation-duration: 3s;
+    animation-delay: 2500ms;
+    animation-iteration-count: infinite;
+}
+
+
+.rtlcrash1_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash2_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash3_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash4_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash5_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash6_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash7_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash8_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 700ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash9_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash10_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 900ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash11_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash12_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 1100ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash13_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 1200ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash14_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 1300ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash15_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 1400ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash16_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash17_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash18_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 1700ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash19_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash20_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 1900ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash21_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash22_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 2500ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash23_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 2600ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash24_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 2700ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash25_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 2800ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash26_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 2900ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash27_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 3000ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash28_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 3100ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash29_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 3200ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash30_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 3300ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash31_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 3400ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash32_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 3500ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash33_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 3600ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash34_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 3700ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash35_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 3800ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash36_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 3900ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash37_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 4000ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash38_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 4100ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash39_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 4200ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash40_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 4300ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash41_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 4400ms;
+    animation-iteration-count: infinite;
+}
+
+.rtlcrash42_slow {
+    animation-name: crashlrSlow;
+    animation-duration: 5s;
+    animation-delay: 4500ms;
+    animation-iteration-count: infinite;
+}
+
+
+/*      keyframes      */
+
+@keyframes crashlrMed {
+    0% {
+        background-color: #E9004C;
+    }
+    4.5% {
+        background-color: #FF3F00;
+    }
+    9% {
+        background-color: transparent;
+    }
+    100% {
+        background-color:transparent;
+    }
+}
+@keyframes crashlrHigh {
+    0% {
+        background-color: #E9004C;
+    }
+    3.5% {
+        background-color: #FF3F00;
+        
+    }
+    7% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+@keyframes crashlrSlow {
+    0% {
+        background-color: #E9004C;
+    }
+    5% {
+        background-color: #FF3F00;
+        
+    }
+    10% {
+        background-color: transparent;
+    }
+    100% {
+        background-color:transparent;
+    }
+}
+@keyframes crashudMed {
+    0% {
+        background-color: #E9004C;
+    }
+    4% {
+        background-color: #FF3F00; 
+    }
+    8% {
+        background-color: transparent;
+    }
+    100% {
+        background-color:transparent;
+    }
+}
+@keyframes crashudHigh {
+    0% {
+        background-color: #E9004C;
+    }
+    3% {
+        background-color: #FF3F00; 
+    }
+    6% {
+        background-color: transparent;
+    }
+    100% {
+        background-color:transparent;
+    }
+}
+@keyframes crashudSlow {
+    0% {
+        background-color: #E9004C;
+    }
+    5% {
+        background-color: #FF3F00; 
+    }
+    10% {
+        background-color: transparent;
+    }
+    100% {
+        background-color:transparent;
+    }
+}

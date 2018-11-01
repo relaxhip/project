@@ -1,0 +1,10 @@
+node-gyp rebuild -target=%ELECTRON_VERSION% -arch=%OS% --dist-url=https://atom.io/download/atom-shell
+
+
+https://www.jianshu.com/p/fd3b19cacd99
+
+https://www.npmjs.com/package/node-gyp
+
+
+node-gyp rebuild --target=1.4.10 --arch=ia32 --dist-url=https://atom.io/download/atom-shell
+node-gyp rebuild --target=1.4.10 --arch=x64 --dist-url=https://atom.io/download/atom-shell

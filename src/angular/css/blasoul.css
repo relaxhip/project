@@ -1,0 +1,664 @@
+/*特效區*/
+
+.blasoul_1_med {
+    animation-name: blasoul_1;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_2_med {
+    animation-name: blasoul_1;
+    animation-duration: 3s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_3_med {
+    animation-name: blasoul_1;
+    animation-duration: 3s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_4_med {
+    animation-name: blasoul_2;
+    animation-duration: 3s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_5_med {
+    animation-name: blasoul_2;
+    animation-duration: 3s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_6_med {
+    animation-name: blasoul_2;
+    animation-duration: 3s;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_7_med {
+    animation-name: blasoul_3;
+    animation-duration: 3s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_8_med {
+    animation-name: blasoul_3;
+    animation-duration: 3s;
+    animation-delay: 700ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_9_med {
+    animation-name: blasoul_4;
+    animation-duration: 3s;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_10_med {
+    animation-name: blasoul_4;
+    animation-duration: 3s;
+    animation-delay: 900ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_11_med {
+    animation-name: blasoul_5;
+    animation-duration: 3s;
+    animation-delay: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_12_med {
+    animation-name: blasoul_5;
+    animation-duration: 3s;
+    animation-delay: 1100ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_13_med {
+    animation-name: blasoul_6;
+    animation-duration: 3s;
+    animation-delay: 1200ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_14_med {
+    animation-name: blasoul_6;
+    animation-duration: 3s;
+    animation-delay: 1300ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_15_med {
+    animation-name: blasoul_6;
+    animation-duration: 3s;
+    animation-delay: 1400ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_16_med {
+    animation-name: blasoul_7;
+    animation-duration: 3s;
+    animation-delay: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_17_med {
+    animation-name: blasoul_8;
+    animation-duration: 3s;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_18_med {
+    animation-name: blasoul_8;
+    animation-duration: 3s;
+    animation-delay: 1700ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_19_med {
+    animation-name: blasoul_8;
+    animation-duration: 3s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_20_med {
+    animation-name: blasoul_9;
+    animation-duration: 3s;
+    animation-delay: 1900ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_21_med {
+    animation-name: blasoul_9;
+    animation-duration: 3s;
+    animation-delay: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_22_med {
+    animation-name: blasoul_9;
+    animation-duration: 3s;
+    animation-delay: 2100ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_23_med {
+    animation-name: blasoul_10;
+    animation-duration: 3s;
+    animation-delay: 2200ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_24_med {
+    animation-name: blasoul_10;
+    animation-duration: 3s;
+    animation-delay: 2300ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_25_med {
+    animation-name: blasoul_10;
+    animation-duration: 3s;
+    animation-delay: 2400ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_26_med {
+    animation-name: blasoul_11;
+    animation-duration: 3s;
+    animation-delay: 2500ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_27_med {
+    animation-name: blasoul_11;
+    animation-duration: 3s;
+    animation-delay: 2600ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_1_high {
+    animation-name: blasoul_1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_2_high {
+    animation-name: blasoul_1;
+    animation-duration: 1.5s;
+    animation-delay: 30ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_3_high {
+    animation-name: blasoul_1;
+    animation-duration: 1.5s;
+    animation-delay: 60ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_4_high {
+    animation-name: blasoul_2;
+    animation-duration: 1.5s;
+    animation-delay: 90ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_5_high {
+    animation-name: blasoul_2;
+    animation-duration: 1.5s;
+    animation-delay: 120ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_6_high {
+    animation-name: blasoul_2;
+    animation-duration: 1.5s;
+    animation-delay: 150ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_7_high {
+    animation-name: blasoul_3;
+    animation-duration: 1.5s;
+    animation-delay: 180ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_8_high {
+    animation-name: blasoul_3;
+    animation-duration: 1.5s;
+    animation-delay: 210ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_9_high {
+    animation-name: blasoul_4;
+    animation-duration: 1.5s;
+    animation-delay: 240ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_10_high {
+    animation-name: blasoul_4;
+    animation-duration: 1.5s;
+    animation-delay: 270ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_11_high {
+    animation-name: blasoul_5;
+    animation-duration: 1.5s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_12_high {
+    animation-name: blasoul_5;
+    animation-duration: 1.5s;
+    animation-delay: 330ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_13_high {
+    animation-name: blasoul_6;
+    animation-duration: 1.5s;
+    animation-delay: 360ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_14_high {
+    animation-name: blasoul_6;
+    animation-duration: 1.5s;
+    animation-delay: 390ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_15_high {
+    animation-name: blasoul_6;
+    animation-duration: 1.5s;
+    animation-delay: 420ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_16_high {
+    animation-name: blasoul_7;
+    animation-duration: 1.5s;
+    animation-delay: 450ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_17_high {
+    animation-name: blasoul_8;
+    animation-duration: 1.5s;
+    animation-delay: 480ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_18_high {
+    animation-name: blasoul_8;
+    animation-duration: 1.5s;
+    animation-delay: 510ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_19_high {
+    animation-name: blasoul_8;
+    animation-duration: 1.5s;
+    animation-delay: 540ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_20_high {
+    animation-name: blasoul_9;
+    animation-duration: 1.5s;
+    animation-delay: 570ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_21_high {
+    animation-name: blasoul_9;
+    animation-duration: 1.5s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_22_high {
+    animation-name: blasoul_9;
+    animation-duration: 1.5s;
+    animation-delay: 630ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_23_high {
+    animation-name: blasoul_10;
+    animation-duration: 1.5s;
+    animation-delay: 660ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_24_high {
+    animation-name: blasoul_10;
+    animation-duration: 1.5s;
+    animation-delay: 690ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_25_high {
+    animation-name: blasoul_10;
+    animation-duration: 1.5s;
+    animation-delay: 720ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_26_high {
+    animation-name: blasoul_11;
+    animation-duration: 1.5s;
+    animation-delay: 750ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_27_high {
+    animation-name: blasoul_11;
+    animation-duration: 1.5s;
+    animation-delay: 780ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_1_slow {
+    animation-name: blasoul_1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_2_slow {
+    animation-name: blasoul_1;
+    animation-duration: 6s;
+    animation-delay: 100ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_3_slow {
+    animation-name: blasoul_1;
+    animation-duration: 6s;
+    animation-delay: 200ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_4_slow {
+    animation-name: blasoul_2;
+    animation-duration: 6s;
+    animation-delay: 300ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_5_slow {
+    animation-name: blasoul_2;
+    animation-duration: 6s;
+    animation-delay: 400ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_6_slow {
+    animation-name: blasoul_2;
+    animation-duration: 6s;
+    animation-delay: 500ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_7_slow {
+    animation-name: blasoul_3;
+    animation-duration: 6s;
+    animation-delay: 600ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_8_slow {
+    animation-name: blasoul_3;
+    animation-duration: 6s;
+    animation-delay: 700ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_9_slow {
+    animation-name: blasoul_4;
+    animation-duration: 6s;
+    animation-delay: 800ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_10_slow {
+    animation-name: blasoul_4;
+    animation-duration: 6s;
+    animation-delay: 900ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_11_slow {
+    animation-name: blasoul_5;
+    animation-duration: 6s;
+    animation-delay: 1000ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_12_slow {
+    animation-name: blasoul_5;
+    animation-duration: 6s;
+    animation-delay: 1100ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_13_slow {
+    animation-name: blasoul_6;
+    animation-duration: 6s;
+    animation-delay: 1200ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_14_slow {
+    animation-name: blasoul_6;
+    animation-duration: 6s;
+    animation-delay: 1300ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_15_slow {
+    animation-name: blasoul_6;
+    animation-duration: 6s;
+    animation-delay: 1400ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_16_slow {
+    animation-name: blasoul_7;
+    animation-duration: 6s;
+    animation-delay: 1500ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_17_slow {
+    animation-name: blasoul_8;
+    animation-duration: 6s;
+    animation-delay: 1600ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_18_slow {
+    animation-name: blasoul_8;
+    animation-duration: 6s;
+    animation-delay: 1700ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_19_slow {
+    animation-name: blasoul_8;
+    animation-duration: 6s;
+    animation-delay: 1800ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_20_slow {
+    animation-name: blasoul_9;
+    animation-duration: 6s;
+    animation-delay: 1900ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_21_slow {
+    animation-name: blasoul_9;
+    animation-duration: 6s;
+    animation-delay: 2000ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_22_slow {
+    animation-name: blasoul_9;
+    animation-duration: 6s;
+    animation-delay: 2100ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_23_slow {
+    animation-name: blasoul_10;
+    animation-duration: 6s;
+    animation-delay: 2200ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_24_slow {
+    animation-name: blasoul_10;
+    animation-duration: 6s;
+    animation-delay: 2300ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_25_slow {
+    animation-name: blasoul_10;
+    animation-duration: 6s;
+    animation-delay: 2400ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_26_slow {
+    animation-name: blasoul_11;
+    animation-duration: 6s;
+    animation-delay: 2500ms;
+    animation-iteration-count: infinite;
+}
+
+.blasoul_27_slow {
+    animation-name: blasoul_11;
+    animation-duration: 6s;
+    animation-delay: 2600ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blasoul_1 {
+    0% {
+        background-color: rgb(255, 126, 0);
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+@keyframes blasoul_2 {
+    0% {
+        background-color: rgb(255, 189, 0);
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+@keyframes blasoul_3 {
+    0% {
+        background-color: rgb(0, 255, 255);
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+@keyframes blasoul_4 {
+    0% {
+        background-color: rgb(0, 255, 126);
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+@keyframes blasoul_5 {
+    0% {
+        background-color: rgb(0, 126, 255);
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+@keyframes blasoul_6 {
+    0% {
+        background-color: rgb(126, 0, 255);
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+@keyframes blasoul_7 {
+    0% {
+        background-color: rgb(255, 0, 0);
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+@keyframes blasoul_8 {
+    0% {
+        background-color: rgb(255, 63, 0);
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+@keyframes blasoul_9 {
+    0% {
+        background-color: rgb(255, 255, 0);
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+@keyframes blasoul_10 {
+    0% {
+        background-color: rgb(255, 163, 0);
+    }
+    100% {
+        background-color: transparent
+    }
+}
+
+@keyframes blasoul_11 {
+    0% {
+        background-color: rgb(0, 255, 63);
+    }
+    100% {
+        background-color: transparent
+    }
+}

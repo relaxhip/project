@@ -1,0 +1,76 @@
+.container {
+    width: 100%;
+}
+
+.socialmain {
+    width: 70%;
+    display: block;
+    position: relative;
+    margin: auto;
+    top: 30px;
+    z-index: 7;
+}
+a{
+    display: block;
+}
+.link1 img {
+    width: 116px;
+    height: 252px;
+    position: absolute;
+    top: 32px;
+    left: 138px;
+    z-index: 9;
+    opacity: 0;
+}
+.link1 img:hover{
+    opacity: 1;
+}
+
+.link2 img {
+    width: 116px;
+    height: 253px;
+    position: absolute;
+    z-index: 9;
+    top: 32px;
+    left: 265px;
+    opacity: 0;
+}
+.link2 img:hover {
+    opacity: 1;
+}
+.link3 img {
+    width: 116px;
+    height: 253px;
+    position: absolute;
+    z-index: 9;
+    top: 32px;
+    left: 393px;
+    opacity: 0;
+}
+.link3 img:hover {
+    opacity: 1;
+}
+.link4 img {
+    width: 116px;
+    height: 253px;
+    position: absolute;
+    z-index: 9;
+    top: 32px;
+    left: 522px;
+    opacity: 0;
+}
+.link4 img:hover {
+    opacity: 1;
+}
+.link5 img {
+    width: 116px;
+    height: 253px;
+    position: absolute;
+    z-index: 8;
+    top: 32px;
+    left: 649px;
+    opacity: 0;
+}
+.link5 img:hover {
+    opacity: 1;
+}

@@ -1,0 +1,43 @@
+<!-- <img src="./image/sidep07.png" alt="01" style="width:80%;"> -->
+<div style="margin-left:10px; margin-top:10px;">
+
+    <div class="checkbox">
+        <a (click)="clickOnitem(0)">&nbsp;
+            <img src="image/uncheck.png" *ngIf='!check01'>
+            <img src="image/check.png" *ngIf='check01'>&nbsp;浏览器</a>
+        <a (click)="clickOnitem(1)">&nbsp;
+            <img src="image/uncheck.png" *ngIf='!check02'>
+            <img src="image/check.png" *ngIf='check02'>&nbsp;播放器</a>
+        <a (click)="clickOnitem(2)">&nbsp;
+            <img src="image/uncheck.png" *ngIf='!check03'>
+            <img src="image/check.png" *ngIf='check03'>&nbsp;计算器</a>
+        <a (click)="clickOnitem(3)">&nbsp;
+            <img src="image/uncheck.png" *ngIf='!check04'>
+            <img src="image/check.png" *ngIf='check04'>&nbsp;自定义</a>
+
+    </div>
+    <br>
+    <h3 class="detitleclr">名称</h3>
+    <br>
+    <input tabindex=-1 [disabled]="disabletextbox" type="text" class="ipstyle" style="width:200px; height:25px;">
+    <br>
+    <br>
+    <!-- 下方攔 -->
+    <div>
+        <h3 class="detitleclr">输入本地或网络程序、文件、文件夹、计算机或Internet地址的快捷键</h3>
+        <br>
+        <!-- <input disabled={{switch}} type="text" class="ipstyle" style="width:200px; height:25px;"> -->
+        <input tabindex=-1 [disabled]="disabletextbox" type="text" name='textfield' id='textfield' class="ipstyle" style="width:200px; height:25px;float:left;"
+            [(ngModel)]="Path">
+        <a  id='btna' class="ipstyle" (click)="openApp()" style="display:block; float:left; width:25px; height:25px;background-image:url(image/more.png);background-position:center;background-size:cover;cursor: pointer"></a>
+        <!-- <a class="ipstyle " style="display:block; float:left; width:25px; height:25px;background-image:url(image/more.png);background-position:center;background-size:cover;" ></a> -->
+        <!-- <input type='text' name='textfield' id='textfield' class='txt' /> -->
+        <!-- <input type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />      -->
+    </div>
+
+    <div id="confirmarea">
+        <a id="na" (click)="cancelPage()">取消</a>
+        <a id="yes" (click)="functionkeysetIn()">保存</a>
+        <!-- <a (click)='openApp()'>test</a> -->
+    </div>
+</div>

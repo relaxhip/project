@@ -1,0 +1,435 @@
+<div id="wrapper" onDRAGSTART="window.event.returnValue=false" onCONTEXTMENU="window.event.returnValue=false"
+    BonSelectStart="event.returnValue=false" class={{hdblock}} (click)="enterConfirm($event)">
+    <!-- <section style="width:1000px; height:1000px;position:absolute;z-index:50;" (mouseenter)="dofirst()" *ngIf="loadingFinish"></section> -->
+    <div id="clrpicker" style='display:none'>
+        <canvas id="myCanvas" width="180px" height="180px"></canvas>
+        <div id="showcolor" style="position:absolute; z-index:85; top:200px; left:320px;background:red;width:100px;height:50px;"></div>
+        <div style="position:absolute; z-index:85; top:300px; left:320px;color:white;">
+            R:<input type="text" [(ngModel)]="Rclr" style="width:100px;text-align:center;">
+            G:<input type="text" [(ngModel)]="Gclr" style="width:100px;text-align:center;">
+            B:<input type="text" [(ngModel)]="Bclr" style="width:100px;text-align:center;">
+        </div>
+        <img src="image/clrmodel.png" id='Img' style="display:none;">
+
+    </div>
+
+    <input type="text" id="cliptext" [(ngModel)]="copytext" style="position: absolute;left: -200px;top: 250px;width: 200px;height: 100px;z-index: 30;padding: 10px;text-align: center;line-height:75px;">
+
+
+    <div style="position: absolute;left: 349px;top: 169px;width: 200px;height: 130px;z-index: 59;padding: 10px;text-align: center;line-height:75px;"
+        *ngIf='fakekb'>
+
+        <img src="./image/bk700.png" alt="bk700" id="bk500">
+    </div>
+
+    <section style="position: absolute;left: 358px;top: 277px;width: 180px;height: 100px;z-index: 70;background: rgba(0,0,0,0.6);"
+        *ngIf='loading'>
+        <img src="image/loading_circles.gif" style="position:absolute;width: 40px;height: 40px;top:30px;left:70px;">
+    </section>
+
+    <!-- <section style="position: absolute;
+    left: 347px;
+    top: 250px;
+    width: 200px;
+    height: 130px;
+    z-index:70;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    line-height:75px;" *ngIf='loading02'>
+        <span>{{showtext}}</span>
+        <br>
+        <img src="image/loading_circles.gif" style="position:absolute;width: 30px;height: 30px;top:75px;left:85px;">
+    </section> -->
+
+    <section style="position: absolute;left: 240px;top: 250px;width: 400px;height: 200px;z-index: 60;background: black;color: white;padding: 10px;text-align: center;line-height:75px;"
+        *ngIf='fwv'>
+        FW版本号不符，即将关闭窗口进行版本号升级，
+        <br> FW版本升级后，请将设备重新插拔并重启软件。
+    </section>
+
+    <section style="position: absolute; left: 240px; top: 250px; width: 400px; height: 100px; z-index: 60; background: black;color: white;padding: 10px;text-align: center;line-height:75px;"
+        *ngIf='remindUnplug'>未侦测到设备，软体即将关闭
+    </section>
+
+    <section style="position: absolute; left: 240px; top: 250px; width: 400px; height: 100px; z-index: 60; background: black;color: white;padding: 10px;text-align: center;line-height:75px;"
+        *ngIf='namesCheck'>{{textShow}}
+    </section>
+
+    <section style="position:absolute;bottom:0px;left:0px; width:1000px;height:300px;z-index:10;" (click)="hidebox()"></section>
+    <div id="clickarea" [style.display]="selfdf">
+        <img style="position: absolute; top:5%; right:3%;" src="image/rtup03.png" alt="close" (click)="colseSelfdf()">
+        <img style="width:100%;height:auto;" src="./image/setting.png">
+        <div id="optionsbar" style="top:25%;text-align:center;">
+            <a id="optb01" [ngStyle]="lecssb01" (click)="onClick(0)">常规</a>
+            <a id="optb02" [ngStyle]="lecssb02" (click)="onClick(1)">设备</a>
+            <a id="optb03" [ngStyle]="lecssb03" (click)="onClick(2)">关于</a>
+        </div>
+        <div id="settingPage">
+            <div *ngIf="lanset">
+                <h3 class="margindistantStyle">语言</h3>
+                <a class="dropA margindistantStyle" >{{lan}}</a>
+                <!-- 隱藏啟動 -->
+             <section style="display:none;"> 
+                <h3 class="margindistantStyle">启动</h3>
+                <section class="margindistantStyle">
+                    <div style="float:left;">
+                            <img src="image/checkbox.png" alt="checkbox" *ngIf="!check" (click)="check=!check">
+                            <img src="image/checkbox02.png" alt="checkbox02" *ngIf="check" (click)="check=false">
+                    </div>
+                    <div style="float:left;">
+                            <p>启动系统时自动运行炽魂云</p><br>
+                            <p>注意：取消自动运行将失去设备部分个性化功能。</p>
+                    </div>
+                </section>
+            </section>
+               
+            </div>
+
+            <div *ngIf="setting" id="setting">
+                <h3 class="margindistant20Style">设备</h3>
+                <a class="dropA margindistantStyle" > {{assor}}</a>
+                 <!-- 隱藏回報率 -->
+                <section style="display:none;"> 
+                <h3 class="margindistant20Style">回报率</h3>
+                <div class="slidecontainer" style="margin-top:5px;">
+                        <input type="range" min="0" max="1" style="width:265px;" class="slider">
+                    <span class="contword" style="font-size:12px;margin-right:12px;margin-top:5px;float:left;">125Hz/8ms</span>
+				<span class="contword" style="font-size:12px;margin-right:12px;margin-top:5px;float:left;">500Hz/2ms</span>
+				<span class="contword" style="font-size:12px;margin-top:5px;float:left;">1000Hz/1ms</span>
+                    </div><br>
+                </section>
+                <h3 class="margindistant20Style">固件</h3>
+                <p class="margindistant20Style">固件版本 v1.0.0.37</p>
+                <a class="lobtn margindistant20Style">檢查更新</a>
+                <h3 class="margindistant20Style">恢复出厂设置</h3>
+                <p class="margindistant20Style">执行恢复出厂设置将会删除该设备板载内存中的所有配置文件。</p>
+                <a style="cursor:pointer" class="lobtn margindistant20Style">重置</a>
+            </div>
+
+            <div *ngIf="logov" id="logov">
+                <img src="image/logov.png" alt="logov" class="margindistantStyle">
+                <h3 class="margindistantStyle">炽魂云</h3><br>
+                <a style="color:#969696;" >软件版本 1.1.00</a>
+                <a style="margin:0 auto;" class="lobtn margindistantStyle">检查更新</a>
+                
+            <div style="margin-top:80px;">
+                <li style="list-style-type:none;color:#969696">
+                    <a>用户协议 | </a>
+                    <a>服务条款 | </a>
+                    <a>隐私政策</a>
+                </li><br>
+                <p>版权所有© 2016-2017 BLASOUL 保留所有权利 </p><br>
+                <p> www.blasoul.com </p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="draggable" style="position: absolute;z-index:17;width:100%; height:15px;"></div>
+        <p id="uwd01" (click)="settings()" [style.color]="title01">设备</p>
+        <p id="uwd02" (click)="socials()" [style.color]="title02">社交</p>
+        <img src="./image/ubtn01.png" alt="ubtn01" id="s1">
+        <img src="./image/ubtn02.png" alt="ubtn02" id="s2">
+        <div id="rtup">
+            <a (click)="callSelfdf()">
+                <img src="image/rtup01.png" alt="rtup01">
+            </a>
+            <a (click)="hide()">
+                <img src="image/rtup02.png" alt="rtup02">
+            </a>
+            <a (click)="hide()">
+                <img src="image/rtup03.png" alt="rtup03">
+            </a>
+        </div>
+
+        <div *ngIf="define" id="mwdlink" style="margin-top:5px;">
+            <a (click)="pick01()" [style.color]="css01" style="cursor:pointer;">自定义</a>
+            <a (click)="pick02()" [style.color]="css02" style="cursor:pointer;">灯光效果</a>
+            <a (click)="pick03()" [style.color]="css03" style="cursor:pointer;">魂力灯带</a>
+            <a (click)="pick04()" [style.color]="css04" style="cursor:pointer;">游戏模式</a>
+              <!-- <button (click)="names=gameatFirst(names,'游戏模式')">gameatFirst()</button> -->
+            <!-- <button (click)="testallprofile()">testallprofile()</button> -->
+            <!-- <button (click)="getReadFile()">getReadFile()</button> -->
+            <!-- <button (click)="testgetkeyMatrix()">testgetkeyMatrix()</button> -->
+            <!-- <button (click)="testAllTemp()">testalltemp()</button> -->
+            <!-- <button (click)="seeMacrolist()">see Macrolist</button> -->
+            <!-- <button (click)="getReadFile()">click</button> -->
+            <!-- <input id="myfile" type="file" style="width:100px; height:50px;position: relative;z-index:15;top:-20px;opacity:1;cursor: pointer;"
+            /> -->
+            <!-- <button (click)="seeprofile()">seeResult</button>
+            <button (click)="TestUpdatePF()">update</button>
+            <button (click)="addpro1()">add</button>
+            <button (click)="seeprofile()">testallprofile()</button>
+            <br>-->
+            <!-- <button (click)="ConnectApp()">Test對應profile</button> -->
+
+        </div>
+    </header>
+
+    <main>
+        <!-- <self-app *ngIf="self"></self-app> -->
+        <section id="ItisSelf" *ngIf="self">
+            <div id="mchbar02">
+                <a style="line-height:-16px;" id="mchbtn01" [ngStyle]="givclr01" (click)="clickOn01()">单个按键</a>
+                <a style="line-height:-16px;" id="mchbtn02" [ngStyle]="givclr02" (click)="clickOn02()">FN組合鍵</a>
+            </div>
+            <div id="mchbar">
+                <a style="line-height:-16px;" id="mchbtn01" [ngStyle]="givclr01" (click)="clickOn01()">单个按键</a>
+                <a style="line-height:-16px;" id="mchbtn02" [ngStyle]="givclr02" (click)="clickOn02()">FN組合鍵</a>
+            </div>
+            <self01-app *ngIf="selfshow" (resetEvent)='resetUI($event)' (openFrtp)="openFrtp($event)" [ProfileDetail]="profileAllcontentSend"
+                (outputGameEvent)='getGameoptions($event)'></self01-app>
+            <self02-app *ngIf="!selfshow" (resetEvent)='resetUI($event)' (openFrtp)="openFrtp($event)" [ProfileDetail]="profileAllcontentSend"
+                (outputGameEvent)='getGameoptions($event)'></self02-app>
+        </section>
+
+        <att-app *ngIf="att" [class]="attshow" (sendPercent)="getPercent($event)" [lightBS]="lightBarStatus"></att-app>
+        <game-app *ngIf="game" (outputGameEvent)='getGameoptions($event)' (UpdateEvent)='updateEffect($event)'></game-app>
+        <social-app *ngIf="social"></social-app>
+
+        <section id='show'>
+            <rainbow-effect *ngIf="seerainbow" (callclrpicker)='Openclrpicker($event)' [changeProfile]='changeProfile'
+                [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)" (effectfinish)="effectfinish($event)"
+                (passTime)="sendT($event)" [attPt]="attPercent" [ProfileDetail]="profileAllcontentSend" [lightBS]="lightBarStatus"
+                (sendStatus)=" receiveLBS($event)" [ttitle]='ttitle' (outputTtile)='titke' [getGameChange]="getGame"
+                (RainbowTemp)="rainbowTemp($event)" (LightEffect)="LightEffect($event)" [receiveTemp]="sendRainbowTemp"
+                (applyStatus)="sendApply($event)" [profileName]="profileName" [check01]="check01" [timeEffect]="timeEffect"
+                (sendTimeCloseFlag)="timeCheck($event)"></rainbow-effect>
+            <breath-effect *ngIf="seebreath" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)"
+                (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent" [ProfileDetail]="profileAllcontentSend"
+                [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)" [getGameChange]="getGame" (BreathTemp)="breathTemp($event)"
+                (LightEffect)="LightEffect($event)" [receiveTemp]="sendBreathTemp" (applyStatus)="sendApply($event)"
+                [profileName]="profileName" [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></breath-effect>
+            <lighten-effect *ngIf="seelighten" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind'
+                (openFrtp)="openFrtp($event)" (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent"
+                [ProfileDetail]="profileAllcontentSend" [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)"
+                [getGameChange]="getGame" (LightenTemp)="lightenTemp($event)" (LightEffect)="LightEffect($event)"
+                [receiveTemp]="sendLightenTemp" (applyStatus)="sendApply($event)" [profileName]="profileName" [check01]="check01"
+                [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></lighten-effect>
+            <crash-effect *ngIf="seecrash" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)"
+                (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent" [ProfileDetail]="profileAllcontentSend"
+                [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)" [getGameChange]="getGame" (CrashTemp)="crashTemp($event)"
+                (LightEffect)="LightEffect($event)" [receiveTemp]="sendCrashTemp" (applyStatus)="sendApply($event)"
+                [profileName]="profileName" [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></crash-effect>
+            <starlight-effect *ngIf="seestarlight" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind'
+                (openFrtp)="openFrtp($event)" (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent"
+                [ProfileDetail]="profileAllcontentSend" [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)"
+                [getGameChange]="getGame" (StarlightTemp)="starlightTemp($event)" (LightEffect)="LightEffect($event)"
+                [receiveTemp]="sendStarlightTemp" (applyStatus)="sendApply($event)" [profileName]="profileName"
+                [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></starlight-effect>
+            <dragon-effect *ngIf="seedragon" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)"
+                (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent" [ProfileDetail]="profileAllcontentSend"
+                [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)" [getGameChange]="getGame" (DragonTemp)="dragonTemp($event)"
+                (LightEffect)="LightEffect($event)" [receiveTemp]="sendDragonTemp" (applyStatus)="sendApply($event)"
+                [profileName]="profileName" [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></dragon-effect>
+            <meeting-effect *ngIf="seemeeting" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind'
+                (openFrtp)="openFrtp($event)" (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent"
+                [ProfileDetail]="profileAllcontentSend" [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)"
+                [getGameChange]="getGame" (MeetingTemp)="meetingTemp($event)" (LightEffect)="LightEffect($event)"
+                [receiveTemp]="sendMeetingTemp" (applyStatus)="sendApply($event)" [profileName]="profileName" [check01]="check01"
+                [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></meeting-effect>
+            <lightrain-effect *ngIf="seelightrain" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind'
+                (openFrtp)="openFrtp($event)" (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent"
+                [ProfileDetail]="profileAllcontentSend" [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)"
+                [getGameChange]="getGame" (LightrainTemp)="lightrainTemp($event)" (LightEffect)="LightEffect($event)"
+                [receiveTemp]="sendLightrainTemp" (applyStatus)="sendApply($event)" [profileName]="profileName"
+                [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></lightrain-effect>
+            <boom-effect *ngIf="seeboom" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)"
+                (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent" [ProfileDetail]="profileAllcontentSend"
+                [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)" [getGameChange]="getGame" (BoomTemp)="boomTemp($event)"
+                (LightEffect)="LightEffect($event)" [receiveTemp]="sendBoomTemp" (applyStatus)="sendApply($event)"
+                [profileName]="profileName" [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></boom-effect>
+            <cross-effect *ngIf="seecross" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)"
+                (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent" [ProfileDetail]="profileAllcontentSend"
+                [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)" [getGameChange]="getGame" (CrossTemp)="crossTemp($event)"
+                (LightEffect)="LightEffect($event)" [receiveTemp]="sendCrossTemp" (applyStatus)="sendApply($event)"
+                [profileName]="profileName" [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></cross-effect>
+            <float-effect *ngIf="seefloat" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)"
+                (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent" [ProfileDetail]="profileAllcontentSend"
+                [lightBS]="lightBarStatus" (sendStatus)="receiveLBS($event)" [getGameChange]="getGame" (FloatTemp)="floatTemp($event)"
+                (LightEffect)="LightEffect($event)" [receiveTemp]="sendFloatTemp" (applyStatus)="sendApply($event)"
+                [profileName]="profileName" [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></float-effect>
+            <waves-effect *ngIf="seewaves" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)"
+                (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent" [ProfileDetail]="profileAllcontentSend"
+                [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)" [getGameChange]="getGame" (WavesTemp)="wavesTemp($event)"
+                (LightEffect)="LightEffect($event)" [receiveTemp]="sendWavesTemp" (applyStatus)="sendApply($event)"
+                [profileName]="profileName" [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></waves-effect>
+            <round-effect *ngIf="seeround" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)"
+                (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent" [ProfileDetail]="profileAllcontentSend"
+                [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)" [getGameChange]="getGame" (RoundTemp)="roundTemp($event)"
+                (LightEffect)="LightEffect($event)" [receiveTemp]="sendRoundTemp" (applyStatus)="sendApply($event)"
+                [profileName]="profileName" [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></round-effect>
+            <gameEffect-effect *ngIf="seegameeffect" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind'
+                (openFrtp)="openFrtp($event)" (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent"
+                [ProfileDetail]="profileAllcontentSend" [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)"
+                [getGameChange]="getGame" (GameeffectTemp)="gameeffectTemp($event)" (LightEffect)="LightEffect($event)"
+                [receiveTemp]="sendGameeffectTemp" (applyStatus)="sendApply($event)" [check01]="check01" [timeEffect]="timeEffect"
+                (sendTimeCloseFlag)="timeCheck($event)"></gameEffect-effect>
+            <blasoul-effect *ngIf="seeblasoul" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind'
+                (openFrtp)="openFrtp($event)" (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent"
+                [ProfileDetail]="profileAllcontentSend" [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)"
+                [getGameChange]="getGame" (BlasoulTemp)="blasoulTemp($event)" (LightEffect)="LightEffect($event)"
+                [receiveTemp]="sendBlasoulTemp" (applyStatus)="sendApply($event)" [profileName]="profileName" [check01]="check01"
+                [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></blasoul-effect>
+            <pure-effect *ngIf="seepure" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)"
+                (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" [attPt]="attPercent" [ProfileDetail]="profileAllcontentSend"
+                [lightBS]="lightBarStatus" (sendStatus)=" receiveLBS($event)" [getGameChange]="getGame" (PureTemp)="pureTemp($event)"
+                (LightEffect)="LightEffect($event)" [receiveTemp]="sendPureTemp" (applyStatus)="sendApply($event)"
+                [profileName]="profileName" [check01]="check01" [timeEffect]="timeEffect" (sendTimeCloseFlag)="timeCheck($event)"></pure-effect>
+            <none-effect *ngIf="seenone" [changeProfile]='changeProfile' [updatenow]='LightcompoRemind' (openFrtp)="openFrtp($event)"
+                (effectfinish)="effectfinish($event)" (passTime)="sendT($event)" (NoneTemp)="noneTemp($event)"
+                (LightEffect)="LightEffect($event)" (applyStatus)="sendApply($event)" [lightBS]="lightBarStatus"></none-effect>
+            <section>
+
+
+                <div style="position: absolute;z-index: 20; top: 212px;left: 110px; width: 280px;height: 210px"
+                    (mouseenter)='cancelft()' *ngIf="cancelftng">
+                </div>
+                <div style="width:200px; height:35px;position: absolute;opacity: 0.7;z-index: 20;top: 228px;left: 130px;">
+                    <div *ngIf="fnbtn" class="twsize" style=" background-image:url(image/fnopthv.png);float:left;width:207px;height:30px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;padding-left:10px;color:white;line-height:30px;font-size: 14px;"
+                        (click)="CloseFtltbox()">
+                        {{etitle}}
+                    </div>
+
+                    <div *ngIf="!fnbtn" class="twsize" style=" background-image:url(image/fnopt.png);float:left;width:207px;height:28px;background-position:center;background-repeat:no-repeat;background-size:cover;margin-right:5px;padding-left:10px;color:white;line-height:28px;font-size: 14px;"
+                        (click)="openOpt()" id="ftltopt">
+                        {{etitle}}
+                    </div>
+                </div>
+                <div id="ftltbox" class="fadeIn" *ngIf="ftltbox" style="z-index: 21;">
+                    <div>
+                        <a (click)="frtpClose(0)">流光</a>
+                        <a (click)="frtpClose(1)">呼吸</a>
+                        <a (click)="frtpClose(2)">光谱</a>
+                        <a (click)="frtpClose(3)">撞击</a>
+                        <a (click)="frtpClose(4)">繁星</a>
+                        <a (click)="frtpClose(5)">龙腾</a>
+                        <a (click)="frtpClose(6)">邂逅</a>
+                        <a (click)="frtpClose(7)">光雨</a>
+                        <a (click)="frtpClose(8)">脉冲</a>
+                        <a (click)="frtpClose(9)">纵横</a>
+                        <a (click)="frtpClose(10)">飘痕</a>
+                        <a (click)="frtpClose(11)">涟漪</a>
+                        <a (click)="frtpClose(12)">绽放</a>
+                        <a (click)="frtpClose(13)">游戏模式</a>
+                        <a (click)="frtpClose(14)">纯色</a>
+                        <a (click)="frtpClose(15)">Blasoul</a>
+                        <a (click)="frtpClose(16)">关闭所有灯光（省电模式）</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div style="width:35px; height:35px;position: absolute;opacity: 0.7;z-index: 19;top: 305px;left: 90px;">
+                    <a (click)="clickOnitem()" style="width:30px;height:18px;">&nbsp;
+                        <img src="image/uncheck.png" *ngIf='!check01' style="width: 12px; display:inline-block;">
+                        <img src="image/check.png" *ngIf='check01' style="width: 12px;">
+                    </a>
+                    &nbsp;
+                </div>
+
+                <div style="position: absolute;z-index: 19; top: 300px;left: 100px; width: 280px; height: 210px;"
+                    (mouseenter)='canceltime()' *ngIf=cancelt></div>
+
+                <div style="width: 210px; height: 50px; position: absolute; top: 330px; left: 129px;z-index: 20;"></div>
+
+                <div *ngIf="selectOPT" style="width:207px; height:35px;position: absolute; top:388px; left: 32px; z-index: 20;">
+                    <div class="titleclr" *ngIf="stime" style="background-image:url(image/fnopthv.png); background-size:cover; background-repeat: no-repeat; display:block;width:207px; height:30px; line-height: 30px; font-size:14px; position: absolute;top: -62px; left: 100px; padding-left: 10px;color:white"
+                        (click)="closeTs()">
+                        {{ttitle}}
+                    </div>
+                    <div class="titleclr" *ngIf="!stime" style="background-image:url(image/fnopt.png); background-size:cover; background-repeat: no-repeat; display:block;width:207px; height: 28px; line-height: 28px; font-size:14px; position: absolute; top: -62px; left: 100px;padding-left: 10px;color:white"
+                        (click)="openTs() " id="timeset">
+                        {{ttitle}}
+                    </div>
+                </div>
+                <div id="timebox" *ngIf="timebox" style="z-index: 21;">
+                    <div>
+                        <a (click)="timeClose(0) ">流光</a>
+                        <a (click)="timeClose(1) ">呼吸</a>
+                        <a (click)="timeClose(2) ">光谱</a>
+                        <a (click)="timeClose(3) ">撞击</a>
+                        <a (click)="timeClose(4) ">繁星</a>
+                        <a (click)="timeClose(5) ">龙腾</a>
+                        <a (click)="timeClose(6) ">邂逅</a>
+                        <a (click)="timeClose(7) ">光雨</a>
+                        <a (click)="timeClose(8) ">脉冲</a>
+                        <a (click)="timeClose(9) ">纵横</a>
+                        <a (click)="timeClose(10) ">飘痕</a>
+                        <a (click)="timeClose(11) ">涟漪</a>
+                        <a (click)="timeClose(12) ">绽放</a>
+                        <a (click)="timeClose(13) ">游戏模式</a>
+                        <a (click)="timeClose(14) ">纯色</a>
+                        <a (click)="timeClose(15) ">Blasoul</a>
+                        <a (click)="timeClose(16) ">关闭所有灯光（省电模式）</a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+
+        <div id="btnlist" style="width:270px; height: 24px; color: #969696; position: absolute; top: 103px; left: 230px; z-index: 30;">
+            <a>
+                <img src="./image/ft_edit.png" alt="edit" style="width:22px;float:left; cursor: pointer;" (click)="FtEdit()">
+            </a>
+            <a>
+                <img src="./image/ft_add.png" alt="add" style="width:22px;float:left;  cursor: pointer;" (click)="FtAdd()">
+            </a>
+            <a>
+                <img src="./image/ft_bin.png" alt="bin" style="width:22px;float:left;  cursor: pointer;" (click)="Ftdelete()">
+            </a>
+            <a>
+                <img src="./image/ft_more.png" alt="more" style="width:22px;float:left;  cursor: pointer; " (click)="ativateGetFile()
+                ">
+            </a>
+            <a>
+                <img src="./image/ft_onoff.png" *ngIf="!connectOn" (click)="connectOn=!connectOn;openApp()" alt="more"
+                    style="width:22px;float:left;  cursor: pointer;opacity:0; pointer-events: none; ">
+            </a>
+            <a>
+                <img src="./image/ft_on.png" *ngIf="connectOn" (click)="connectOn=!connectOn" alt="more" style="width:22px;float:left;  cursor: pointer;opacity:0; pointer-events: none; ">
+            </a>
+            <a>
+
+            </a>
+            <!-- 连接程序 -->
+
+        </div>
+
+
+        <div  style="width:40px;height: 45px;background: #0A0A0A;color:white;border: 1px solid #E9004C;position: absolute;top: 75px;left: 297px;z-index: 30;text-align: center;overflow:hidden" *ngIf="showmore" (click)="leave()">
+
+            <!-- <p>复制</p> -->
+            <p (click)="SaveFile()">导出</p>
+            <p>导入</p>
+            <!-- <a href="" download style="width:100px; height:50px;position: relative;z-index:15;top:-40px;opacity:0;cursor: pointer;background:yellow"></a> -->
+
+            <input id="myfile" type="file" style="width:50px; height:20px;position: relative;z-index:15;top:-20px;opacity:0;cursor: pointer;" />
+        </div>
+
+
+
+
+
+        <div id="obbox" *ngIf="Openobbox" style="width: 170px;height: 100px;background: #0A0A0A;border: 1px solid #E9004C;position: absolute;top: 3px;left: 30px;z-index: 30;overflow-y: scroll;">
+            <a *ngFor="let item of names;let i = index" (click)="callName(i)" class="FontSize12px">{{item}}</a>
+        </div>
+
+        <section *ngIf="!showinput">
+            <a id="ob" *ngIf="changeOb" style="width: 170px;background: #000000; color: #969696; position: absolute; top: 103px; left: 30px; z-index: 30;"
+                (click)="openobbox()" class="FontSize12px">{{profileName}}</a>
+            <a id="reverseob" *ngIf="!changeOb" style="width: 170px;background: #E9004C;color:white;position: absolute;top: 103px;left: 30px;z-index: 30;"
+                (click)="openobbox()" class="FontSize12px">{{profileName}}</a>
+        </section>
+
+
+        <input tabindex=-1 value="1" id="EditprofileName" [(ngModel)]="profileName" (ngModelChange)="editProfile($event)"
+            (keyup)="enterConfirm($event)" style="width: 170px;height: 20px;background:black;color: #969696;position: absolute;top: 103px;left: 30px;z-index: 30;"*ngIf="showinput">
+        <img src="./image/footer.png " a="header " class="bg ">
+
+    </footer>
+</div>

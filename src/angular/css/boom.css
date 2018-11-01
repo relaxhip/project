@@ -1,0 +1,1915 @@
+#esc_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 191px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f1_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 237px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f2_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 261px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f3_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 284px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f4_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 307px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f5_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 341px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f6_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 365px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f7_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 388px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f8_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 411px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f9_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 445px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f10_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 468px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f11_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 491px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f12_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 514px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#print_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 545px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#scroll_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 568px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pause_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 17px;
+	left: 591px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#perid_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n1_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 216px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n2_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 239px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n3_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 261px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n4_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 284px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n5_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 307px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n6_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 329px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n7_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 353px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n8_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 376px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n9_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 400px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n0_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 423px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#minus_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 446px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#plus_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 468px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#bsp_boom {
+	width: 40px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 492px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#insert_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#home_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pup_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numlock_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 623px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numdrawn_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numtimes_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numminus_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 53px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#tab_boom {
+	width: 30px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#q_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 228px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#w_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 250px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#e_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 273px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#r_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 296px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#t_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 319px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#y_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 341px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#u_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 365px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#i_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 388px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#o_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 411px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#p_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 435px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lqu_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 458px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rqu_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 481px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#drawn_boom {
+	width: 28px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 504px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#delete_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#end_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#pdown_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num7_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num8_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num9_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 77px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numplus_boom {
+	width: 16px;
+	height: 40px;
+	position: absolute;
+	top: 77px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#caps_boom {
+	width: 35px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#a_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 232px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#s_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 256px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#d_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 279px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#f_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 301px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#g_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 325px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#h_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 348px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#j_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 371px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#k_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 394px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#l_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 417px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#sem_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 441px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#quo_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 464px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#enter_boom {
+	width: 43px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 488px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num4_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num5_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num6_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 100px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lshift_boom {
+	width: 45px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#z_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 246px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#x_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 268px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#c_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 291px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#v_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 314px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#b_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 338px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#n_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 361px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#m_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 384px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#comma_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 407px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#dot_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 430px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#qmark_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 451px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rshift_boom {
+	width: 55px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 476px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#up_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num1_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num2_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 646px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num3_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 123px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lctrl_boom {
+	width: 30px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 192px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#win_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 228px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#lalt_boom {
+	width: 26px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 251px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#space_boom {
+	width: 130px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 285px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#ralt_boom {
+	width: 28px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 423px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#fn_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 457px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#book_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 481px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#rctrl_boom {
+	width: 25px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 505px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#left_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 547px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#down_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 570px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#right_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 593px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#num0_boom {
+	width: 38px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 624px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numdot_boom {
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	top: 146px;
+	left: 669px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+#numenter_boom {
+	width: 16px;
+	height: 40px;
+	position: absolute;
+	top: 123px;
+	left: 692px;
+	opacity: 0.5;
+	z-index: 9;
+	border-radius: 1px;
+}
+
+/*特效區*/
+
+.boom1_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+}
+
+.boom2_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 50ms;
+}
+
+.boom3_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 100ms;
+}
+
+.boom4_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 150ms;
+}
+
+.boom5_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 200ms;
+}
+
+.boom6_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 250ms;
+}
+
+.boom7_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 300ms;
+}
+
+.boom8_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 350ms;
+}
+
+.boom9_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 400ms;
+}
+
+.boom10_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 450ms;
+}
+
+.boom11_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 500ms;
+}
+
+.boom12_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 550ms;
+}
+
+.boom13_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 600ms;
+}
+
+.boom14_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 650ms;
+}
+
+.boom15_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 700ms;
+}
+
+.boom16_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 750ms;
+}
+
+.boom17_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 800ms;
+}
+
+.boom18_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 850ms;
+}
+
+.boom19_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 900ms;
+}
+
+.boom20_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 950ms;
+}
+
+.boom21_1_med {
+	animation-name: boom1;
+	animation-duration: 1.5s;
+	animation-delay: 1000ms;
+}
+
+.boom1_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+}
+
+.boom2_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 50ms;
+}
+
+.boom3_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 100ms;
+}
+
+.boom4_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 150ms;
+}
+
+.boom5_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 200ms;
+}
+
+.boom6_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 250ms;
+}
+
+.boom7_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 300ms;
+}
+
+.boom8_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 350ms;
+}
+
+.boom9_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 400ms;
+}
+
+.boom10_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 450ms;
+}
+
+.boom11_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 500ms;
+}
+
+.boom12_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 550ms;
+}
+
+.boom13_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 600ms;
+}
+
+.boom14_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 650ms;
+}
+
+.boom15_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 700ms;
+}
+
+.boom16_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 750ms;
+}
+
+.boom17_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 800ms;
+}
+
+.boom18_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 850ms;
+}
+
+.boom19_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 900ms;
+}
+
+.boom20_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 950ms;
+}
+
+.boom21_2_med {
+	animation-name: boom2;
+	animation-duration: 1.5s;
+	animation-delay: 1000ms;
+}
+
+.boom1_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+}
+
+.boom2_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 20ms;
+}
+
+.boom3_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 40ms;
+}
+
+.boom4_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 60ms;
+}
+
+.boom5_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 80ms;
+}
+
+.boom6_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 100ms;
+}
+
+.boom7_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 120ms;
+}
+
+.boom8_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 140ms;
+}
+
+.boom9_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 160ms;
+}
+
+.boom10_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 180ms;
+}
+
+.boom11_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 200ms;
+}
+
+.boom12_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 220ms;
+}
+
+.boom13_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 240ms;
+}
+
+.boom14_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 260ms;
+}
+
+.boom15_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 280ms;
+}
+
+.boom16_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 300ms;
+}
+
+.boom17_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 320ms;
+}
+
+.boom18_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 340ms;
+}
+
+.boom19_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 360ms;
+}
+
+.boom20_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 380ms;
+}
+
+.boom21_1_high {
+	animation-name: boom1;
+	animation-duration: 0.5s;
+	animation-delay: 400ms;
+}
+
+.boom1_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+}
+
+.boom2_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 20ms;
+}
+
+.boom3_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 40ms;
+}
+
+.boom4_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 60ms;
+}
+
+.boom5_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 80ms;
+}
+
+.boom6_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 100ms;
+}
+
+.boom7_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 120ms;
+}
+
+.boom8_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 140ms;
+}
+
+.boom9_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 160ms;
+}
+
+.boom10_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 180ms;
+}
+
+.boom11_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 200ms;
+}
+
+.boom12_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 220ms;
+}
+
+.boom13_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 240ms;
+}
+
+.boom14_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 260ms;
+}
+
+.boom15_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 280ms;
+}
+
+.boom16_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 300ms;
+}
+
+.boom17_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 320ms;
+}
+
+.boom18_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 340ms;
+}
+
+.boom19_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 360ms;
+}
+
+.boom20_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 380ms;
+}
+
+.boom21_2_high {
+	animation-name: boom2;
+	animation-duration: 0.5s;
+	animation-delay: 400m
+}
+.boom1_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+}
+
+.boom2_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 100ms;
+}
+
+.boom3_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 200ms;
+}
+
+.boom4_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 300ms;
+}
+
+.boom5_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 400ms;
+}
+
+.boom6_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 500ms;
+}
+
+.boom7_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 600ms;
+}
+
+.boom8_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 700ms;
+}
+
+.boom9_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 800ms;
+}
+
+.boom10_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 900ms;
+}
+
+.boom11_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 1000ms;
+}
+
+.boom12_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 1100ms;
+}
+
+.boom13_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 1200ms;
+}
+
+.boom14_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 1300ms;
+}
+
+.boom15_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 1400ms;
+}
+
+.boom16_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 1500ms;
+}
+
+.boom17_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 1600ms;
+}
+
+.boom18_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 1700ms;
+}
+
+.boom19_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 1800ms;
+}
+
+.boom20_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 1900ms;
+}
+
+.boom21_1_slow {
+	animation-name: boom1;
+	animation-duration: 3s;
+	animation-delay: 2000ms;
+}
+.boom1_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+}
+
+.boom2_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 100ms;
+}
+
+.boom3_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 200ms;
+}
+
+.boom4_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 300ms;
+}
+
+.boom5_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 400ms;
+}
+
+.boom6_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 500ms;
+}
+
+.boom7_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 600ms;
+}
+
+.boom8_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 700ms;
+}
+
+.boom9_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 800ms;
+}
+
+.boom10_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 900ms;
+}
+
+.boom11_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 1000ms;
+}
+
+.boom12_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 1100ms;
+}
+
+.boom13_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 1200ms;
+}
+
+.boom14_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 1300ms;
+}
+
+.boom15_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 1400ms;
+}
+
+.boom16_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 1500ms;
+}
+
+.boom17_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 1600ms;
+}
+
+.boom18_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 1700ms;
+}
+
+.boom19_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 1800ms;
+}
+
+.boom20_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 1900ms;
+}
+
+.boom21_2_slow {
+	animation-name: boom2;
+	animation-duration: 3s;
+	animation-delay: 2000ms;
+}
+
+#rbway a {
+	cursor: pointer;
+}
+
+@keyframes boom1 {
+	0% {
+		background-color: rgb(255, 0, 0);
+	}
+	100% {
+		background-color: rgb(0, 0, 255);
+	}
+}
+
+@keyframes boom2 {
+	0% {
+		background-color: rgb(0, 0, 255);
+	}
+	100% {
+		background-color: rgb(0,0,255);
+	}
+}

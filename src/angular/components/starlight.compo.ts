@@ -1,0 +1,1653 @@
+declare var System;
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { protocolService } from '../services/service/protocol.service';
+
+const { ipcRenderer } = System._nodeRequire('electron');
+declare var $: any;
+
+import { ElectronEventService, dbService, EmitService } from '../services/libs/electron/index';
+import { GetDeviceService } from '../services/device/GetDevice.service';
+import { Subscription } from "rxjs/Subscription";
+import { MAX_LENGTH_VALIDATOR } from '@angular/forms/src/directives/validators';
+import { icpEventService } from '../services/service/icpEventService.service';
+
+
+
+let evtVar = System._nodeRequire('./backend/others/eventVariable');
+let funcVar = System._nodeRequire('./backend/others/FunctionVariable');
+let env = System._nodeRequire('./backend/others/env');
+
+
+
+
+@Component({
+    selector: 'starlight-effect',
+    templateUrl: './components/effect/starlight.compo.html',
+    //template: '<h1>我的第一个 Angular 应用</h1>',
+    styleUrls: ['./css/first.css', './css/kbd.css', './css/starlight.css', './css/attractlight.css'],
+    providers: [protocolService, dbService, icpEventService],
+    inputs: ['ProfileDetail', 'ttitle', 'getGameChange', 'updatenow', 'changeProfile']
+})
+
+
+
+export class starlightComponent implements OnInit {
+    constructor(private protocol: protocolService, private db: dbService, private getDeviceService: GetDeviceService, private emitService: EmitService, private icpEventService: icpEventService) {
+        this.subscription = this.emitService.EmitObservable.subscribe(src => {
+            if (src == 'insert') {
+                this.plugIn();
+            }
+            if (src == 'remove') {
+                this.goOut();
+            }
+            this.fromicp = src;
+
+            if (this.fromicp.data !== undefined) {
+                if (this.fromicp.data[1] == 225 && this.fromicp.data[2] == 4 && this.fromicp.data[3] == 1) {//Fn按下
+                    this.set128 = 128;
+                    this.fnflag = 1;
+                    //console.log('fn1111' + this.set128)
+                } else {
+
+                    if (this.fromicp.data[1] == 7 && this.fromicp.data[2] == 7 && this.fromicp.data[5] == 1) {//normalkey 按下
+                        //console.log('normal1111');
+                        this.keyfuncposition = this.fromicp.data[3] * 8 + this.fromicp.data[4]
+
+                        if (this.fnflag !== 1) {
+                            this.doItfunction(this.keyfuncposition);
+                        } else {
+                            // this.keypositionX = this.fromicp.data[3];
+                            // this.keypositionY = this.fromicp.data[4];
+                            //console.log('fn444' + this.set128)
+                            this.keyfuncposition = this.fromicp.data[3] * 8 + this.fromicp.data[4] + this.set128;
+                            //console.log('this.keyfuncposition' + this.keyfuncposition);
+                            // //console.log('this.keyfuncposition get');
+                            this.doItfunction(this.keyfuncposition);
+
+                        }
+                    }
+                }
+                if (this.fromicp.data[1] == 225 && this.fromicp.data[2] == 5 && this.fromicp.data[3] == 2) {//Fn放開
+                    this.fnflag = 0;
+                    //console.log('fn222' + this.set128)
+                }
+            }
+
+            if (this.fromicp.data !== undefined) {
+                if (this.fromicp.data[0] == 4 && this.fromicp.data[1] == 225 && this.fromicp.data[2] == 15 && this.fromicp.data[3] == 1) {
+                    //console.log("attleft");
+                    this.lightBar(1);
+                    this.attbtn = false;
+                    this.defaultLb = true;
+                }
+                else if (this.fromicp.data[0] == 4 && this.fromicp.data[1] == 225 && this.fromicp.data[2] == 16 && this.fromicp.data[3] == 2) {
+                    //console.log("attright");
+                    this.lightBar(0);
+                    this.attbtn = true;
+                    this.defaultLb = false;
+                }
+            }
+            this.attPt01();
+            var vm = this;
+            if (this.mode == 0) {
+                clearTimeout(this.timeStop);
+                this.mode++
+                if (this.mode == 1 || this.attPt == 0) {
+                    this.timeStop = setTimeout(() => {
+                        vm.cleanBar();
+                    }, 5000);
+                    this.mode = 0
+                }
+            }
+        })
+    }
+    saveapmode: boolean = false; //doapmode的執行判斷用布林值
+    changeProfile: any = '2';
+    keeploading: boolean = true;
+    timeStop: any;
+    mode: any = 0;
+    fnflag: number = 0;
+    nowobj: any;
+    ProfileDetail: any;
+    attbtn: boolean;
+    defaultLb: boolean;
+    // blockcss: any = "disabled";
+    @Output() openFrtp: EventEmitter<any> = new EventEmitter();
+    @Output() effectfinish: EventEmitter<any> = new EventEmitter();
+
+    openFrtpfun(w) {
+        if (w == 1) {
+            this.openFrtp.emit(w);
+        }
+        if (w == 0) {
+            this.openFrtp.emit(w);
+        }
+
+    }
+
+    attPt01() {
+        if (this.data == 0) {
+            if (this.attPt >= 98) {
+                this.array1 = this.arrayAtt;
+                this.attLight();
+            }
+        }
+    }
+
+
+    //檢查fn和normal key
+    presstime: number = 0;//計算FUNCTION KEY按鍵次數
+    pausetime: number = 0;
+    openclose: number = 0;
+    keypositionX: any;
+    keypositionY: any;
+    dofunctionName: any;
+    time: any = 0;
+    set128: any = 0;
+    keyfuncposition: any;
+    fromicp: any;
+    speedhere: any = 60;
+    setAp: number = 0;
+    savechange: number = 0;
+    currentV: any;
+    changeV: any;
+
+    cuteValue: any = 0.5;
+    speedValue: any = 60;
+    loading: boolean;
+    Effectdirection: any = 3;
+    NewtimeValue: any;
+    ttitle: string;
+
+
+    subscription: Subscription;
+    timeValue: any = 10;
+    timeCount: any;
+    timewarn: any = false;
+    @Output() outputTtile: EventEmitter<any> = new EventEmitter();
+
+    sendTtile() {
+        this.outputTtile.emit(this.ttitle);
+    }
+
+    @Output() passTime = new EventEmitter();
+
+    @Input() attPt;
+    resetTime: any;
+    timeInput(e) {
+        this.detectEffectChange();
+        this.timeValue = e;
+        this.passTime.emit(this.timeValue);
+        var vm = this;
+        window.addEventListener('keydown', function (e) {
+            if (e.keyCode == 13) {
+                clearTimeout(vm.resetTime);
+                if (vm.timeValue < 1 || isNaN(vm.timeValue)) {
+                    vm.timeValue = 10;
+                    vm.timewarn = true
+                    setTimeout(() => {
+                        vm.timewarn = false;
+                    }, 3000);
+                } else {
+                    document.getElementById('time').blur();
+                }
+            }
+        })
+    }
+
+    timeBlur() {
+        if (this.timeValue == "" || this.timeValue < 1 || isNaN(this.timeValue)) {
+            this.timeValue = 10;
+            this.timewarn = true
+            setTimeout(() => {
+                this.timewarn = false;
+            }, 3000);
+        } else {
+            return false;
+        }
+    }
+
+    timeEventFlag: boolean = false;
+    defaultFlag: boolean = true;
+    blockTime: boolean = true;
+    lightBarStatus: any;
+
+    @Input() lightBS;
+    @Output() sendStatus = new EventEmitter();
+
+    sendLBS() {
+        if (this.lightBarStatus !== undefined) {
+            this.sendStatus.emit(this.lightBarStatus);
+        }
+    }
+
+    lightBar(x) {
+        if (x == 1) {
+            this.data = 1;
+            this.lightBarStatus = this.data;
+            this.array1 = ["esc_star", "f1_star", "f2_star", "f3_star", "f4_star", "f5_star", "f6_star", "f7_star", "f8_star", "f9_star", "f10_star", "f11_star", "f12_star", "print_star", "scroll_star", "pause_star", "perid_star", "n1_star", "n2_star", "n3_star", "n4_star", "n5_star", "n6_star", "n7_star", "n8_star", "n9_star", "n0_star", "minus_star", "plus_star", "bsp_star", "insert_star", "home_star", "pup_star", "numlock_star", "numdrawn_star", "numtimes_star", "numminus_star", "tab_star", "q_star", "w_star", "e_star", "r_star", "t_star", "y_star", "u_star", "i_star", "o_star", "p_star", "lqu_star", "rqu_star", "delete_star", "drawn_star", "end_star", "pdown_star", "num7_star", "num8_star", "num9_star", "numplus_star", "caps_star", "a_star", "s_star", "d_star", "f_star", "g_star", "h_star", "j_star", "k_star", "l_star", "sem_star", "quo_star", "enter_star", "num4_star", "num5_star", "num6_star", "lshift_star", "z_star", "x_star", "c_star", "v_star", "b_star", "n_star", "m_star", "comma_star", "dot_star", "qmark_star", "rshift_star", "up_star", "num1_star", "num2_star", "num3_star", "numenter_star", "lctrl_star", "win_star", "lalt_star", "space_star", "ralt_star", "fn_star", "book_star", "rctrl_star", "left_star", "down_star", "right_star", "num0_star", "numdot_star", "Upside1_star", "Upside2_star", "Upside3_star", "Upside4_star", "Upside5_star", "Upside6_star", "Upside7_star", "Upside8_star", "Upside9_star", "Upside10_star", "Upside11_star", "Upside12_star", "Upside13_star", "Upside14_star", "Upside15_star", "Upside16_star", "Upside17_star", "Upside18_star", "Upside19_star", "Upside20_star", "logo1_star", "logo2_star"];
+            this.logo1_att = "";
+            this.logo2_att = "";
+            this.attBar(1);
+            this.sendLBS();
+
+        }
+        else if (x == 0) {
+            this.data = 0;
+            this.lightBarStatus = this.data;
+            this.attBar(0);
+            this.sendLBS();
+        }
+    }
+    detectButton() {
+        let obj3 = {
+            Type: funcVar.FuncType.Device,
+            Func: funcVar.FuncName.GetProfieAndFirmwareVer,
+            Param: ""
+        }
+        this.protocol.RunSetFunction(obj3).then((data) => {
+            if (data[5] == 1) {
+                //console.log('按鈕位置在右邊')
+                this.lightBar(0);
+                this.attbtn = true;
+                this.defaultLb = false;
+            }
+            else if (data[5] == 0) {
+                //console.log('按鈕位置在左邊')
+                this.lightBar(1);
+                this.attbtn = true;
+            }
+        })
+    }
+    getkeymatrixKB() {
+        let data = {
+            Flag: '1'
+        }
+
+        let obj1 = {
+            Type: funcVar.FuncType.Device,
+            Func: funcVar.FuncName.GetDefaultKeyMatrix,
+            Param: data
+        }
+
+        this.protocol.RunSetFunction(obj1).then((data) => {
+        });
+    }
+
+
+    ngOnInit() {        //繁星
+        env.log('light-effect', 'starlight', 'start');
+        this.timeValue = this.receiveTemp[3];
+        this.check01 = false;
+        this.StarlightTemp.emit(this.starlight);
+        this.LEDmatrix();//找出對應按鍵;
+        this.setDefault(1);
+        this.doApmode01();
+        this.sendTimeCloseFlag.emit(false);
+        setTimeout(() => {
+            this.readTemp();
+        }, 100);
+        if (this.lightBS == 0) {
+            //console.log("from parent LBS 0 attRight", this.lightBS);
+            this.lightBar(0);
+            this.attbtn = true;
+            this.defaultLb = false;
+            this.logo1_att = "red";
+            this.logo2_att = "red";
+        }
+        else if (this.lightBS == 1) {
+            //console.log("from parent LBS 1 attLeft", this.lightBS)
+            this.lightBar(1)
+            this.attbtn = false;
+            this.defaultLb = true;
+        }
+    }
+    ngOnChanges(changes: any) {
+        this.detectEffectChange()
+        // changes.prop contains the old and the new value...
+        for (let propName in changes) {
+
+            this.changeV = changes[propName];
+            this.currentV = JSON.stringify(this.changeV.currentValue);
+            let prev = JSON.stringify(this.changeV.previousValue);
+        }
+
+
+        if (this.currentV == '"stopApmode"' && this.savechange == 0) {
+            this.savechange = 1;
+            this.goOut();
+            // if(this.envio == 1){
+				env.log('startlight', 'apmode', 'stopapmode')
+			// }
+            // this.savechange = 0
+        }
+        if (this.currentV == '"startApmode"' && this.savechange == 0) {
+            this.savechange = 1;
+            this.plugIn();
+            this.attBar(0);
+            // if(this.envio == 1){
+				env.log('startlight', 'apmode', 'startapmode')
+			// }
+            // this.savechange = 0
+        }
+
+        if (this.currentV == '"changeProfile"') {
+            this.keeploading = false;
+            this.goOut();
+
+            let vm = this;
+            setTimeout(() => {
+                this.leave = 1;
+                vm.ngOnInit();
+            }, 200);
+
+        }
+
+        if (this.currentV == '"changePage"') {
+            this.keeploading = false;
+            this.goOut();
+
+            let vm = this;
+            setTimeout(() => {
+                this.leave = 1;
+                vm.ngOnInit();
+            }, 200);
+
+        }
+
+        if (this.currentV == '"updatenow"') {
+            this.keeploading = true;
+            this.goOut();
+
+            let vm = this;
+            setTimeout(() => {
+                this.leave = 1;
+                vm.ngOnInit();
+            }, 200);
+
+        }
+
+        if (this.currentV == '"setTime"') {
+            this.timeBlur();
+        }
+
+        if (this.check01 == true) {
+			this.blockTime = false;
+		} else {
+			this.blockTime = true;
+		}
+    }
+
+    leave: any = 1;
+    firstKB: any;
+    positionR: any;
+    positionG: any;
+    positionB: any;
+    positionRarr: any = [];
+    positionGarr: any = [];
+    positionBarr: any = [];
+    getclr01: any;
+
+    array1: any = ["esc_star", "f1_star", "f2_star", "f3_star", "f4_star", "f5_star", "f6_star", "f7_star", "f8_star", "f9_star", "f10_star", "f11_star", "f12_star", "print_star", "scroll_star", "pause_star", "perid_star", "n1_star", "n2_star", "n3_star", "n4_star", "n5_star", "n6_star", "n7_star", "n8_star", "n9_star", "n0_star", "minus_star", "plus_star", "bsp_star", "insert_star", "home_star", "pup_star", "numlock_star", "numdrawn_star", "numtimes_star", "numminus_star", "tab_star", "q_star", "w_star", "e_star", "r_star", "t_star", "y_star", "u_star", "i_star", "o_star", "p_star", "lqu_star", "rqu_star", "delete_star", "drawn_star", "end_star", "pdown_star", "num7_star", "num8_star", "num9_star", "numplus_star", "caps_star", "a_star", "s_star", "d_star", "f_star", "g_star", "h_star", "j_star", "k_star", "l_star", "sem_star", "quo_star", "enter_star", "num4_star", "num5_star", "num6_star", "lshift_star", "z_star", "x_star", "c_star", "v_star", "b_star", "n_star", "m_star", "comma_star", "dot_star", "qmark_star", "rshift_star", "up_star", "num1_star", "num2_star", "num3_star", "numenter_star", "lctrl_star", "win_star", "lalt_star", "space_star", "ralt_star", "fn_star", "book_star", "rctrl_star", "left_star", "down_star", "right_star", "num0_star", "numdot_star", "Upside1_star", "Upside2_star", "Upside3_star", "Upside4_star", "Upside5_star", "Upside6_star", "Upside7_star", "Upside8_star", "Upside9_star", "Upside10_star", "Upside11_star", "Upside12_star", "Upside13_star", "Upside14_star", "Upside15_star", "Upside16_star", "Upside17_star", "Upside18_star", "Upside19_star", "Upside20_star", "logo1_star", "logo2_star"];
+
+    arrayLb1: any = ["Upside1_star", "Upside2_star", "Upside3_star", "Upside4_star", "Upside5_star", "Upside6_star", "Upside7_star", "Upside8_star", "Upside9_star", "Upside10_star", "Upside11_star", "Upside12_star", "Upside13_star", "Upside14_star", "Upside15_star", "Upside16_star", "Upside17_star", "Upside18_star", "Upside19_star", "Upside20_star", "logo1_star", "logo2_star"];
+
+    arrayAtt: any = ["esc_att", "f1_att", "f2_att", "f3_att", "f4_att", "f5_att", "f6_att", "f7_att", "f8_att", "f9_att", "f10_att", "f11_att", "f12_att", "print_att", "scroll_att", "pause_att", "perid_att", "n1_att", "n2_att", "n3_att", "n4_att", "n5_att", "n6_att", "n7_att", "n8_att", "n9_att", "n0_att", "minus_att", "plus_att", "bsp_att", "insert_att", "home_att", "pup_att", "numlock_att", "numdrawn_att", "numtimes_att", "numminus_att", "tab_att", "q_att", "w_att", "e_att", "r_att", "t_att", "y_att", "u_att", "i_att", "o_att", "p_att", "lqu_att", "rqu_att", "delete_att", "drawn_att", "end_att", "pdown_att", "num7_att", "num8_att", "num9_att", "numplus_att", "caps_att", "a_att", "s_att", "d_att", "f_att", "g_att", "h_att", "j_att", "k_att", "l_att", "sem_att", "quo_att", "enter_att", "num4_att", "num5_att", "num6_att", "lshift_att", "z_att", "x_att", "c_att", "v_att", "b_att", "n_att", "m_att", "comma_att", "dot_att", "qmark_att", "rshift_att", "up_att", "num1_att", "num2_att", "num3_att", "numenter_att", "lctrl_att", "win_att", "lalt_att", "space_att", "ralt_att", "fn_att", "book_att", "rctrl_att", "left_att", "down_att", "right_att", "num0_att", "numdot_att", "Upside1_att", "Upside2_att", "Upside3_att", "Upside4_att", "Upside5_att", "Upside6_att", "Upside7_att", "Upside8_att", "Upside9_att", "Upside10_att", "Upside11_att", "Upside12_att", "Upside13_att", "Upside14_att", "Upside15_att", "Upside16_att", "Upside17_att", "Upside18_att", "Upside19_att", "Upside20_att", "logo1_att", "logo2_att"]
+
+    getPt: any;
+    data: any = 1;
+    upAtt: any = []
+
+    getColor1() {	//RGB取值 上到下
+        let vm = this;
+        clearInterval(this.getclr01);
+        if (this.data == 0) {
+            this.upAtt = ["Upside1_att", "Upside2_att", "Upside3_att", "Upside4_att", "Upside5_att", "Upside6_att", "Upside7_att", "Upside8_att", "Upside9_att", "Upside10_att", "Upside11_att", "Upside12_att", "Upside13_att", "Upside14_att", "Upside15_att", "Upside16_att", "Upside17_att", "Upside18_att", "Upside19_att", "Upside20_att", "logo1_att", "logo2_att"]
+            for (let i = 0; i < 22; i++) {
+                this.array1[i + 104] = this.upAtt[i]
+            }
+            this.getclr01 = setInterval(() => {
+                for (var i = 0; i < this.array1.length; i++) {
+                    let clrIn = window.getComputedStyle(document.getElementById(this.array1[i]), null).getPropertyValue("background-color");
+                    vm.red[i] = (parseInt(vm.convertColor(clrIn)[0]));
+                    vm.green[i] = (parseInt(vm.convertColor(clrIn)[1]));
+                    vm.blue[i] = (parseInt(vm.convertColor(clrIn)[2]));
+                }
+            }, 1000 / 60);
+        } else {
+            this.upAtt = ["Upside1_star", "Upside2_star", "Upside3_star", "Upside4_star", "Upside5_star", "Upside6_star", "Upside7_star", "Upside8_star", "Upside9_star", "Upside10_star", "Upside11_star", "Upside12_star", "Upside13_star", "Upside14_star", "Upside15_star", "Upside16_star", "Upside17_star", "Upside18_star", "Upside19_star", "Upside20_star", "logo1_star", "logo2_star"]
+            for (let i = 0; i < 22; i++) {
+                this.array1[i + 104] = this.upAtt[i]
+            }
+            this.getclr01 = setInterval(() => {
+                for (var i = 0; i < this.array1.length; i++) {
+                    let clrIn = window.getComputedStyle(document.getElementById(this.array1[i]), null).getPropertyValue("background-color");
+                    vm.red[i] = (parseInt(vm.convertColor(clrIn)[0]));
+                    vm.green[i] = (parseInt(vm.convertColor(clrIn)[1]));
+                    vm.blue[i] = (parseInt(vm.convertColor(clrIn)[2]));
+                }
+            }, 1000 / 60);
+        }
+    }
+
+    //取值區
+    red: any = new Buffer(new Array(126));
+    green: any = new Buffer(new Array(126));
+    blue: any = new Buffer(new Array(126));
+    bri: any;
+    
+    convertColor(color) {
+        var rgbColors = new Object();
+        ///////////////////////////////////
+        // Handle rgb(redValue, greenValue, blueValue) format
+        //////////////////////////////////
+        if (color[0] == 'r') {
+            // Find the index of the redValue.  Using subscring function to 
+            // get rid off "rgb(" and ")" part.  
+            // The indexOf function returns the index of the "(" and ")" which we 
+            // then use to get inner content.  
+            color = color.substring(color.indexOf('(') + 1, color.indexOf(')'));
+            // Notice here that we don't know how many digits are in each value,
+            // but we know that every value is separated by a comma.
+            // So split the three values using comma as the separator.
+            // The split function returns an object.
+            rgbColors = color.split(',', 4);
+            this.bri = (parseFloat(rgbColors[3])).toFixed(3);
+            if (isNaN(this.bri)) {
+                this.bri = 1;
+            }
+            // Convert redValue to integer
+            // rgbColors[0] = parseInt(rgbColors[0]) * this.bri * this.op;//當下R值 * A透明度值 * 鍵盤透明度
+            // rgbColors[0] = parseInt(rgbColors[0]);
+            // Convert greenValue to integer
+            // rgbColors[1] = parseInt(rgbColors[1]) * this.bri * this.op;//當下G值 * A透明度值 * 鍵盤透明度
+            // rgbColors[1] = parseInt(rgbColors[1]);
+            // Convert blueValue to integer
+            // rgbColors[2] = parseInt(rgbColors[2]) * this.bri * this.op;//當下B值 * A透明度值 * 鍵盤透明度
+            // rgbColors[2] = parseInt(rgbColors[2]);
+            // Convert AphaValue to integer
+            var x = this.bri * 1000 / 3.9  //x 對應硬體亮度為255階 超過255已255計算
+            if (x > 255) {
+                x = 255;
+            }
+            rgbColors[0] = Math.round((parseInt(rgbColors[0]) * x) / 255) * this.op;//當下R值 * x透明度值 * 鍵盤透明度
+            rgbColors[1] = Math.round((parseInt(rgbColors[1]) * x) / 255) * this.op;//當下G值 * x透明度值 * 鍵盤透明度
+            rgbColors[2] = Math.round((parseInt(rgbColors[2]) * x) / 255) * this.op;//當下B值 * x透明度值 * 鍵盤透明度
+            // //console.log(rgbColors) 
+        }
+        ////////////////////////////////
+        // Handle the #RRGGBB' format
+        ////////////////////////////////
+        else if (color.substring(0, 1) == "#") {
+            // This is simples because we know that every values is two 
+            // hexadecimal digits.
+            rgbColors[0] = color.substring(1, 3);  // redValue
+            rgbColors[1] = color.substring(3, 5);  // greenValue
+            rgbColors[2] = color.substring(5, 7);  // blueValue
+            rgbColors[3] = color.substring(7, 9);
+            // We need to convert the value into integers, 
+            //   but the value is in hex (base 16)!
+            // Fortunately, the parseInt function takes a second parameter 
+            // signifying the base we're converting from.  
+            // rgbColors[0] = parseInt(rgbColors[0], 16);
+            // rgbColors[1] = parseInt(rgbColors[1], 16);
+            // rgbColors[2] = parseInt(rgbColors[2], 16);
+        }
+        return rgbColors;
+    }
+    //
+
+    setAPmode() {
+        if (this.setAp == 0) {
+            this.setAp = 1;
+            // //console.log('setapmode');
+            let data = {
+                profile: this.changeProfile,
+            }
+            let obj1 = {
+                Type: funcVar.FuncType.Device,
+                Func: funcVar.FuncName.SetProfie,
+                Param: data
+            }
+            this.protocol.RunSetFunction(obj1).then((data) => {
+                // //console.log("Container RunSetFunction:" + data);
+                //
+                // let setprofile = {
+                //     profile: '1',    //profile  0:reset, 1:Profile1 2:Profile2
+                //     mode: '0x0e', //1~15 代表不同Mode
+                //     light: '0x14',    //0~32 燈光亮度
+                // }
+                // let obj2 = {
+                //     Type: funcVar.FuncType.Device,
+                //     Func: funcVar.FuncName.SetCommand,
+                //     Param: setprofile
+                // }
+                // // //console.log("setprofile:SetCommand");
+                // this.protocol.RunSetFunction(obj2).then((data) => {
+                // //console.log("Container RunSetFunction:" + data);
+                this.setAp = 0;
+                // });
+            })
+        }
+    }
+
+    LEDmatrix() {
+        // //console.log('LED1111');
+        var s = [];//找Marixtable
+        s[0] = ['f5_star', 'n6_star', 'y_star', 'h_star', 'n_star', 'f6_star', 'n7_star', 'k132_star', 'Upside6_star', ''];
+        s[1] = ['f3_star', 'n4_star', 'r_star', 'g_star', 'b_star', 'f4_star', 'n5_star', 't_star', 'Upside5_star', ''];
+        s[2] = ['f2_star', 'n3_star', 'e_star', 'd_star', 'v_star', 'space_star', 'c_star', 'f_star', 'Upside4_star', ''];
+        s[3] = ['f1_star', 'n2_star', 'w_star', 's_star', 'z_star', 'lalt_star', 'x_star', 'K131_star', 'Upside3_star', ''];
+        s[4] = ['L-Up_star', 'n1_star', 'q_star', 'a_star', 'K45_star', 'win_star', 'logo1_star', 'L-Down_star', 'Upside2_star', ''];
+        s[5] = ['esc_star', 'perid_star', 'tab_star', 'caps_star', 'lshift_star', 'lctrl_star', , 'logo2_star', '', 'Upside1_star', ''];
+        s[6] = ['f12_star', 'K14_star', 'drawn_star', 'K42_star', 'enter_star', 'print_star', 'bsp_star', 'insert_star', '', 'Upside15_star'];
+        s[7] = ['f10_star', 'plus_star', 'lqu_star', 'quo_star', 'rctrl_star', 'f11_star', 'rqu_star', 'rshift_star', 'Upside10_star', 'Upside12_star'];
+        s[8] = ['minus_star', 'p_star', 'sem_star', 'K56_star', 'qmark_star', 'f9_star', 'book_star', 'fn_star', 'Upside9_star', 'Upside11_star'];
+        s[9] = ['n0_star', 'i_star', 'k_star', 'l_star', 'comma_star', 'dot_star', 'o_star', 'ralt_star', 'Upside7_star', 'Upside14_star'];
+        s[10] = ['f7_star', 'n8_star', 'u_star', 'j_star', 'm_star', 'f8_star', 'n9_star', 'K133_star', 'Upside8_star', 'Upside13_star'];
+        s[11] = ['scroll_star', 'pdown_star', 'delete_star', 'numlock_star', 'end_star', 'pause_star', 'home_star', 'pup_star', '', 'Upside17_star'];
+        s[12] = ['', 'num2_star', 'numdrawn_star', '', 'num5_star', 'D123_star', 'D121_star', 'num8_star', '', 'Upside18_star'];
+        s[13] = ['', 'R-Up_star', 'numminus_star', 'R-Down_star', 'numenter_star', 'D122_star', '', 'numplus_star', '', 'Upside20_star'];
+        s[14] = ['', 'num3_star', 'numtimes_star', '', 'num6_star', '_star', 'numdot_star', 'num9_star', '', 'Upside19_star'];
+        s[15] = ['up_star', 'num1_star', 'down_star', 'right_star', 'num4_star', 'left_star', 'num0_star', 'num7_star', '', 'Upside16_star'];
+
+        // for (let w = 0; w < 16; w++) {
+
+        //     for (let n = 0; n < s[w].length; n++) {
+        //         s[w][n] = s[w][n] + this.suffix;
+        //     }
+        // }
+        // //console.log(s);
+
+        for (var t = 0; t < this.array1.length; t++) {
+            //console.log('here!');
+            let word = this.array1[t];
+            for (let i = 0; i < 16; i++) {
+                if (s[i].indexOf(word) !== -1) {
+                    let x = i;
+                    let y = s[i].indexOf(word);
+                    this.positionR = x * 10 + y;
+                    this.positionG = x * 10 + y + 160;
+                    this.positionB = x * 10 + y + 320;
+                    //console.log('x:' + x + 'y:' + y)
+                    this.positionRarr.push(this.positionR);
+                    this.positionGarr.push(this.positionG);
+                    this.positionBarr.push(this.positionB);
+
+                    // //console.log('total_pr' + this.positionR)
+                    // //console.log('total_pr' + this.positionG)
+                    // //console.log('total_pr' + this.positionB)
+
+                }
+            }
+        }
+    }
+    cleanApmode() {
+        //console.log("cleanapmode");
+        var apMode = new Buffer(new Array(480));
+        var vm = this
+        for (let i = 0; i < 480; i++) {
+            apMode[i] = 0;
+            // //console.log("cleanapmode");
+        }
+        // apMode[45] = 0xff;
+        // apMode[205] = 0xff;
+        // apMode[365] = 0xff;
+        // apMode[100] = 0xff;
+        // apMode[260] = 0xff;
+        // apMode[420] = 0xff;
+        let apmodesetting = {
+            profile: this.changeProfile,    //profile  0:reset, 1:Profile1 2:Profile2
+            RGBData: apMode
+        }
+        let obj3 = {
+            Type: funcVar.FuncType.Device,
+            Func: funcVar.FuncName.APMode,
+            Param: apmodesetting
+        }
+        this.protocol.RunSetFunction(obj3).then((data) => {
+            // //console.log("Container RunSetFunction:" + data);
+            // //console.log('data:' + data);
+            //  if(data==1){
+        })
+        // //console.log('next apmode');
+    }
+
+    doApmode01() {
+        if (this.saveapmode === false) { //設定一個布林值決定是否要執行下面的程式碼
+            this.saveapmode = true;//一進入程式後就把判斷通道關閉，代表同一個時間，不會有兩個doapmode執行
+            var apMode = new Buffer(new Array(480));
+            for (let i = 0; i < this.array1.length; i++) {
+                apMode[this.positionRarr[i]] = this.red[i];
+                apMode[this.positionGarr[i]] = this.green[i];
+                apMode[this.positionBarr[i]] = this.blue[i];
+                apMode[56] = this.red[124];
+                apMode[236] = this.green[124];
+                apMode[416] = this.blue[124];
+            }
+            if (this.data == 0) {
+                apMode[56] = 0xff;
+                apMode[216] = 0x00;
+                apMode[376] = 0x00;
+            }
+            else if (this.data == 1) {
+                apMode[56] = this.red[124];
+                apMode[216] = this.green[124];
+                apMode[376] = this.blue[124];
+            }
+            // apMode[45] = 0xff;
+            // apMode[205] = 0xff;
+            // apMode[365] = 0xff;
+            // apMode[100] = 0xff;
+            // apMode[260] = 0xff;
+            // apMode[420] = 0xff;
+            let apmodesetting = {
+                profile: this.changeProfile,    //profile  0:reset, 1:Profile1 2:Profile2
+                RGBData: apMode
+            }
+            let obj3 = {
+                Type: funcVar.FuncType.Device,
+                Func: funcVar.FuncName.APMode,
+                Param: apmodesetting
+            }
+            // //console.log('next apmode');
+            this.saveapmode = false;
+            if (this.leave == 1) {
+                // //console.log('next apmode');
+                this.protocol.RunSetFunction(obj3).then((data) => {
+                    // //console.log("Container RunSetFunction:" + data);
+                    // //console.log('data:' + data);
+                    //  if(data==1){
+                    // this.saveapmode=false;
+                    this.doApmode01();
+
+                    //
+                })
+            }
+
+        } else {
+            console.log('有重複的apmode');//當判斷到有第二個doapmode要執行的要求，直接關閉此要求，結果就是剩下一個doapmode執行
+            this.leave == 0;
+        }
+    }
+
+
+    //Att set area
+    Upside1_att: any = "";
+    Upside2_att: any = "";
+    Upside3_att: any = "";
+    Upside4_att: any = "";
+    Upside5_att: any = "";
+    Upside6_att: any = "";
+    Upside7_att: any = "";
+    Upside8_att: any = "";
+    Upside9_att: any = "";
+    Upside10_att: any = "";
+    Upside11_att: any = "";
+    Upside12_att: any = "";
+    Upside13_att: any = "";
+    Upside14_att: any = "";
+    Upside15_att: any = "";
+    Upside16_att: any = "";
+    Upside17_att: any = "";
+    Upside18_att: any = "";
+    Upside19_att: any = "";
+    Upside20_att: any = "";
+    logo1_att: any = "";
+    logo2_att: any = "";
+
+    LtoR1_att: any = "";
+    LtoR2_att: any = "";
+    LtoR3_att: any = "";
+    LtoR4_att: any = "";
+    LtoR5_att: any = "";
+    LtoR6_att: any = "";
+    LtoR7_att: any = "";
+    LtoR8_att: any = "";
+    LtoR9_att: any = "";
+    LtoR10_att: any = "";
+    LtoR11_att: any = "";
+    LtoR12_att: any = "";
+    LtoR13_att: any = "";
+    LtoR14_att: any = "";
+    LtoR15_att: any = "";
+    LtoR16_att: any = "";
+    LtoR17_att: any = "";
+    LtoR18_att: any = "";
+    LtoR19_att: any = "";
+    LtoR20_att: any = "";
+    LtoR21_att: any = "";
+
+    attLight() {
+        this.LtoR1_att = "att11";
+        this.LtoR2_att = "att10";
+        this.LtoR3_att = "att9";
+        this.LtoR4_att = "att8";
+        this.LtoR5_att = "att7";
+        this.LtoR6_att = "att6";
+        this.LtoR7_att = "att5";
+        this.LtoR8_att = "att4";
+        this.LtoR9_att = "att3";
+        this.LtoR10_att = "att2";
+        this.LtoR11_att = "att1";
+        this.LtoR12_att = "att2";
+        this.LtoR13_att = "att3";
+        this.LtoR14_att = "att4";
+        this.LtoR15_att = "att5";
+        this.LtoR16_att = "att6";
+        this.LtoR17_att = "att7";
+        this.LtoR18_att = "att8";
+        this.LtoR19_att = "att9";
+        this.LtoR20_att = "att10";
+        this.LtoR21_att = "att11";
+        setTimeout(() => {
+            this.array1 = ["esc_star", "f1_star", "f2_star", "f3_star", "f4_star", "f5_star", "f6_star", "f7_star", "f8_star", "f9_star", "f10_star", "f11_star", "f12_star", "print_star", "scroll_star", "pause_star", "perid_star", "n1_star", "n2_star", "n3_star", "n4_star", "n5_star", "n6_star", "n7_star", "n8_star", "n9_star", "n0_star", "minus_star", "plus_star", "bsp_star", "insert_star", "home_star", "pup_star", "numlock_star", "numdrawn_star", "numtimes_star", "numminus_star", "tab_star", "q_star", "w_star", "e_star", "r_star", "t_star", "y_star", "u_star", "i_star", "o_star", "p_star", "lqu_star", "rqu_star", "delete_star", "drawn_star", "end_star", "pdown_star", "num7_star", "num8_star", "num9_star", "numplus_star", "caps_star", "a_star", "s_star", "d_star", "f_star", "g_star", "h_star", "j_star", "k_star", "l_star", "sem_star", "quo_star", "enter_star", "num4_star", "num5_star", "num6_star", "lshift_star", "z_star", "x_star", "c_star", "v_star", "b_star", "n_star", "m_star", "comma_star", "dot_star", "qmark_star", "rshift_star", "up_star", "num1_star", "num2_star", "num3_star", "numenter_star", "lctrl_star", "win_star", "lalt_star", "space_star", "ralt_star", "fn_star", "book_star", "rctrl_star", "left_star", "down_star", "right_star", "num0_star", "numdot_star", "Upside1_att", "Upside2_att", "Upside3_att", "Upside4_att", "Upside5_att", "Upside6_att", "Upside7_att", "Upside8_att", "Upside9_att", "Upside10_att", "Upside11_att", "Upside12_att", "Upside13_att", "Upside14_att", "Upside15_att", "Upside16_att", "Upside17_att", "Upside18_att", "Upside19_att", "Upside20_att", "logo1_att", "logo2_att"]
+        }, 2000);
+    }
+
+    cleanAttLight() {
+        // //console.log("cleanAtt complete 2222")
+        this.LtoR1_att = "";
+        this.LtoR2_att = "";
+        this.LtoR3_att = "";
+        this.LtoR4_att = "";
+        this.LtoR5_att = "";
+        this.LtoR6_att = "";
+        this.LtoR7_att = "";
+        this.LtoR8_att = "";
+        this.LtoR9_att = "";
+        this.LtoR10_att = "";
+        this.LtoR11_att = "";
+        this.LtoR12_att = "";
+        this.LtoR13_att = "";
+        this.LtoR14_att = "";
+        this.LtoR15_att = "";
+        this.LtoR16_att = "";
+        this.LtoR17_att = "";
+        this.LtoR18_att = "";
+        this.LtoR19_att = "";
+        this.LtoR20_att = "";
+        this.LtoR21_att = "";
+    }
+
+    defaultBar() {
+        this.Upside1_att = "";
+        this.Upside2_att = "";
+        this.Upside3_att = "";
+        this.Upside4_att = "";
+        this.Upside5_att = "";
+        this.Upside6_att = "";
+        this.Upside7_att = "";
+        this.Upside8_att = "";
+        this.Upside9_att = "";
+        this.Upside11_att = "";
+        this.Upside10_att = "";
+        this.Upside12_att = "";
+        this.Upside13_att = "";
+        this.Upside14_att = "";
+        this.Upside15_att = "";
+        this.Upside16_att = "";
+        this.Upside17_att = "";
+        this.Upside18_att = "";
+        this.Upside19_att = "";
+        this.Upside20_att = "";
+    }
+    stopAtt: any;
+    attBar(w) {
+        if (w == 0) {
+            // this.saveGetcolorMode1 = false;
+            this.getColor1();
+            this.logo1_att = "red";
+            this.logo2_att = "red";
+            this.stopAtt = setInterval(() => {
+                if (this.attPt < 1 || this.attPt >= 99 || this.attPt == undefined || isNaN(this.attPt)) {
+                    this.cleanBar();
+                }
+                else if (this.attPt >= 98) {
+                    this.Upside10_att = "bar1";
+                    this.Upside11_att = "bar1";
+                    this.Upside9_att = "bar2";
+                    this.Upside12_att = "bar2";
+                    this.Upside8_att = "bar3";
+                    this.Upside13_att = "bar3";
+                    this.Upside7_att = "bar4";
+                    this.Upside14_att = "bar4";
+                    this.Upside6_att = "bar5";
+                    this.Upside15_att = "bar5";
+                    this.Upside5_att = "bar6";
+                    this.Upside16_att = "bar6";
+                    this.Upside4_att = "bar7";
+                    this.Upside17_att = "bar7";
+                    this.Upside3_att = "bar8";
+                    this.Upside18_att = "bar8";
+                    this.Upside2_att = "bar9";
+                    this.Upside19_att = "bar9";
+                    this.Upside1_att = "bar10";
+                    this.Upside20_att = "bar10";
+                }
+                else if (this.attPt >= 79) {
+                    this.Upside10_att = "bar1";
+                    this.Upside11_att = "bar1";
+                    this.Upside9_att = "bar2";
+                    this.Upside12_att = "bar2";
+                    this.Upside8_att = "bar3";
+                    this.Upside13_att = "bar3";
+                    this.Upside7_att = "bar4";
+                    this.Upside14_att = "bar4";
+                    this.Upside6_att = "bar5";
+                    this.Upside15_att = "bar5";
+                    this.Upside5_att = "bar6";
+                    this.Upside16_att = "bar6";
+                    this.Upside4_att = "bar7";
+                    this.Upside17_att = "bar7";
+                    this.Upside3_att = "bar8";
+                    this.Upside18_att = "bar8";
+                    this.Upside2_att = "bar9";
+                    this.Upside19_att = "bar9";
+                }
+                else if (this.attPt >= 60) {
+                    this.Upside10_att = "bar1";
+                    this.Upside11_att = "bar1";
+                    this.Upside9_att = "bar2";
+                    this.Upside12_att = "bar2";
+                    this.Upside8_att = "bar3";
+                    this.Upside13_att = "bar3";
+                    this.Upside7_att = "bar4";
+                    this.Upside14_att = "bar4";
+                    this.Upside6_att = "bar5";
+                    this.Upside15_att = "bar5";
+                    this.Upside5_att = "bar6";
+                    this.Upside16_att = "bar6";
+                    this.Upside4_att = "bar7";
+                    this.Upside17_att = "bar7";
+                    this.Upside3_att = "bar8";
+                    this.Upside18_att = "bar8";
+                    this.cleanAttLight();
+                }
+                else if (this.attPt >= 45) {
+                    this.Upside10_att = "bar1";
+                    this.Upside11_att = "bar1";
+                    this.Upside9_att = "bar2";
+                    this.Upside12_att = "bar2";
+                    this.Upside8_att = "bar3";
+                    this.Upside13_att = "bar3";
+                    this.Upside7_att = "bar4";
+                    this.Upside14_att = "bar4";
+                    this.Upside6_att = "bar5";
+                    this.Upside15_att = "bar5";
+                    this.Upside5_att = "bar6";
+                    this.Upside16_att = "bar6";
+                    this.Upside4_att = "bar7";
+                    this.Upside17_att = "bar7";
+                }
+                else if (this.attPt >= 30) {
+                    this.Upside10_att = "bar1";
+                    this.Upside11_att = "bar1";
+                    this.Upside9_att = "bar2";
+                    this.Upside12_att = "bar2";
+                    this.Upside8_att = "bar3";
+                    this.Upside13_att = "bar3";
+                    this.Upside7_att = "bar4";
+                    this.Upside14_att = "bar4";
+                    this.Upside6_att = "bar5";
+                    this.Upside15_att = "bar5";
+                    this.Upside5_att = "bar6";
+                    this.Upside16_att = "bar6";
+                }
+                else if (this.attPt >= 20) {
+                    this.Upside10_att = "bar1";
+                    this.Upside11_att = "bar1";
+                    this.Upside9_att = "bar2";
+                    this.Upside12_att = "bar2";
+                    this.Upside8_att = "bar3";
+                    this.Upside13_att = "bar3";
+                    this.Upside7_att = "bar4";
+                    this.Upside14_att = "bar4";
+                    this.Upside6_att = "bar5";
+                    this.Upside15_att = "bar5";
+                }
+                else if (this.attPt >= 13) {
+                    this.Upside10_att = "bar1";
+                    this.Upside11_att = "bar1";
+                    this.Upside9_att = "bar2";
+                    this.Upside12_att = "bar2";
+                    this.Upside8_att = "bar3";
+                    this.Upside13_att = "bar3";
+                    this.Upside7_att = "bar4";
+                    this.Upside14_att = "bar4";
+                }
+                else if (this.attPt >= 7) {
+                    this.Upside10_att = "bar1";
+                    this.Upside11_att = "bar1";
+                    this.Upside9_att = "bar2";
+                    this.Upside12_att = "bar2";
+                    this.Upside8_att = "bar3";
+                    this.Upside13_att = "bar3";
+                }
+                else if (this.attPt >= 3) {
+                    this.Upside10_att = "bar1";
+                    this.Upside11_att = "bar1";
+                    this.Upside9_att = "bar2";
+                    this.Upside12_att = "bar2";
+                }
+                else if (this.attPt >= 1) {
+                    this.Upside10_att = "bar1";
+                    this.Upside11_att = "bar1";
+                }
+            }, 1)
+        }
+        else if (w == 1) {
+            clearInterval(this.stopAtt);
+            this.defaultBar();
+        }
+    }
+
+    cleanBar() {
+        setTimeout(() => {
+            this.Upside1_att = "";
+            this.Upside20_att = "";
+        }, 20);
+        setTimeout(() => {
+            this.Upside2_att = "";
+            this.Upside19_att = "";
+        }, 40);
+        setTimeout(() => {
+            this.Upside3_att = "";
+            this.Upside18_att = "";
+        }, 60);
+        setTimeout(() => {
+            this.Upside4_att = "";
+            this.Upside17_att = "";
+        }, 80);
+        setTimeout(() => {
+            this.Upside5_att = "";
+            this.Upside16_att = "";
+        }, 100);
+        setTimeout(() => {
+            this.Upside6_att = "";
+            this.Upside15_att = "";
+        }, 120);
+        setTimeout(() => {
+            this.Upside7_att = "";
+            this.Upside14_att = "";
+        }, 140);
+        setTimeout(() => {
+            this.Upside8_att = "";
+            this.Upside13_att = "";
+        }, 160);
+        setTimeout(() => {
+            this.Upside9_att = "";
+            this.Upside12_att = "";
+        }, 180);
+        setTimeout(() => {
+            this.Upside10_att = "";
+            this.Upside11_att = "";
+        }, 200);
+    }
+
+    thelastEffect: any = this.starLight_med;
+
+    KBClean() {
+        for (let i = 0; i < this.array1.length; i++) {
+            this.red[i] = 0;
+            this.green[i] = 0;
+            this.blue[i] = 0;
+        }
+    }
+
+    letsgoout: boolean = true;
+    letsgoIn: boolean = false;
+
+    plugIn() {
+        clearInterval(this.getclr01);
+        this.leave = 0;
+        // this.letsgoout = false;
+        // this.letsgoIn = true;
+        this.goIn();
+    }
+
+    none() {
+        clearInterval(this.getclr01);
+        this.leave = 0;
+        // this.letsgoout = false;
+        // this.letsgoIn = true;
+        this.cleanApmode();
+        this.savechange = 0;
+    }
+
+    goOut() {
+        clearInterval(this.getclr01);
+        clearInterval(this.slHighStop)
+        clearInterval(this.slMedStop)
+        clearInterval(this.slSlowStop)
+        this.leave = 0;
+        this.letsgoout = false;
+        this.letsgoIn = true;
+        this.savechange = 0;
+    }
+
+    goIn() {
+        // //this.setAPmode();//連續下值預備動作
+        // this.LEDmatrix()//找出對應按鍵;
+        // this.setDefault(1);
+        // if (this.getDeviceService.dataObj.status == 1) {
+        this.thelastEffect();
+        this.leave = 1;
+        setTimeout(() => {
+            this.doApmode01();
+        }, 200);
+        this.letsgoout = true;
+        this.letsgoIn = false;
+        this.savechange = 0;
+    }
+
+    slMedStop: any;
+    slHighStop: any;
+    slSlowStop: any;
+
+
+    //小方框設定
+    default: boolean = true;
+    default02: boolean = false;
+    setDefault(w) {
+        // 
+        document.getElementById('colorgp').style.display = "none";
+        this.default = false;
+        this.default02 = false;
+
+        if (w == 1) {
+            this.default = true;
+            this.modeswitch = "1";
+            document.getElementById('colorgp').style.display = "none";
+        }
+        if (w == 2) {
+            this.default02 = true;
+            this.modeswitch = "0";
+            document.getElementById('colorgp').style.display = "block";
+        } else {
+            return false;
+        }
+
+    }
+    //
+    starLightStop() {
+        for (var i = 0; i < this.array1.length; i++) {
+            document.getElementById(this.array1[i]).className = "";
+        }
+    }
+
+
+    frtp: boolean = true;
+    ftltbox: boolean = false;
+    etitle: string = "";
+    fnbtn: boolean = false;
+    in: any = false;
+    see: any = false;
+
+    showsd: boolean = false;
+    modeswitch: any = "1";
+
+    openOpt() {
+        this.fnbtn = !this.fnbtn;
+        this.ftltbox = !this.ftltbox;
+    }
+
+    desideclrCss: any = {
+        R: "e9",
+        G: "00",
+        B: "4c"
+    };
+
+    desideclrCss02: any = {
+        R: "e9",
+        G: "00",
+        B: "4c"
+    };
+
+    //顯示給UI介面
+    defaultclr: any = "#" + (this.desideclrCss.R + this.desideclrCss.G + this.desideclrCss.B).toUpperCase();
+    // defaultclr02:any="#"+(this.desideclrCss02.R+this.desideclrCss02.G+this.desideclrCss02.B).toUpperCase();
+    selectborder: any;
+    selectborder02: any;
+    clropt: boolean = true;
+
+    // //選定色
+    // selectclr(w){
+
+    //     if(w==1){
+    //         this.selectborder="1px solid white";
+    //         this.selectborder02=" ";
+    //         this.clropt=true;
+    //     }
+    //     if(w==2){
+    //         this.selectborder=" ";
+    //         this.selectborder02="1px solid white";
+    //         this.clropt=false;
+    //     }
+
+    // }
+
+
+
+    //選色器
+    PickClr(whichcolor) {
+        if (whichcolor == 1) {
+            this.desideclrCss = {
+                R: "e9",
+                G: "00",
+                B: "4c"
+            };
+            // this.pure_red();
+            this.defaultclr = "#" + (this.desideclrCss.R + this.desideclrCss.G + this.desideclrCss.B).toUpperCase();
+        }
+        if (whichcolor == 2) {
+            this.desideclrCss = {
+                R: "ff",
+                G: "3f",
+                B: "00"
+            };
+            // this.pure_orange();
+            this.defaultclr = "#" + (this.desideclrCss.R + this.desideclrCss.G + this.desideclrCss.B).toUpperCase();
+        }
+        if (whichcolor == 3) {
+            this.desideclrCss = {
+                R: "ff",
+                G: "bf",
+                B: "00"
+            };
+            // this.pure_yellow();
+            this.defaultclr = "#" + (this.desideclrCss.R + this.desideclrCss.G + this.desideclrCss.B).toUpperCase();
+        }
+        if (whichcolor == 4) {
+            this.desideclrCss = {
+                R: "7f",
+                G: "ff",
+                B: "00"
+            };
+            // this.pure_green();
+            this.defaultclr = "#" + (this.desideclrCss.R + this.desideclrCss.G + this.desideclrCss.B).toUpperCase();
+        }
+        if (whichcolor == 5) {
+            this.desideclrCss = {
+                R: "00",
+                G: "ff",
+                B: "ff"
+            };
+            // this.pure_lightblue();
+            this.defaultclr = "#" + (this.desideclrCss.R + this.desideclrCss.G + this.desideclrCss.B).toUpperCase();
+        }
+        if (whichcolor == 6) {
+            this.desideclrCss = {
+                R: "00",
+                G: "7f",
+                B: "ff"
+            };
+            // this.pure_blue();
+            this.defaultclr = "#" + (this.desideclrCss.R + this.desideclrCss.G + this.desideclrCss.B).toUpperCase();
+        }
+        if (whichcolor == 7) {
+            this.desideclrCss = {
+                R: "64",
+                G: "00",
+                B: "ff"
+            };
+            // this.pure_darkblue();
+            this.defaultclr = "#" + (this.desideclrCss.R + this.desideclrCss.G + this.desideclrCss.B).toUpperCase();
+        }
+        if (whichcolor == 8) {
+            this.desideclrCss = {
+                R: "af",
+                G: "26",
+                B: "ff"
+            };
+            // this.pure_purple();
+            this.defaultclr = "#" + (this.desideclrCss.R + this.desideclrCss.G + this.desideclrCss.B).toUpperCase();
+        }
+    }
+
+
+    //UI亮度調整
+    op: any = "0.5";
+    bright: any = "0x05";
+    onInput(value) {
+        this.detectEffectChange();
+        this.op = value;
+        let vm = this;
+        if (this.getDeviceService.dataObj.status == 1) {
+            vm.bright = value;
+        }
+    }
+
+    //
+
+    sp: any = 60;
+    SpeedInput(value) {
+        this.detectEffectChange();
+        let vm = this;
+        this.sp = value;
+        setTimeout(() => {
+            vm.speedMethod(value);
+        }, 1000);
+    }
+
+
+
+
+    slowFun: any = this.starLight_slow;
+    medFun: any = this.starLight_med;
+    fastFun: any = this.starLight_high;
+    speed: any = '60';
+
+    // //最先決定速度類型
+
+    speedMethod(s) {
+        this.detectEffectChange()
+        this.KBClean();
+        this.starLightStop();
+        clearInterval(this.slMedStop);
+        clearInterval(this.slHighStop);
+        clearInterval(this.slSlowStop);
+        clearInterval(this.getclr01);
+        let vm = this;
+        vm.speed = s;
+        if (s == 20) {
+            this.sp = 20;
+            vm.fastFun();
+        }
+        else if (s == 60) {
+            this.sp = 60;
+            vm.medFun();
+        }
+        else if (s == 100) {
+            this.sp = 100;
+            vm.slowFun();
+        } else {
+            return false;
+        }
+    }
+
+    //速度
+    starLight_med() {
+        this.detectEffectChange();
+        this.KBClean();
+        this.getColor1();
+        this.thelastEffect = this.starLight_med;
+        this.slMedStop = setInterval(() => {
+            if (this.data == 1) {
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_1_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_2_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_3_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_4_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_5_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_6_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_7_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_8_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+            }
+            else if (this.data == 0) {
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_1_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_2_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_3_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_4_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_5_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_6_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_7_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_8_med";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+            }
+        }, 800)
+    }
+
+    starLight_high() {  //繁星高速
+        this.detectEffectChange();
+        this.KBClean();
+        this.getColor1();
+        this.thelastEffect = this.starLight_high;
+        this.slHighStop = setInterval(() => {
+            if (this.data == 1) {
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_1_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_2_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_3_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_4_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_5_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_6_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_7_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_8_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+            }
+            else if (this.data == 0) {
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_1_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_2_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_3_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_4_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_5_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_6_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_7_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_8_high";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+            }
+        }, 200)
+    }
+    starLight_slow() {        //繁星
+        this.detectEffectChange();
+        this.KBClean();
+        this.getColor1();
+        this.thelastEffect = this.starLight_slow;
+        this.slSlowStop = setInterval(() => {
+            if (this.data == 1) {
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_1_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_2_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_3_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_4_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_5_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_6_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_7_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "starLight_8_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 125)]).className = "";
+            }
+            else if (this.data == 0) {
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_1_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_2_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_3_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_4_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_5_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_6_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_7_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "starLight_8_slow";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+                document.getElementById(this.array1[Math.round(Math.random() * 103)]).className = "";
+            }
+        }, 1300)
+    }
+
+    //速度
+    FastSpeed: any = 20;
+    MedSpeed: any = 60;
+    SlowSpeed: any = 100;
+
+
+    timerFlag: any = 0;
+
+    @Input() sendFlag;
+    @Input() profileName;
+    doItfunction(position) {
+        let obj = {
+            'ProfileName': this.profileName
+        }
+        if (this.timerFlag == 0) {
+            this.timerFlag = 1;
+            setTimeout(() => {
+                this.db.getProfile(obj).then((doc: any) => {
+                    if (doc[0].Light.Speed[position] == "Speedup") {   //按鍵燈效加快
+                        console.log('function did');
+                        if (this.sp == this.SlowSpeed) {
+                            this.speedMethod(this.MedSpeed);
+                            this.sp = this.MedSpeed;
+                            this.speedValue = this.MedSpeed;
+                        }
+                        else if (this.sp == this.MedSpeed) {
+                            this.speedMethod(this.FastSpeed);
+                            this.sp = this.FastSpeed;
+                            this.speedValue = this.FastSpeed;
+                        }
+                        else if (this.sp == this.FastSpeed) {
+                        }
+                    }
+
+                    if (doc[0].Light.Speed[position] == "Slowdown") {   //按鍵燈效減速
+                        console.log('function did');
+                        if (this.sp == this.FastSpeed) {
+                            this.speedMethod(this.MedSpeed);
+                            this.sp = this.MedSpeed;
+                            this.speedValue = this.MedSpeed;
+                        }
+                        else if (this.sp == this.MedSpeed) {
+                            this.speedMethod(this.SlowSpeed);
+                            this.sp = this.SlowSpeed;
+                            this.speedValue = this.SlowSpeed;
+                        }
+                        else if (this.sp == this.SlowSpeed) {
+                        }
+                    }
+                    if (doc[0].Light.Mode[position] == "Open_CloseEffect") {
+                        this.openclose++
+                        if (this.openclose == 1) {
+                            this.none();
+                        }
+                        else if (this.openclose == 2) {
+                            this.goOut();
+                            setTimeout(() => {
+                                this.goIn();
+                                this.openclose = 0;
+                            }, 100)
+                        }
+                    }
+                    if (doc[0].Light.Mode[position] == "pauseEffect") {
+                        this.pausetime++
+                        if (this.pausetime == 1) {
+                            this.goOut();
+                        }
+                        else if (this.pausetime == 2) {
+                            this.goOut();
+                            setTimeout(() => {
+                                this.goIn();
+                                this.pausetime = 0;
+                            }, 100)
+                        }
+                    }
+                })
+                this.timerFlag = 0;
+            }, 1000);
+        }
+        // }
+    }
+
+    clearAllInterval() {
+		var highestIntervalId = setInterval(";");
+		for (var i = 0; i < highestIntervalId; i++) {
+			clearInterval(i);
+		}
+	}
+	// clearAllTimeout(){
+	// 	var highestTimeoutId = setTimeout(";");
+	// 	for (var i = 0; i < highestTimeoutId; i++) {
+	// 		clearTimeout(i);
+	// 	}
+    // }
+    
+    ngOnDestroy(): void {
+        this.subscription.unsubscribe();
+        this.goOut();
+        //this.clearAllInterval();
+        env.log('light-effect', 'startlight', 'end');
+    }
+
+
+    @Output() sendTimeCloseFlag = new EventEmitter();
+    @Input() check01;
+    @Input() timeEffect;
+    @Input() receiveTemp;
+    @Output() StarlightTemp = new EventEmitter();
+    @Output() LightEffect = new EventEmitter();
+    @Output() applyStatus = new EventEmitter();
+    starlight: any;
+    applyFlag: any = 1;
+    lightEffect: any = 4;
+    starlightObj() {
+        this.starlight = {
+            'LightEffect': 4,
+            'LSbrightness': this.op,
+            'LSspeed': this.sp,
+            'LSdirection': "",
+            'changeTime': this.timeValue,
+            'ttitle': '繁星',
+            'changeStatus': this.check01,
+            'changeEffect': this.timeEffect,
+            'ColorMode': '',
+            'Color':'',
+        }
+    }
+    readTemp() {
+        this.cuteValue = this.receiveTemp[0];
+        this.speedValue = this.receiveTemp[1];
+        this.NewtimeValue = this.receiveTemp[3];
+        this.ttitle = this.receiveTemp[4];
+
+        if (this.cuteValue !== undefined && this.cuteValue !== null && this.cuteValue !== "") {
+            this.op = this.cuteValue;
+        }
+        
+        if (this.speedValue !== undefined && this.speedValue !== null && this.speedValue !== "") {
+            this.sp = this.speedValue;
+            this.speedMethod(this.sp);
+        } 
+        
+        else if (this.speedValue == null || this.speedValue == undefined || this.speedValue == "") {
+            this.sp = 60;
+            this.speedMethod(this.sp);
+        }
+
+        if (this.NewtimeValue !== undefined && this.NewtimeValue !== null && this.NewtimeValue !== "") {
+            this.timeValue = this.NewtimeValue;
+        }
+
+        if (this.ttitle !== undefined && this.ttitle !== null && this.ttitle !== "") {
+            this.sendTtile();
+        } else {
+            this.ttitle = '繁星';
+        }
+    }
+
+    sendApply() {
+        if (this.timeEffect !== 4) {
+            this.starlightObj();
+            setTimeout(() => {
+                this.sendTimeCloseFlag.emit(this.check01);
+                this.StarlightTemp.emit(this.starlight);
+                this.LightEffect.emit(this.starlight.LightEffect);
+                this.passTime.emit(this.timeValue);
+                setTimeout(() => {
+                    this.applyStatus.emit(this.applyFlag);
+                    setTimeout(() => {
+                        this.sendTimeCloseFlag.emit(this.check01);
+                        this.detectEffectChange();
+                    }, 500);
+                }, 500);
+            }, 500);
+        } else {
+            console.log('apply false');
+            return false;
+        }
+    }
+
+    detectEffectChange() {
+        let apply = document.getElementById('apply');
+        if (this.op != this.receiveTemp[0] || this.sp != this.receiveTemp[1] || this.timeValue != this.receiveTemp[3] || this.lightEffect != this.receiveTemp[5] || this.check01 != this.receiveTemp[6] || this.timeEffect != this.receiveTemp[7]) {
+            apply.style.animationName = "effectApply";
+            apply.style.animationDuration = "3s";
+            apply.style.animationIterationCount = "infinite";
+        } else {
+            apply.style.animationName = "";
+            apply.style.animationDuration = "";
+            apply.style.animationIterationCount = "";
+        }
+    }
+
+    // ek1: any = 0;
+	// ek2: any = 0;
+	// ek3: any = 0;
+	// envio: any = 0;
+
+	// debug() {
+	// 	let pause = 19;
+	// 	let insert = 45;
+	// 	let ctrl = 17;
+	// 	let d = 68;
+	// 	let b = 66;
+	// 	let g = 71;
+	// 	let vm = this;
+	// 	window.addEventListener('keydown', (e) => {
+	// 		if (e.ctrlKey && e.keyCode == insert) {
+	// 			vm.ek1 = 1;
+	// 			window.addEventListener('keyup', (e) => {
+	// 				if (e.keyCode == ctrl || e.keyCode == insert) {
+	// 					if (vm.ek1 == 1) {
+	// 						vm.ek1 = 0;
+	// 						console.log('cancel debug')
+	// 						return false
+	// 					}
+	// 				}
+	// 			})
+	// 		}
+
+	// 		else if (e.shiftKey && e.keyCode == pause) {
+	// 			vm.ek1 = 0;
+	// 			vm.ek2 = 0;
+	// 			vm.ek3 = 0;
+	// 			vm.envio = 0;
+	// 			console.log('close debug mode')
+	// 			env.log('in rainbow', '關閉偵錯模式', 'close debug mode');
+	// 		}
+
+	// 		window.addEventListener('keydown', (e) => {
+	// 			if (e.keyCode == d) {
+	// 				if (vm.ek1 == 1) {
+	// 					vm.ek2 = 1;
+	// 				}
+	// 			}
+	// 		})
+	// 		window.addEventListener('keydown', (e) => {
+	// 			if (e.keyCode == b) {
+	// 				if (vm.ek1 == 1 && vm.ek2 == 1) {
+	// 					vm.ek3 = 1;
+	// 				}
+	// 			}
+	// 		})
+	// 		window.addEventListener('keydown', (e) => {
+	// 			if (e.keyCode == g) {
+	// 				if (vm.ek1 == 1 && vm.ek2 == 1 && vm.ek3 == 1) {
+	// 					vm.envio = 1;
+	// 					console.log('in debug mode')
+	// 					env.log('in rainbow', '開啟偵錯模式', 'in debug mode');
+	// 				}
+	// 			}
+	// 		})
+	// 	})
+	// }
+
+}

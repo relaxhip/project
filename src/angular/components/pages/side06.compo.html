@@ -1,0 +1,16 @@
+<!-- <img src="./image/sidep06.png" alt="01" style="width:80%;"> -->
+<div style="margin-left:10px; margin-top:10px;">
+<div  class="checkbox">
+    <a (click)="clickOnitem(0)">&nbsp;<img src="image/uncheck.png" *ngIf='!check01'><img src="image/check.png" *ngIf='check01'>&nbsp;播放/暂停</a>
+    <a (click)="clickOnitem(1)">&nbsp;<img src="image/uncheck.png" *ngIf='!check02'><img src="image/check.png" *ngIf='check02'>&nbsp;停止</a>
+    <a (click)="clickOnitem(2)">&nbsp;<img src="image/uncheck.png" *ngIf='!check03'><img src="image/check.png" *ngIf='check03'>&nbsp;上一首</a>
+    <a (click)="clickOnitem(3)">&nbsp;<img src="image/uncheck.png" *ngIf='!check04'><img src="image/check.png" *ngIf='check04'>&nbsp;下一首</a>
+    <a (click)="clickOnitem(4)">&nbsp;<img src="image/uncheck.png" *ngIf='!check05'><img src="image/check.png" *ngIf='check05'>&nbsp;提高音量</a>
+    <a (click)="clickOnitem(5)">&nbsp;<img src="image/uncheck.png" *ngIf='!check06'><img src="image/check.png" *ngIf='check06'>&nbsp;降低音量</a>
+    <a (click)="clickOnitem(6)">&nbsp;<img src="image/uncheck.png" *ngIf='!check07'><img src="image/check.png" *ngIf='check07'>&nbsp;静音</a>
+</div>
+<div id="confirmarea">
+    <a id="na"     (click)="cancelPage()">取消</a>
+    <a id="yes"   (click)="functionkeysetIn()">保存</a>
+</div>
+</div>
